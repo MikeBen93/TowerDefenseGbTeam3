@@ -2,9 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraController : MonoBehaviour
+public class InputController : MonoBehaviour
 {
     [SerializeField] private string _nodeTag = "Node";
+
+    private BuildManager buildManager;
+
+    private void Start()
+    {
+        buildManager = BuildManager.instance;
+    }
+
     private void Update()
     {
         if(Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
@@ -14,7 +22,7 @@ public class CameraController : MonoBehaviour
         }
 
 #if UNITY_EDITOR
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
             RaycastToNode(Input.mousePosition);
             return;
@@ -28,13 +36,21 @@ public class CameraController : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(touchPosition);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit))
+        if (!Physics.Raycast(ray, out hit))
         {
-            if (hit.collider != null && hit.collider.CompareTag(_nodeTag))
-            {
-               
-                hit.collider.GetComponent<Node>().ChangeColorOnTouch();
-            }
+            return;
         }
+
+        //Debug.Log(hit.collider.gameObject.name);
+
+        if (hit.collider != null && hit.collider.CompareTag(_nodeTag))//add below compare if tower already exists
+        {
+            
+            Node node = hit.collider.GetComponent<Node>();
+
+            string result = node.TryToBuildTower();
+            Debug.Log(result);
+        }
+
     }
 }

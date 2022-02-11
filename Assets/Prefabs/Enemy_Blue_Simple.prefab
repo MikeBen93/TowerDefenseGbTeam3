@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6305114470508758587}
   m_Layer: 0
   m_Name: Enemy_Blue_Simple
-  m_TagString: Untagged
+  m_TagString: BlueEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,10 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc4ec2b0af36e44f8ff3c7f0c1d9f6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSpeed: 10
+  startSpeed: 5
   speed: 0
   startHealth: 100
   health: 0
   worth: 50
-  deathEffect: {fileID: 0}
-  healthBar: {fileID: 0}
