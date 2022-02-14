@@ -19,6 +19,8 @@ public class BuildManager : MonoBehaviour
     private TowerBlueprint towerToBuild;
     private Node selectedNode;
 
+    public NodeUI _nodeUI;
+
     //property to check if we have chosen towe to build
     public bool CanBuild { get { return towerToBuild != null; } }
     //property to check if we have enough money to build that tower
@@ -27,6 +29,8 @@ public class BuildManager : MonoBehaviour
     public void SelectTowerToBuild(TowerBlueprint cupid)
     {
         towerToBuild = cupid;
+        string result = selectedNode.TryToBuildTower();
+        Debug.Log(result);
         DeselectNode();
     }
 
@@ -41,13 +45,13 @@ public class BuildManager : MonoBehaviour
         selectedNode = node;
         towerToBuild = null;
 
-        //nodeUI.SetTarget(node);
+        _nodeUI.ActivateNodeUI(node);
     }
 
     public void DeselectNode()
     {
         selectedNode = null;
-        //nodeUI.Hide();
+        _nodeUI.DeactivateNodeUI();
     }
 
     public TowerBlueprint GetTowerToBuild()

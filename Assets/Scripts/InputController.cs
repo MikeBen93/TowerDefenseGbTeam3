@@ -6,51 +6,76 @@ public class InputController : MonoBehaviour
 {
     [SerializeField] private string _nodeTag = "Node";
 
-    private BuildManager buildManager;
+    private BuildManager _buildManager;
+    private NodeUI _nodeUI;
+    private Ray _rayFromCamera;
+    private RaycastHit _hitFromCameraRay;
+
 
     private void Start()
     {
-        buildManager = BuildManager.instance;
+        _buildManager = BuildManager.instance;
     }
 
     private void Update()
     {
         if(Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
         {
-            RaycastToNode(Input.touches[0].position);
+            CheckRaycast(Input.touches[0].position);
             return;
         }
 
 #if UNITY_EDITOR
         if (Input.GetMouseButtonDown(0))
         {
-            RaycastToNode(Input.mousePosition);
+            CheckRaycast(Input.mousePosition);
             return;
         }
 #endif
     }
 
-
-    private void RaycastToNode(Vector2 touchPosition)
+    private void CheckRaycast(Vector2 touchPosition)
     {
-        Ray ray = Camera.main.ScreenPointToRay(touchPosition);
-        RaycastHit hit;
+        _rayFromCamera = Camera.main.ScreenPointToRay(touchPosition);
 
-        if (!Physics.Raycast(ray, out hit))
+        if (!Physics.Raycast(_rayFromCamera, out _hitFromCameraRay))
         {
             return;
         }
 
-        //Debug.Log(hit.collider.gameObject.name);
+        //if(hitFromCameraRay.collider == null)
+        //{
+        //    return;
+        //}
 
-        if (hit.collider != null && hit.collider.CompareTag(_nodeTag))//add below compare if tower already exists
+        if(_hitFromCameraRay.collider.CompareTag(_nodeTag))
         {
-            
-            Node node = hit.collider.GetComponent<Node>();
+            Node node = _hitFromCameraRay.collider.GetComponent<Node>();
 
-            string result = node.TryToBuildTower();
-            Debug.Log(result);
+            _buildManager.SelectNode(node);
+
+            return;
         }
-
     }
+    //private void RaycastToNode(Vector2 touchPosition)
+    //{
+    //    _rayFromCamera = Camera.main.ScreenPointToRay(touchPosition);
+
+    //    if (!Physics.Raycast(_rayFromCamera, out _hitFromCameraRay))
+    //    {
+    //        return;
+    //    }
+
+    //    //Debug.Log(hit.collider.gameObject.name);
+
+    //    if (_hitFromCameraRay.collider != null && _hitFromCameraRay.collider.CompareTag(_nodeTag))//add below compare if tower already exists
+    //    {
+            
+    //        Node node = _hitFromCameraRay.collider.GetComponent<Node>();
+
+    //        string result = node.TryToBuildTower();
+    //        Debug.Log(result);
+    //    }
+
+    //}
 }

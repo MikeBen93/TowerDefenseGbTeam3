@@ -5,19 +5,14 @@ using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
-    //public TowerBlueprint standardCupid;
-    //public TowerBlueprint rocketCupid;
     public TowerBlueprint redLaserCupid;
     public TowerBlueprint blueLaserCupid;
 
-    //public Button standardCupidButton;
-    //public Button rocketCupidButton;
     public Button redLaserCupidButton;
     public Button blueLaserCupidButton;
 
-    //public Text standardCupidCostText;
-    //public Text rocketCupidCostText;
-    //public Text laserCupidCostText;
+    public Text redLaserCupidCostText;
+    public Text blueLaserCupidCostText;
 
     private BuildManager _buildManager;
 
@@ -28,21 +23,12 @@ public class Shop : MonoBehaviour
 
     private void Update()
     {
-        //standardCupidButton.enabled = PlayerStats.Money >= standardCupid.cost;
-        //rocketCupidButton.enabled = PlayerStats.Money >= rocketCupid.cost;
+        redLaserCupidCostText.text = redLaserCupid.cost.ToString() + "$";
+        blueLaserCupidCostText.text = blueLaserCupid.cost.ToString() + "$";
+
         redLaserCupidButton.interactable = PlayerStats.Money >= redLaserCupid.cost;
         blueLaserCupidButton.interactable = PlayerStats.Money >= blueLaserCupid.cost;
     }
-
-    //public void SelectStandardCupid()
-    //{
-    //    _buildManager.SelectTowerToBuild(standardCupid);
-    //}
-
-    //public void SelectRocketCupid()
-    //{
-    //    _buildManager.SelectTowerToBuild(rocketCupid);
-    //}
 
     public void SelectRedLaserCupid()
     {

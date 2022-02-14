@@ -18,13 +18,14 @@ public class Node : MonoBehaviour
 
     private Color defaultColor;
     private Renderer rend;
-    private BuildManager buildManager;
+    private BuildManager _buildManager;
+
 
     private void Start()
     {
         rend = GetComponent<Renderer>();
         defaultColor = rend.material.color;
-        buildManager = BuildManager.instance;
+        _buildManager = BuildManager.instance;
     }
 
     public Vector3 GetBuildPosition()
@@ -53,16 +54,21 @@ public class Node : MonoBehaviour
 
     public string TryToBuildTower()
     {
-        if (!buildManager.CanBuild)
+        if (!_buildManager.CanBuild)
         {
             return "Tower is not choosen";
         }
 
-        if(!buildManager.HasMoney)
+        if(tower != null )
+        {
+            return "Tower is already build";
+        }
+
+        if(!_buildManager.HasMoney)
         {
             return "Not enough money";
         }
-        TowerBlueprint towerToBuild = buildManager.GetTowerToBuild();
+        TowerBlueprint towerToBuild = _buildManager.GetTowerToBuild();
         BuildTower(towerToBuild);
         ChangeNodeColor(towerToBuild.prefab.GetComponent<Tower>().enemyTag);
 
@@ -71,20 +77,19 @@ public class Node : MonoBehaviour
 
     private void BuildTower(TowerBlueprint blueprint)
     {
-        //if (PlayerStats.Money < blueprint.cost)
-        //{
-        //    Debug.Log("NOT ENOUGH MONEY TO BUILD");
-        //    return;
-        //}
-
         PlayerStats.Money -= blueprint.cost;
 
         GameObject createdTower = Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);
         tower = createdTower;
 
         towerBlueprint = blueprint;
+    }
 
-        //GameObject effect = Instantiate(buildManager.buildEffect, GetBuildPosition(), Quaternion.identity);
-        //estroy(effect, 4f);
+    public void SellTower()
+    {
+        PlayerStats.Money += towerBlueprint.GetSellAmount();
+        rend.material.color = defaultColor;
+        Destroy(tower);
+        towerBlueprint = null;
     }
 }
