@@ -14,6 +14,11 @@ public class Tower : MonoBehaviour
     [Header("General")]
     public float range = 15f;
 
+    [Header("Use bullets (default)")]
+    public GameObject bulletPrefab;
+    public float fireRate = 1f;
+    private float fireCountdown = 0;
+
     [Header("Use laser")]
     public bool useLaser = false;
 
@@ -85,6 +90,15 @@ public class Tower : MonoBehaviour
         if (useLaser)
         {
             Laser();
+        } else
+        {
+            if(fireCountdown <= 0)
+            {
+                Shoot();
+                fireCountdown = 1 / fireRate;
+            }
+
+            fireCountdown -= Time.deltaTime;
         }
     }
 
@@ -115,5 +129,19 @@ public class Tower : MonoBehaviour
 
         //impactEffect.transform.position = _target.position + dir.normalized * 1f;
         //impactEffect.transform.rotation = Quaternion.LookRotation(dir);
+    }
+
+    private void Shoot()
+    {
+        GameObject bulletGO = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Bullet bullet = bulletGO.GetComponent<Bullet>();
+
+        if (bullet != null) bullet.SetAim(_target);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, range);
     }
 }

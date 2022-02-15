@@ -570,7 +570,7 @@ GameObject:
   - component: {fileID: 156431478}
   - component: {fileID: 156431477}
   m_Layer: 0
-  m_Name: ShopRedLaserCupidText
+  m_Name: LaserTowerCostText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -700,16 +700,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa907d0f1efa8634fa1af8f009e0edde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redLaserCupid:
-    prefab: {fileID: 6941440261116734179, guid: ff2ea2166b439424f8cd3e9a3365f2d7, type: 3}
+  laserTower:
+    prefab: {fileID: 6623846213659933248, guid: fa62a8c4d552cda479324284e136b88b, type: 3}
     cost: 100
-  blueLaserCupid:
-    prefab: {fileID: 6941440261116734179, guid: 2037c6cb461a8ae44a02a77b21171e2c, type: 3}
+  plasmaTower:
+    prefab: {fileID: 2298470444541065647, guid: 0bae11645e7a7484896dfbbb2cafed13, type: 3}
     cost: 100
-  redLaserCupidButton: {fileID: 280229163}
-  blueLaserCupidButton: {fileID: 1141112376}
-  redLaserCupidCostText: {fileID: 156431477}
-  blueLaserCupidCostText: {fileID: 1391736387}
+  buyLaserTowerButton: {fileID: 280229163}
+  buyPlasmaTowerButton: {fileID: 1141112376}
+  laserTowerCostText: {fileID: 156431477}
+  plasmaTowerCostText: {fileID: 1391736387}
 --- !u!114 &231001229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1063,7 +1063,7 @@ GameObject:
   - component: {fileID: 280229163}
   - component: {fileID: 280229162}
   m_Layer: 0
-  m_Name: ShopRedLaserCupidButton
+  m_Name: BuyLaserTowerButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1155,7 +1155,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 231001228}
         m_TargetAssemblyTypeName: Shop, Assembly-CSharp
-        m_MethodName: SelectRedLaserCupid
+        m_MethodName: SelectLaserTower
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2075,7 +2075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58e527fd032415e439119a6a1b7cce8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShowTutorial: 1
+  ShowTutorial: 0
   tutorialUI: {fileID: 781886272}
   tutorials:
   - sceneName: Level01
@@ -2107,16 +2107,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - enemy: {fileID: 4427740072520333583, guid: 9ff9250ea6a37f942b76f9e66ae139f0, type: 3}
+  - enemy: {fileID: 6408497559615290737, guid: e153908ade6dd6c46aac536ac7c1352b, type: 3}
     count: 5
     rate: 1.5
-  - enemy: {fileID: 4427740072520333583, guid: 9ff9250ea6a37f942b76f9e66ae139f0, type: 3}
+  - enemy: {fileID: 6408497559615290737, guid: e153908ade6dd6c46aac536ac7c1352b, type: 3}
     count: 7
     rate: 1
   - enemy: {fileID: 6305114470508758586, guid: d3428dd9d49d6e745b93cd8e9b8ed525, type: 3}
     count: 4
     rate: 4
-  - enemy: {fileID: 4427740072520333583, guid: 9ff9250ea6a37f942b76f9e66ae139f0, type: 3}
+  - enemy: {fileID: 6408497559615290737, guid: e153908ade6dd6c46aac536ac7c1352b, type: 3}
     count: 10
     rate: 1.5
   - enemy: {fileID: 6305114470508758586, guid: d3428dd9d49d6e745b93cd8e9b8ed525, type: 3}
@@ -2125,7 +2125,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 1727449963}
   waveCountdownText: {fileID: 1475292152}
   gameController: {fileID: 607069959}
-  timeBetweenWaves: 10
+  timeBetweenWaves: 2
 --- !u!114 &607069961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3323,7 +3323,7 @@ GameObject:
   - component: {fileID: 1141112376}
   - component: {fileID: 1141112375}
   m_Layer: 0
-  m_Name: ShopBlueLaserCupidButton
+  m_Name: BuyPlasmaTowerButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3415,7 +3415,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 231001228}
         m_TargetAssemblyTypeName: Shop, Assembly-CSharp
-        m_MethodName: SelectBlueLaserCupid
+        m_MethodName: SelectPlasmaTower
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3866,7 +3866,7 @@ GameObject:
   - component: {fileID: 1391736388}
   - component: {fileID: 1391736387}
   m_Layer: 0
-  m_Name: ShopBlueLaserCupidText
+  m_Name: PlasmaTowerCostText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

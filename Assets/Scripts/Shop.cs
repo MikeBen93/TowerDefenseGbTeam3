@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
-    public TowerBlueprint redLaserCupid;
-    public TowerBlueprint blueLaserCupid;
+    public TowerBlueprint laserTower;
+    public TowerBlueprint plasmaTower;
 
-    public Button redLaserCupidButton;
-    public Button blueLaserCupidButton;
+    public Button buyLaserTowerButton;
+    public Button buyPlasmaTowerButton;
 
-    public Text redLaserCupidCostText;
-    public Text blueLaserCupidCostText;
+    public Text laserTowerCostText;
+    public Text plasmaTowerCostText;
 
     private BuildManager _buildManager;
 
@@ -23,20 +23,20 @@ public class Shop : MonoBehaviour
 
     private void Update()
     {
-        redLaserCupidCostText.text = redLaserCupid.cost.ToString() + "$";
-        blueLaserCupidCostText.text = blueLaserCupid.cost.ToString() + "$";
+        laserTowerCostText.text = laserTower.cost.ToString() + "$";
+        plasmaTowerCostText.text = plasmaTower.cost.ToString() + "$";
 
-        redLaserCupidButton.interactable = PlayerStats.Money >= redLaserCupid.cost;
-        blueLaserCupidButton.interactable = PlayerStats.Money >= blueLaserCupid.cost;
+        buyLaserTowerButton.interactable = PlayerStats.Money >= laserTower.cost;
+        buyPlasmaTowerButton.interactable = PlayerStats.Money >= plasmaTower.cost;
     }
 
-    public void SelectRedLaserCupid()
+    public void SelectLaserTower()
     {
-        _buildManager.SelectTowerToBuild(redLaserCupid);
+        _buildManager.SelectTowerToBuild(laserTower);
     }
 
-    public void SelectBlueLaserCupid()
+    public void SelectPlasmaTower()
     {
-        _buildManager.SelectTowerToBuild(blueLaserCupid);
+        _buildManager.SelectTowerToBuild(plasmaTower);
     }
 }

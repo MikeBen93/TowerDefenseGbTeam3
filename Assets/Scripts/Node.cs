@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Node : MonoBehaviour
 {
-    public Color redTowerColor;
-    public Color blueTowerColor;
+    public Color laserTowerColor;
+    public Color plasmaTowerColor;
     public Color purpleTowerColor;
     public Vector3 positionOffset; // offset of the tower relative to node position
 
@@ -38,10 +38,10 @@ public class Node : MonoBehaviour
         switch(enemyColor)
         {
             case "RedEnemy":
-                rend.material.color = redTowerColor;
+                rend.material.color = laserTowerColor;
                 break;
             case "BlueEnemy":
-                rend.material.color = blueTowerColor;
+                rend.material.color = plasmaTowerColor;
                 break;
             case "PurpleEnemy":
                 rend.material.color = purpleTowerColor;
