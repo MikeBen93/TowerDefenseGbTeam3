@@ -83,7 +83,7 @@ MonoBehaviour:
   damageOverTime: 30
   slowAmount: 0.5
   lineRenderer: {fileID: 6623846213659933249}
-  enemyTag: RedEnemy
+  enemyTag: BlueEnemy
   turnSpeed: 30
   firePoint: {fileID: 6623846212460850852}
 --- !u!120 &6623846213659933249
