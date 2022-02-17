@@ -22,10 +22,14 @@ public class Tower : MonoBehaviour
     [Header("Use laser")]
     public bool useLaser = false;
 
-    public int damageOverTime = 30;
+    public float initialDamageOverTime = 10.0f;
     public float slowAmount = .5f;
 
     public LineRenderer lineRenderer;
+
+    [SerializeField] private float _pointingTime;
+    [SerializeField] private float _lastPointingTime;
+    [SerializeField] private float _currentDamageOverTime;
     //public ParticleSystem impactEffect;
     //public Light impactLight;
 
@@ -61,6 +65,9 @@ public class Tower : MonoBehaviour
         {
             _target = nearestEnemy.transform;
             _targetEnemy = _target.GetComponent<Enemy>();
+            _currentDamageOverTime = initialDamageOverTime;
+            _pointingTime = 0f;
+            _lastPointingTime = 0f;
         }
         else
         {
@@ -112,7 +119,7 @@ public class Tower : MonoBehaviour
 
     private void Laser()
     {
-        _targetEnemy.TakeDamage(damageOverTime * Time.deltaTime);
+        _targetEnemy.TakeDamage(_currentDamageOverTime * Time.deltaTime);
         _targetEnemy.Slow(slowAmount);
 
         //below code related to graphics
@@ -129,6 +136,18 @@ public class Tower : MonoBehaviour
 
         //impactEffect.transform.position = _target.position + dir.normalized * 1f;
         //impactEffect.transform.rotation = Quaternion.LookRotation(dir);
+        DamageOverTimeRise();
+    }
+
+    private void DamageOverTimeRise()
+    {
+        _pointingTime += Time.deltaTime;
+
+        if(_pointingTime - _lastPointingTime >= 1f)
+        {
+            _lastPointingTime++;
+            _currentDamageOverTime += initialDamageOverTime * 0.5f;
+        }
     }
 
     private void Shoot()
