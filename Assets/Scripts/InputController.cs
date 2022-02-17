@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class InputController : MonoBehaviour
 {
@@ -21,6 +22,11 @@ public class InputController : MonoBehaviour
     {
         if(Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
         {
+            if (EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId))
+            {
+                Debug.Log("Touched the UI");
+                return;
+            }
             CheckRaycast(Input.touches[0].position);
             return;
         }
@@ -28,6 +34,11 @@ public class InputController : MonoBehaviour
 #if UNITY_EDITOR
         if (Input.GetMouseButtonDown(0))
         {
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                Debug.Log("Clicked on the UI");
+                return;
+            }
             CheckRaycast(Input.mousePosition);
             return;
         }
@@ -56,7 +67,11 @@ public class InputController : MonoBehaviour
 
             return;
         }
+
+        _buildManager.DeselectNode();
     }
+
+
     //private void RaycastToNode(Vector2 touchPosition)
     //{
     //    _rayFromCamera = Camera.main.ScreenPointToRay(touchPosition);

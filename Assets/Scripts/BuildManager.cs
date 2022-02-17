@@ -19,7 +19,7 @@ public class BuildManager : MonoBehaviour
     private TowerBlueprint towerToBuild;
     private Node selectedNode;
 
-    public NodeUI _nodeUI;
+    public NodeUI nodeUI;
 
     //property to check if we have chosen towe to build
     public bool CanBuild { get { return towerToBuild != null; } }
@@ -45,13 +45,13 @@ public class BuildManager : MonoBehaviour
         selectedNode = node;
         towerToBuild = null;
 
-        _nodeUI.ActivateNodeUI(node);
+        nodeUI.ActivateNodeUI(node);
     }
 
     public void DeselectNode()
     {
         selectedNode = null;
-        _nodeUI.DeactivateNodeUI();
+        nodeUI.DeactivateNodeUI();
     }
 
     public TowerBlueprint GetTowerToBuild()

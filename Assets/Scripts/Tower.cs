@@ -154,7 +154,6 @@ public class Tower : MonoBehaviour
 
         if(_pointingTime - _lastPointingTime >= 0.5f)
         {
-            Debug.Log(_lastPointingTime);
             _lastPointingTime++;
             _currentDamageOverTime += initialDamageOverTime * 0.5f;
         }

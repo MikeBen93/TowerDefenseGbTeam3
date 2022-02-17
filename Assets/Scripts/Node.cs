@@ -38,10 +38,10 @@ public class Node : MonoBehaviour
         switch(enemyColor)
         {
             case "RedEnemy":
-                rend.material.color = laserTowerColor;
+                rend.material.color = plasmaTowerColor;
                 break;
             case "BlueEnemy":
-                rend.material.color = plasmaTowerColor;
+                rend.material.color = laserTowerColor;
                 break;
             case "PurpleEnemy":
                 rend.material.color = purpleTowerColor;

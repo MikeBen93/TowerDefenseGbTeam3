@@ -95,8 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e285c6c0512193140aef2560e9f28162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserTowerColor: {r: 1, g: 0, b: 0, a: 0}
-  plasmaTowerColor: {r: 0, g: 0.04080534, b: 1, a: 0}
+  laserTowerColor: {r: 0, g: 0.065570354, b: 1, a: 0}
+  plasmaTowerColor: {r: 1, g: 0.063268006, b: 0, a: 0}
   purpleTowerColor: {r: 0.68931866, g: 0, b: 1, a: 0}
   positionOffset: {x: 0, y: 2, z: 0}
   tower: {fileID: 0}
