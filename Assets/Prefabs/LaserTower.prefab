@@ -83,6 +83,9 @@ MonoBehaviour:
   initialDamageOverTime: 10
   slowAmount: 0.5
   lineRenderer: {fileID: 6623846213659933249}
+  _pointingTime: 0
+  _lastPointingTime: 0
+  _currentDamageOverTime: 0
   enemyTag: RedEnemy
   turnSpeed: 30
   firePoint: {fileID: 6623846212460850852}
@@ -125,7 +128,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Positions:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}

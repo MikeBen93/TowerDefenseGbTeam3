@@ -6,6 +6,7 @@ public class Tower : MonoBehaviour
 {
     private Transform _target;
     private Enemy _targetEnemy;
+    private GameObject _selectedEnemy;
 
     private Vector3 _dir;
     private Quaternion _lookRotation;
@@ -16,7 +17,7 @@ public class Tower : MonoBehaviour
 
     [Header("Use bullets (default)")]
     public GameObject bulletPrefab;
-    public float fireRate = 1f;
+    public float fireRate = 2f;
     private float fireCountdown = 0;
 
     [Header("Use laser")]
@@ -43,6 +44,8 @@ public class Tower : MonoBehaviour
     private void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.25f);
+
+        _currentDamageOverTime = initialDamageOverTime;
     }
 
     private void UpdateTarget()
@@ -61,9 +64,15 @@ public class Tower : MonoBehaviour
             }
         }
 
+        if(nearestEnemy == _selectedEnemy)
+        {
+            return;
+        }
+
         if (nearestEnemy != null && shortestDistance <= range)
         {
-            _target = nearestEnemy.transform;
+            _selectedEnemy = nearestEnemy;
+            _target = _selectedEnemy.transform;
             _targetEnemy = _target.GetComponent<Enemy>();
             _currentDamageOverTime = initialDamageOverTime;
             _pointingTime = 0f;
@@ -97,6 +106,7 @@ public class Tower : MonoBehaviour
         if (useLaser)
         {
             Laser();
+            DamageOverTimeRise();
         } else
         {
             if(fireCountdown <= 0)
@@ -136,15 +146,15 @@ public class Tower : MonoBehaviour
 
         //impactEffect.transform.position = _target.position + dir.normalized * 1f;
         //impactEffect.transform.rotation = Quaternion.LookRotation(dir);
-        DamageOverTimeRise();
     }
 
     private void DamageOverTimeRise()
     {
         _pointingTime += Time.deltaTime;
 
-        if(_pointingTime - _lastPointingTime >= 1f)
+        if(_pointingTime - _lastPointingTime >= 0.5f)
         {
+            Debug.Log(_lastPointingTime);
             _lastPointingTime++;
             _currentDamageOverTime += initialDamageOverTime * 0.5f;
         }
