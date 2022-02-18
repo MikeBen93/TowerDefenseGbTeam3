@@ -56,7 +56,7 @@ MonoBehaviour:
   _lastPointingTime: 0
   _currentDamageOverTime: 0
   enemyTag: RedEnemy
-  turnSpeed: 30
+  turnSpeed: 180
   firePoint: {fileID: 2298470445104371766}
 --- !u!1 &2298470445104371761
 GameObject:
