@@ -152,7 +152,7 @@ public class Tower : MonoBehaviour
     {
         _pointingTime += Time.deltaTime;
 
-        if(_pointingTime - _lastPointingTime >= 0.5f)
+        if(_pointingTime - _lastPointingTime >= 1f)
         {
             _lastPointingTime++;
             _currentDamageOverTime += initialDamageOverTime * 0.5f;
