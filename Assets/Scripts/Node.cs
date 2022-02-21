@@ -70,7 +70,7 @@ public class Node : MonoBehaviour
         }
         TowerBlueprint towerToBuild = _buildManager.GetTowerToBuild();
         BuildTower(towerToBuild);
-        ChangeNodeColor(towerToBuild.prefab.GetComponent<Tower>().enemyTag);
+        //ChangeNodeColor(towerToBuild.prefab.GetComponent<Tower>().enemyTag);
 
         return "Tower built";
     }
