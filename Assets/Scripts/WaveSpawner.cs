@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System;
@@ -54,7 +54,7 @@ public class WaveSpawner : MonoBehaviour
         _countdown -= Time.deltaTime;
         _countdown = Mathf.Clamp(_countdown, 0, Mathf.Infinity);
 
-        waveCountdownText.text = string.Format("Wave countdown: {0:00.00}", _countdown);
+        waveCountdownText.text = string.Format("До следующей волны: {0:00.00}", _countdown);
     }
 
     IEnumerator SpawnWave()

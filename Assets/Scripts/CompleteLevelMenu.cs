@@ -4,15 +4,19 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class GameOverMenu : MonoBehaviour
+public class CompleteLevelMenu : MonoBehaviour
 {
     //public SceneFader sceneFader;
     public string mainMeneSceneName = "MainMenu";
 
-    public void Retry()
+    public string nextLevel = "MainMenu";
+    public int levelToUnlock = 2;
+
+    public void Continue()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        //sceneFader.FadeTo(SceneManager.GetActiveScene().name);
+        PlayerPrefs.SetInt("levelReached", levelToUnlock);
+        //sceneFader.FadeTo(nextLevel);
+        SceneManager.LoadScene(nextLevel);
     }
 
     public void Menu()

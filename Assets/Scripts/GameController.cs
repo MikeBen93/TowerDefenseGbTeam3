@@ -9,8 +9,8 @@ public class GameController : MonoBehaviour
     public bool ShowTutorial = true;
 
     public GameObject tutorialUI;
-    //public GameObject gameOverUI;
-    //public GameObject completeLevelUI;
+    public GameObject gameOverUI;
+    public GameObject completeLevelUI;
 
     [SerializeField] private Tutorial[] tutorials;
 
@@ -34,15 +34,14 @@ public class GameController : MonoBehaviour
     private void EndGame()
     {
         GameIsOver = true;
-        Debug.Log("GAME IS OVER");
-        //gameOverUI.SetActive(true);
+        gameOverUI.SetActive(true);
     }
 
     public void WinLevel()
     {
         GameIsOver = true;
         Debug.Log("GAME IS OVER");
-        //completeLevelUI.SetActive(true);
+        completeLevelUI.SetActive(true);
     }
 
     public void ShowTutorialUI(string sceneName, int nextWaveNumber)
