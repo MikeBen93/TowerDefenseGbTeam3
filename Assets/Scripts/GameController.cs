@@ -40,7 +40,6 @@ public class GameController : MonoBehaviour
     public void WinLevel()
     {
         GameIsOver = true;
-        Debug.Log("GAME IS OVER");
         completeLevelUI.SetActive(true);
     }
 
