@@ -13,6 +13,6 @@ public class TowerBlueprint
 
     public int GetSellAmount()
     {
-        return cost / 2;
+        return cost * 4 / 5;
     }
 }

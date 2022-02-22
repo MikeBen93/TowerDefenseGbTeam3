@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6faef08771aa56843a62916595cebd20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 15
+  range: 8
   bulletPrefab: {fileID: 7506923547514773519, guid: a116b4fca9732604f94cc6f086243107, type: 3}
   fireRate: 1
   useLaser: 0
@@ -56,7 +56,7 @@ MonoBehaviour:
   _lastPointingTime: 0
   _currentDamageOverTime: 0
   enemyTag: RedEnemy
-  turnSpeed: 180
+  turnSpeed: 10
   firePoint: {fileID: 2298470445104371766}
 --- !u!1 &2298470445104371761
 GameObject:

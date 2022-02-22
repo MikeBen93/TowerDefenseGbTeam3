@@ -76,18 +76,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6faef08771aa56843a62916595cebd20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 8.56
+  range: 8
   bulletPrefab: {fileID: 0}
   fireRate: 1
   useLaser: 1
-  initialDamageOverTime: 8
-  slowAmount: 0.5
+  initialDamageOverTime: 30
+  slowAmount: 0
   lineRenderer: {fileID: 6623846213659933249}
   _pointingTime: 0
   _lastPointingTime: 0
   _currentDamageOverTime: 0
   enemyTag: BlueEnemy
-  turnSpeed: 90
+  turnSpeed: 5
   firePoint: {fileID: 6623846212460850852}
 --- !u!120 &6623846213659933249
 LineRenderer:
