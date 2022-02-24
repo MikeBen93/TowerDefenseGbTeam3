@@ -24,7 +24,6 @@ public class InputController : MonoBehaviour
         {
             if (EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId))
             {
-                Debug.Log("Touched the UI");
                 return;
             }
             CheckRaycast(Input.touches[0].position);
@@ -36,7 +35,6 @@ public class InputController : MonoBehaviour
         {
             if (EventSystem.current.IsPointerOverGameObject())
             {
-                Debug.Log("Clicked on the UI");
                 return;
             }
             CheckRaycast(Input.mousePosition);
@@ -70,27 +68,4 @@ public class InputController : MonoBehaviour
 
         _buildManager.DeselectNode();
     }
-
-
-    //private void RaycastToNode(Vector2 touchPosition)
-    //{
-    //    _rayFromCamera = Camera.main.ScreenPointToRay(touchPosition);
-
-    //    if (!Physics.Raycast(_rayFromCamera, out _hitFromCameraRay))
-    //    {
-    //        return;
-    //    }
-
-    //    //Debug.Log(hit.collider.gameObject.name);
-
-    //    if (_hitFromCameraRay.collider != null && _hitFromCameraRay.collider.CompareTag(_nodeTag))//add below compare if tower already exists
-    //    {
-            
-    //        Node node = _hitFromCameraRay.collider.GetComponent<Node>();
-
-    //        string result = node.TryToBuildTower();
-    //        Debug.Log(result);
-    //    }
-
-    //}
 }

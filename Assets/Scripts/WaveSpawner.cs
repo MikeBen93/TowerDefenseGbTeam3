@@ -12,7 +12,8 @@ public class WaveSpawner : MonoBehaviour
 
     public Transform spawnPoint;
 
-    public Text waveCountdownText;
+    public Text waveNumberText;
+    public Image heartCountdownImage;
 
     public GameController gameController;
 
@@ -29,6 +30,7 @@ public class WaveSpawner : MonoBehaviour
     }
     private void Update()
     {
+        
         //checking if we killed all enemies in wave 
         if (enemiesAlive > 0) return;
 
@@ -46,6 +48,7 @@ public class WaveSpawner : MonoBehaviour
 
         if (_countdown <= 0f)
         {
+            waveNumberText.text = (_waveIndex + 1).ToString() + "/" + waves.Length.ToString();
             StartCoroutine(SpawnWave());
             _countdown = timeBetweenWaves;
             return;
@@ -54,10 +57,12 @@ public class WaveSpawner : MonoBehaviour
         _countdown -= Time.deltaTime;
         _countdown = Mathf.Clamp(_countdown, 0, Mathf.Infinity);
 
-        waveCountdownText.text = string.Format("До следующей волны: {0:00.00}", _countdown);
+        heartCountdownImage.fillAmount = 1 - _countdown / timeBetweenWaves;
+
+    //waveCountdownText.text = string.Format("{0:00.00}", _countdown);
     }
 
-    IEnumerator SpawnWave()
+IEnumerator SpawnWave()
     {
         PlayerStats.Rounds++;
 
