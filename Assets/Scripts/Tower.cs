@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,6 +14,7 @@ public class Tower : MonoBehaviour
 
     [Header("General")]
     public float range = 15f;
+    public string[] enemyTypes = new string[] { "RedEnemy" };
 
     [Header("Use bullets (default)")]
     public GameObject bulletPrefab;
@@ -36,9 +37,11 @@ public class Tower : MonoBehaviour
 
     [Header("Unity Setup Fields")]
 
-    public string enemyTag = "RedEnemy";
+    public bool turnable = true;
     public float turnSpeed = 10f;
 
+
+    private string enemyTag = "Enemy";
     public Transform firePoint;
 
     private void Start()
@@ -50,11 +53,24 @@ public class Tower : MonoBehaviour
 
     private void UpdateTarget()
     {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
+        GameObject[] allEnemies = GameObject.FindGameObjectsWithTag(enemyTag);
+
+        List<GameObject> relatedEnemies = new List<GameObject>();
+
+        foreach(GameObject enemy in allEnemies)
+        {
+            string currentEnemyType = enemy.GetComponent<Enemy>().enemyType;
+            if (Array.Exists(enemyTypes, n => n == currentEnemyType))
+            {
+                relatedEnemies.Add(enemy);
+            }
+        }
+
+
         float shortestDistance = Mathf.Infinity;
         GameObject nearestEnemy = null;
 
-        foreach (GameObject enemy in enemies)
+        foreach (GameObject enemy in relatedEnemies)
         {
             float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
             if (distanceToEnemy < shortestDistance)
@@ -101,7 +117,10 @@ public class Tower : MonoBehaviour
         }
 
         //target lock on
-        LockOnTarget();
+        if(turnable)
+        {
+            LockOnTarget();
+        }
 
         if (useLaser)
         {

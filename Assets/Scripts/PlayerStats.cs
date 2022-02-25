@@ -7,9 +7,9 @@ public class PlayerStats : MonoBehaviour
     public static int Money;
     public int startMoney = 400;
 
-    public static int Lives;
-    public int startLives = 20;
-    public static int initialLives;
+    public static float Lives;
+    public float startLives = 20;
+    public static float initialLives;
 
     public static int Rounds;
 
@@ -24,6 +24,6 @@ public class PlayerStats : MonoBehaviour
 
     public static float GetRemainPercatnage()
     {
-        return Lives / (float)initialLives * 100f;
+        return Lives / initialLives * 100f;
     }
 }

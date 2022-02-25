@@ -30,7 +30,6 @@ public class BuildManager : MonoBehaviour
     {
         towerToBuild = cupid;
         string result = selectedNode.TryToBuildTower();
-        Debug.Log(result);
         DeselectNode();
     }
 

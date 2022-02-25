@@ -77,6 +77,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 8
+  enemyTypes:
+  - BlueEnemy
+  - PurpleEnemy
   bulletPrefab: {fileID: 0}
   fireRate: 1
   useLaser: 1
@@ -86,7 +89,6 @@ MonoBehaviour:
   _pointingTime: 0
   _lastPointingTime: 0
   _currentDamageOverTime: 0
-  enemyTag: BlueEnemy
   turnSpeed: 5
   firePoint: {fileID: 6623846212460850852}
 --- !u!120 &6623846213659933249

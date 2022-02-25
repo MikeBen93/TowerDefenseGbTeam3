@@ -26,9 +26,6 @@ public class GameController : MonoBehaviour
         {
             EndGame();
         }
-
-        //if (Input.GetKeyDown("e")) EndGame();
-
     }
 
     private void EndGame()
