@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
     public int worth = 50; //amount of money gained from enemy killing
     //public GameObject deathEffect;
     [Header("Unity Stuff")]
-    //public Image healthBar;
+    public Image healthBar;
     private bool isDead = false;
 
     private void Start()
@@ -26,7 +26,7 @@ public class Enemy : MonoBehaviour
     {
         health -= amount;
 
-        //healthBar.fillAmount = health / startHealth;
+        healthBar.fillAmount = health / startHealth;
 
         if (health <= 0 && !isDead)
         {
