@@ -335,6 +335,7 @@ GameObject:
   - component: {fileID: 3328714934668599264}
   - component: {fileID: 482393929976038669}
   - component: {fileID: 1716450271379528168}
+  - component: {fileID: 5010968609753193504}
   m_Layer: 0
   m_Name: Enemy_Purple
   m_TagString: Enemy
@@ -394,6 +395,21 @@ MonoBehaviour:
   Health: 100
   damage: 2
   worth: 10
+  healthBar: {fileID: 0}
+--- !u!64 &5010968609753193504
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8153226696454368382}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &8430691023533988334
 GameObject:
   m_ObjectHideFlags: 0

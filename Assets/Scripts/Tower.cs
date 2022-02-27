@@ -25,7 +25,6 @@ public class Tower : MonoBehaviour
     public bool useLaser = false;
 
     public float initialDamageOverTime = 10.0f;
-    public float slowAmount = .5f;
 
     public LineRenderer lineRenderer;
 
@@ -34,6 +33,11 @@ public class Tower : MonoBehaviour
     [SerializeField] private float _currentDamageOverTime;
     //public ParticleSystem impactEffect;
     //public Light impactLight;
+
+    [Header("Slowing effect")]
+    public bool hasSlowingEffect = false;
+
+    public float slowAmount = .5f;
 
     [Header("Unity Setup Fields")]
 
@@ -136,6 +140,11 @@ public class Tower : MonoBehaviour
 
             fireCountdown -= Time.deltaTime;
         }
+
+        if(hasSlowingEffect)
+        {
+
+        }
     }
 
     private void LockOnTarget()
@@ -146,10 +155,13 @@ public class Tower : MonoBehaviour
         transform.rotation = Quaternion.Euler(0f, _rotation.y, 0f);
     }
 
+    private void SlowDown()
+    {
+        _targetEnemy.Slow(slowAmount);
+    }
     private void Laser()
     {
         _targetEnemy.TakeDamage(_currentDamageOverTime * Time.deltaTime);
-        _targetEnemy.Slow(slowAmount);
 
         //below code related to graphics
         if (!lineRenderer.enabled)
