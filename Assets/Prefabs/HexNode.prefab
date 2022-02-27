@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 771119675371667802}
   - component: {fileID: 4403476823474228991}
   - component: {fileID: 1943511729636391477}
-  - component: {fileID: 952837049334522993}
-  - component: {fileID: 6703527810124107280}
   m_Layer: 0
   m_Name: HexNode
   m_TagString: Node
@@ -83,38 +81,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &952837049334522993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 141935881998539744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e285c6c0512193140aef2560e9f28162, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserTowerColor: {r: 0, g: 0.065570354, b: 1, a: 0}
-  plasmaTowerColor: {r: 1, g: 0.063268006, b: 0, a: 0}
-  purpleTowerColor: {r: 0.68931866, g: 0, b: 1, a: 0}
-  positionOffset: {x: 0, y: 2, z: 0}
-  tower: {fileID: 0}
-  towerBlueprint:
-    prefab: {fileID: 0}
-    cost: 0
-  isUpgraded: 0
---- !u!64 &6703527810124107280
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 141935881998539744}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5076798556035486163, guid: 5efef9b7b7ca70343a768a7ea2e1cc36, type: 3}
