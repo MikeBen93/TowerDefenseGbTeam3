@@ -17,6 +17,7 @@ public class Tower : MonoBehaviour
     public string[] enemyTypes = new string[] { "RedEnemy" };
 
     [Header("Use bullets (default)")]
+    public bool useBullets = true;
     public GameObject bulletPrefab;
     public float fireRate = 2f;
     private float fireCountdown = 0;
@@ -39,6 +40,16 @@ public class Tower : MonoBehaviour
 
     public float slowAmount = .5f;
 
+    [Header("Areal effect")]
+    public bool hasArealEffect = false;
+    private List<Enemy> _enemiesInArea;
+
+
+    [Header("Range visualization")]
+
+    [SerializeField] private bool hasSphereEffect = false;
+    [SerializeField] private Transform sphereEffect;
+
     [Header("Unity Setup Fields")]
 
     public bool turnable = true;
@@ -53,6 +64,12 @@ public class Tower : MonoBehaviour
         InvokeRepeating("UpdateTarget", 0f, 0.25f);
 
         _currentDamageOverTime = initialDamageOverTime;
+        _enemiesInArea = new List<Enemy>();
+
+        if(hasSphereEffect)
+        {
+            sphereEffect.localScale *= range;
+        }
     }
 
     private void UpdateTarget()
@@ -73,6 +90,21 @@ public class Tower : MonoBehaviour
 
         float shortestDistance = Mathf.Infinity;
         GameObject nearestEnemy = null;
+
+        if (hasArealEffect)
+        {
+            _enemiesInArea.Clear();
+
+            foreach (GameObject enemy in relatedEnemies)
+            {
+                float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
+                if(distanceToEnemy <= range)
+                {
+                    _enemiesInArea.Add(enemy.GetComponent<Enemy>());
+                }
+            }
+            return;
+        }
 
         foreach (GameObject enemy in relatedEnemies)
         {
@@ -106,7 +138,7 @@ public class Tower : MonoBehaviour
 
     private void Update()
     {
-        if (_target == null)
+        if (_target == null && _enemiesInArea.Count == 0)
         {
             if (useLaser)
             {
@@ -130,7 +162,9 @@ public class Tower : MonoBehaviour
         {
             Laser();
             DamageOverTimeRise();
-        } else
+        }
+
+        if(useBullets)
         {
             if(fireCountdown <= 0)
             {
@@ -141,9 +175,12 @@ public class Tower : MonoBehaviour
             fireCountdown -= Time.deltaTime;
         }
 
-        if(hasSlowingEffect)
+        if(hasArealEffect)
         {
-
+            foreach (Enemy enemy in _enemiesInArea)
+            {
+                SlowDown(enemy);
+            }
         }
     }
 
@@ -155,9 +192,9 @@ public class Tower : MonoBehaviour
         transform.rotation = Quaternion.Euler(0f, _rotation.y, 0f);
     }
 
-    private void SlowDown()
+    private void SlowDown(Enemy enemy)
     {
-        _targetEnemy.Slow(slowAmount);
+        enemy.Slow(slowAmount);
     }
     private void Laser()
     {
