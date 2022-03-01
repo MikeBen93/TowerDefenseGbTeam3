@@ -10,14 +10,14 @@ public class BuildManager : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.LogError("More the one BuildManager in scene");
+            Debug.LogError("More than one BuildManager in scene");
             return;
         }
         instance = this;
     }
 
     private TowerBlueprint towerToBuild;
-    private Node selectedNode;
+    [SerializeField] private Node selectedNode;
 
     public NodeUI nodeUI;
 
@@ -26,9 +26,9 @@ public class BuildManager : MonoBehaviour
     //property to check if we have enough money to build that tower
     public bool HasMoney { get { return PlayerStats.Money >= towerToBuild.cost; } }
 
-    public void SelectTowerToBuild(TowerBlueprint cupid)
+    public void SelectTowerToBuild(TowerBlueprint towerBlueprint)
     {
-        towerToBuild = cupid;
+        towerToBuild = towerBlueprint;
         string result = selectedNode.TryToBuildTower();
         DeselectNode();
     }

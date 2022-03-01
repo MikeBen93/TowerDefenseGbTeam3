@@ -2696,7 +2696,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6130438399313684841}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 2.507, z: 0}
+  m_LocalPosition: {x: 0, y: 1.675, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 5415341021115472717}
@@ -3061,7 +3061,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6816593126214924281}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.903, z: 0}
+  m_LocalPosition: {x: 0, y: 4.0709996, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6816593127903017048}
@@ -3079,7 +3079,7 @@ GameObject:
   - component: {fileID: 6816593127903017047}
   m_Layer: 0
   m_Name: ElectroTower
-  m_TagString: Untagged
+  m_TagString: ElectroTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3117,15 +3117,20 @@ MonoBehaviour:
   - PurpleEnemy
   - RedEnemy
   - BlueEnemy
+  useBullets: 1
   bulletPrefab: {fileID: 7506923547514773519, guid: e1aa7047adfd1c44a8021551207542bd, type: 3}
   fireRate: 2
   useLaser: 0
   initialDamageOverTime: 10
-  slowAmount: 0
   lineRenderer: {fileID: 0}
   _pointingTime: 0
   _lastPointingTime: 0
   _currentDamageOverTime: 0
+  hasSlowingEffect: 0
+  slowAmount: 0
+  hasArealEffect: 0
+  hasSphereEffect: 0
+  sphereEffect: {fileID: 0}
   turnable: 0
   turnSpeed: 10
   firePoint: {fileID: 6816593126214924282}

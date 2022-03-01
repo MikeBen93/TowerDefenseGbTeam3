@@ -11,7 +11,12 @@ public class NodeUI : MonoBehaviour
     [SerializeField] private GameObject _nodeTowerUI;
 
     private Node _choosenNode;
+    private CameraSeeker _cameraSeeker;
 
+    private void Start()
+    {
+        _cameraSeeker = CameraSeeker.instance;
+    }
     private void ActivateShopUI()
     {
         _nodeShopUI.SetActive(true);
@@ -37,7 +42,8 @@ public class NodeUI : MonoBehaviour
     {
         _choosenNode = node;
 
-        transform.position = node.transform.position;
+        transform.position = node.transform.position + (_cameraSeeker.GetCameraPosition - node.transform.position).normalized * 15;
+        transform.LookAt(_cameraSeeker.GetCameraPosition);
 
         if (node.tower == null)
         {

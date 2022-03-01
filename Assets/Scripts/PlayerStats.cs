@@ -11,7 +11,10 @@ public class PlayerStats : MonoBehaviour
     public float startLives = 20;
     public static float initialLives;
 
+    public static float Crystals;
+
     public static int Rounds;
+ 
 
     private void Start()
     {

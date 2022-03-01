@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class Node : MonoBehaviour
 {
-    public Color laserTowerColor;
-    public Color plasmaTowerColor;
-    public Color purpleTowerColor;
     public Vector3 positionOffset; // offset of the tower relative to node position
 
     [HideInInspector]
@@ -19,6 +16,7 @@ public class Node : MonoBehaviour
     private Color defaultColor;
     private Renderer rend;
     private BuildManager _buildManager;
+    
 
 
     private void Start()
@@ -31,25 +29,6 @@ public class Node : MonoBehaviour
     public Vector3 GetBuildPosition()
     {
         return transform.position + positionOffset;
-    }
-
-    public void ChangeNodeColor(string enemyColor)
-    {
-        switch(enemyColor)
-        {
-            case "RedEnemy":
-                rend.material.color = plasmaTowerColor;
-                break;
-            case "BlueEnemy":
-                rend.material.color = laserTowerColor;
-                break;
-            case "PurpleEnemy":
-                rend.material.color = purpleTowerColor;
-                break;
-            default:
-                rend.material.color = defaultColor;
-                break;
-        }
     }
 
     public string TryToBuildTower()
@@ -81,6 +60,8 @@ public class Node : MonoBehaviour
 
         GameObject createdTower = Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);
         tower = createdTower;
+
+        tower.GetComponent<Tower>().SetNewParameters(blueprint);
 
         towerBlueprint = blueprint;
     }

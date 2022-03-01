@@ -11,14 +11,13 @@ GameObject:
   - component: {fileID: 1202517686}
   - component: {fileID: 1202517689}
   - component: {fileID: 1202517688}
-  - component: {fileID: 1202517687}
   m_Layer: 0
   m_Name: MagnitTowerSphereEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1202517686
 Transform:
   m_ObjectHideFlags: 0
@@ -27,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1202517685}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.7, z: 0}
+  m_LocalPosition: {x: 0, y: -77.7, z: 0}
   m_LocalScale: {x: 200, y: 200, z: 200}
   m_Children: []
   m_Father: {fileID: 7331579370200855126}
@@ -82,19 +81,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &1202517687
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1202517685}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3109339898008180959
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,7 +107,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3109339898008180959}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 84.10871, y: 220.35748, z: 28.77771}
+  m_LocalPosition: {x: 84.10871, y: 145.35748, z: 28.77771}
   m_LocalScale: {x: 1, y: 2.0073943, z: 0.17202373}
   m_Children: []
   m_Father: {fileID: 7331579370200855126}
@@ -202,7 +188,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4255644629933379253}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 169.89038, z: 0}
+  m_LocalPosition: {x: 0, y: 94.89038, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7331579370200855126}
@@ -269,7 +255,7 @@ GameObject:
   - component: {fileID: 7076766807341274547}
   m_Layer: 0
   m_Name: MagnitTower
-  m_TagString: Untagged
+  m_TagString: MagnitTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -352,7 +338,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8382144203990728653}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -84.24518, y: 287.91, z: 0.49166748}
+  m_LocalPosition: {x: -84.24518, y: 212.91, z: 0.49166748}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7331579370200855126}

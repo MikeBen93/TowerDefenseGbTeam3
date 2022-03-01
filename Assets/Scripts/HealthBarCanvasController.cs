@@ -5,10 +5,16 @@ using UnityEngine;
 public class HealthBarCanvasController : MonoBehaviour
 {
     public Transform healthBarCanvas;
-    public Transform cameraPosition;
 
-    void Update()
+    private CameraSeeker cameraSeeker;
+
+    private void Start()
     {
-        healthBarCanvas.transform.LookAt(cameraPosition);
+        cameraSeeker = CameraSeeker.instance;
+    }
+
+    private void Update()
+    {
+        healthBarCanvas.transform.LookAt(cameraSeeker.GetCameraPosition);
     }
 }

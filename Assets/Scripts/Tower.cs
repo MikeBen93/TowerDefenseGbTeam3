@@ -50,6 +50,11 @@ public class Tower : MonoBehaviour
     [SerializeField] private bool hasSphereEffect = false;
     [SerializeField] private Transform sphereEffect;
 
+    [Header("Bullet setup fields")]
+    private int bulletDamage;
+    private float bulletExplosionRadius;
+
+
     [Header("Unity Setup Fields")]
 
     public bool turnable = true;
@@ -57,7 +62,14 @@ public class Tower : MonoBehaviour
 
 
     private string enemyTag = "Enemy";
-    public Transform firePoint;
+    [SerializeField] private Transform firePoint;
+
+    private DataManager _dataManager;
+
+    private void Awake()
+    {
+        _dataManager = DataManager.instance;
+    }
 
     private void Start()
     {
@@ -66,8 +78,9 @@ public class Tower : MonoBehaviour
         _currentDamageOverTime = initialDamageOverTime;
         _enemiesInArea = new List<Enemy>();
 
-        if(hasSphereEffect)
+        if (hasSphereEffect)
         {
+            sphereEffect.gameObject.SetActive(true);
             sphereEffect.localScale *= range;
         }
     }
@@ -169,7 +182,7 @@ public class Tower : MonoBehaviour
             if(fireCountdown <= 0)
             {
                 Shoot();
-                fireCountdown = 1 / fireRate;
+                fireCountdown = fireRate;
             }
 
             fireCountdown -= Time.deltaTime;
@@ -232,12 +245,37 @@ public class Tower : MonoBehaviour
         GameObject bulletGO = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
 
-        if (bullet != null) bullet.SetAim(_target);
+        if (bullet != null)
+        {
+            bullet.damage = bulletDamage;
+            bullet.explosionRadius = bulletExplosionRadius;
+            bullet.SetAim(_target);
+        }
     }
 
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
+    }
+
+    public void InverseTower()
+    {
+
+    }
+
+    public void SetNewParameters(TowerBlueprint blueprint)
+    {
+        foreach (TowerParameters tParams in _dataManager.towerParameters)
+        {
+            if (tParams.prefab == blueprint.prefab)
+            {
+                range = tParams.range;
+                fireRate = tParams.fireRate;
+                initialDamageOverTime = tParams.damageOverTime;
+                bulletDamage = tParams.bulletDamage;
+                bulletExplosionRadius = tParams.explosionRadius;
+            }
+        }
     }
 }

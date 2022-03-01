@@ -29,7 +29,7 @@ public class Bullet : MonoBehaviour
 
         float distanceThisFrame = speed * Time.deltaTime;
 
-        if (dir.magnitude <= distanceThisFrame)
+        if (dir.magnitude <= distanceThisFrame/2)
         {
             HitTarget();
             return;
@@ -57,9 +57,9 @@ public class Bullet : MonoBehaviour
     private void Damage(Transform enemy)
     {
         Enemy e = enemy.GetComponent<Enemy>();
-
         if (e != null)
         {
+           
             e.TakeDamage(damage);
         }
     }
@@ -67,7 +67,7 @@ public class Bullet : MonoBehaviour
     private void Explode()
     {
         Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius);
-
+        
         foreach (Collider collider in colliders)
         {
             if (collider.tag == "Enemy")

@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Node
   - Enemy
+  - LaserTower
+  - PlasmaTower
+  - MagnitTower
+  - ElectroTower
   layers:
   - Default
   - TransparentFX

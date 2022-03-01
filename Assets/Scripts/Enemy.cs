@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     [HideInInspector]
     public float startHealth = 100;
     public float health;
-    public float Health = 100;
+    //public float Health = 100;
     public float damage = 1;
     public int worth = 50; //amount of money gained from enemy killing
     //public GameObject deathEffect;

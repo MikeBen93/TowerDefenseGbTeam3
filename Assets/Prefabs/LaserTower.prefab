@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 6623846213659933249}
   m_Layer: 0
   m_Name: LaserTower
-  m_TagString: Untagged
+  m_TagString: LaserTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,15 +80,21 @@ MonoBehaviour:
   enemyTypes:
   - BlueEnemy
   - PurpleEnemy
+  useBullets: 0
   bulletPrefab: {fileID: 0}
   fireRate: 1
   useLaser: 1
   initialDamageOverTime: 30
-  slowAmount: 0
   lineRenderer: {fileID: 6623846213659933249}
   _pointingTime: 0
   _lastPointingTime: 0
   _currentDamageOverTime: 0
+  hasSlowingEffect: 0
+  slowAmount: 0
+  hasArealEffect: 0
+  hasSphereEffect: 0
+  sphereEffect: {fileID: 0}
+  turnable: 1
   turnSpeed: 5
   firePoint: {fileID: 6623846212460850852}
 --- !u!120 &6623846213659933249
