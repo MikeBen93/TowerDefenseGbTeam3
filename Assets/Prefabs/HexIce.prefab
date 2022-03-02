@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1123934812936543785}
   - component: {fileID: 4706918499453626956}
   - component: {fileID: 2151949683008217361}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 8136441631280517149}
   - component: {fileID: 5474259086297170119}
   - component: {fileID: 3778501042450557957}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: HexGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 6959610278966444805}
   - component: {fileID: 2822378562530183299}
   - component: {fileID: 1555558154580226490}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -266,7 +266,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7141156419571653088}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: HexIce
   m_TagString: Untagged
   m_Icon: {fileID: 0}

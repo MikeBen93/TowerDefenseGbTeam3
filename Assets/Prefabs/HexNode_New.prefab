@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2480420479968650799}
   - component: {fileID: 1568346536825170314}
   - component: {fileID: 3613880952700099904}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 3529338784110501503}
   - component: {fileID: 2826905200160669755}
   - component: {fileID: 8576455081875221082}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HexNode_Upper
   m_TagString: Node
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2099952113282652336}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HexNode_New
   m_TagString: Untagged
   m_Icon: {fileID: 0}
