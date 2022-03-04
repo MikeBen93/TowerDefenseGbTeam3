@@ -103,8 +103,8 @@ public class PlasmaTowerUpgrade : MonoBehaviour
 
         if (tParamLVL1 != null && tParamLVL2 != null && tParamLVL3 != null)
         {
-            tParamLVL1.upgradableToLvl2 = tParamLVL2.upgradableToLvl2 = tParamLVL1.upgradableToLvl2 = true;
-            tParamLVL1.firstUprgradeBought = tParamLVL2.firstUprgradeBought = tParamLVL1.firstUprgradeBought = true;
+            tParamLVL1.upgradableToLvl2 = tParamLVL2.upgradableToLvl2 = tParamLVL3.upgradableToLvl2 = true;
+            tParamLVL1.firstUprgradeBought = tParamLVL2.firstUprgradeBought = tParamLVL3.firstUprgradeBought = true;
 
             firstUprgradeBought = true;
         }
@@ -121,7 +121,7 @@ public class PlasmaTowerUpgrade : MonoBehaviour
             tParamLVL2.cost = tParamLVL2.cost - (int)(tParamLVL2.cost * costDecreasePrc / 100.0f);
             tParamLVL3.cost = tParamLVL3.cost - (int)(tParamLVL3.cost * costDecreasePrc / 100.0f);
 
-            tParamLVL1.secondtUprgradeBought = tParamLVL2.secondtUprgradeBought = tParamLVL1.secondtUprgradeBought = true;
+            tParamLVL1.secondtUprgradeBought = tParamLVL2.secondtUprgradeBought = tParamLVL3.secondtUprgradeBought = true;
 
             secondUprgradeBought = true;
         }
@@ -138,7 +138,7 @@ public class PlasmaTowerUpgrade : MonoBehaviour
             tParamLVL2.fireRate = tParamLVL2.fireRate - tParamLVL2.fireRate * fireRateDecreasePrc / 100.0f;
             tParamLVL3.fireRate = tParamLVL3.fireRate - tParamLVL3.fireRate * fireRateDecreasePrc / 100.0f;
 
-            tParamLVL1.thirdUprgradeBought = tParamLVL2.thirdUprgradeBought = tParamLVL1.thirdUprgradeBought = true;
+            tParamLVL1.thirdUprgradeBought = tParamLVL2.thirdUprgradeBought = tParamLVL3.thirdUprgradeBought = true;
 
             thirdUprgradeBought = true;
         }
@@ -151,8 +151,8 @@ public class PlasmaTowerUpgrade : MonoBehaviour
     {
         if (tParamLVL1 != null && tParamLVL2 != null && tParamLVL3 != null)
         {
-            tParamLVL1.upgradableToLvl3 = tParamLVL2.upgradableToLvl3 = tParamLVL1.upgradableToLvl3 = true;
-            tParamLVL1.fourthUprgradeBought = tParamLVL2.fourthUprgradeBought = tParamLVL1.fourthUprgradeBought = true;
+            tParamLVL1.upgradableToLvl3 = tParamLVL2.upgradableToLvl3 = tParamLVL3.upgradableToLvl3 = true;
+            tParamLVL1.fourthUprgradeBought = tParamLVL2.fourthUprgradeBought = tParamLVL3.fourthUprgradeBought = true;
 
             fourthUprgradeBought = true;
         }

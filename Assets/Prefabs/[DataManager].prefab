@@ -75,7 +75,6 @@ MonoBehaviour:
     fourthUprgradeBought: 0
     enemyTypes:
     - RedEnemy
-    - BlueEnemy
     - PurpleEnemy
   - prefab: {fileID: 2298470444541065647, guid: 4ecc5de22424ab1468dceaca9dfc2af1, type: 3}
     cost: 110
@@ -92,7 +91,6 @@ MonoBehaviour:
     fourthUprgradeBought: 0
     enemyTypes:
     - RedEnemy
-    - BlueEnemy
     - PurpleEnemy
   - prefab: {fileID: 6623846213659933248, guid: fa62a8c4d552cda479324284e136b88b, type: 3}
     cost: 110

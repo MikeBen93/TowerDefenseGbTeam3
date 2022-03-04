@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PlasmaTower
+  m_Name: PlasmaTower_LVL2
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP _PARALLAXMAP
   m_LightmapFlags: 2
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: d15b0960c9292624aaf1c4e058ade5c6, type: 3}
+        m_Texture: {fileID: 2800000, guid: b3955864c8b15ae4abeeea9ef2de30c9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -36,15 +36,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: 3702fddabdc0df149a401132c711a38a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 850b8f6e0aa346f4484bc5950a969a56, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 39706df2a45face4e8024fc0e1bc99a9, type: 3}
+        m_Texture: {fileID: 2800000, guid: a96b7e2ae80642e43ba35d2736f4e821, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 5f50119d739ddaa4daae902063dfcdb3, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0a42b9c75b1875741897897e81bd7dec, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -52,7 +52,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 2800000, guid: 78aec4bbbf10e5a44ae0ae447a16b2d4, type: 3}
+        m_Texture: {fileID: 2800000, guid: f12603c0f7590f440a586574c810c61f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:

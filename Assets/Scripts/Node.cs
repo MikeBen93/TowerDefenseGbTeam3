@@ -6,9 +6,11 @@ public class Node : MonoBehaviour
 {
     public Vector3 positionOffset; // offset of the tower relative to node position
 
-    [HideInInspector]
-    public GameObject tower;
-    [HideInInspector]
+    //[HideInInspector]
+    public GameObject towerObj;
+    //[HideInInspector]
+    public Tower tower;
+    //[HideInInspector]
     public TowerBlueprint towerBlueprint;
     [HideInInspector]
     public bool isUpgraded = false;
@@ -16,7 +18,11 @@ public class Node : MonoBehaviour
     private Color defaultColor;
     private Renderer rend;
     private BuildManager _buildManager;
-    
+    //[HideInInspector]
+    public int towerNextlevel;
+    //[HideInInspector]
+    public int upgradeCostToNextLevel;
+
 
 
     private void Start()
@@ -38,45 +44,7 @@ public class Node : MonoBehaviour
             return "Tower is not choosen";
         }
 
-        if(tower != null )
-        {
-            return "Tower is already build";
-        }
-
-        if(!_buildManager.HasMoney)
-        {
-            return "Not enough money";
-        }
-        TowerBlueprint towerToBuild = _buildManager.GetTowerToBuild();
-        BuildTower(towerToBuild);
-        //ChangeNodeColor(towerToBuild.prefab.GetComponent<Tower>().enemyTag);
-
-        return "Tower built";
-    }
-
-    private void BuildTower(TowerBlueprint blueprint)
-    {
-        PlayerStats.Money -= blueprint.cost;
-
-        GameObject createdTower = Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);
-        tower = createdTower;
-
-        tower.GetComponent<Tower>().SetNewParameters(blueprint);
-
-        towerBlueprint = blueprint;
-    }
-
-    public void SellTower()
-    {
-        PlayerStats.Money += towerBlueprint.GetSellAmount();
-        rend.material.color = defaultColor;
-        Destroy(tower);
-        towerBlueprint = null;
-    }
-
-    public string TryToUpgradeTower()
-    {
-        if (tower != null)
+        if (towerObj != null)
         {
             return "Tower is already build";
         }
@@ -92,15 +60,70 @@ public class Node : MonoBehaviour
         return "Tower built";
     }
 
-    private void UpgradeTower(TowerBlueprint blueprint)
+    private void BuildTower(TowerBlueprint blueprint)
     {
         PlayerStats.Money -= blueprint.cost;
 
-        GameObject createdTower = Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);
-        tower = createdTower;
+        towerObj = Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);
 
-        tower.GetComponent<Tower>().SetNewParameters(blueprint);
+        tower = towerObj.GetComponent<Tower>();
+
+        tower.SetNewParameters(blueprint, 1);
+        towerNextlevel = 2;
+        upgradeCostToNextLevel = blueprint.lvl2Cost;
 
         towerBlueprint = blueprint;
+    }
+
+    public void SellTower()
+    {
+        PlayerStats.Money += towerBlueprint.GetSellAmount();
+        rend.material.color = defaultColor;
+        Destroy(towerObj);
+        towerBlueprint = null;
+    }
+
+    public bool TowerIsUpgradable()
+    {
+        Tower towerToCheck = tower.GetComponent<Tower>();
+
+        if (!towerToCheck.IsUpgradable())
+        {
+            return false;
+        }
+
+        if (towerNextlevel == 2 && PlayerStats.Money >= towerBlueprint.lvl2Cost)
+        {
+            return true;
+        } 
+        else if (towerNextlevel == 3 && PlayerStats.Money >= towerBlueprint.lvl3Cost)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    public void UpgradeTower()
+    {
+        Destroy(towerObj);
+        if (towerNextlevel == 2)
+        {
+            PlayerStats.Money -= towerBlueprint.lvl2Cost;
+            towerObj = Instantiate(towerBlueprint.lvl2Prefab, GetBuildPosition(), Quaternion.identity);
+            tower = towerObj.GetComponent<Tower>();
+            tower.SetNewParameters(towerBlueprint, 2);
+            towerNextlevel = 3;
+            upgradeCostToNextLevel = towerBlueprint.lvl2Cost;
+            return;
+        } else if (towerNextlevel == 3)
+        {
+            PlayerStats.Money -= towerBlueprint.lvl3Cost;
+            towerObj = Instantiate(towerBlueprint.lvl3Prefab, GetBuildPosition(), Quaternion.identity);
+            tower = towerObj.GetComponent<Tower>();
+            tower.SetNewParameters(towerBlueprint, 3);
+            towerNextlevel = 0;
+            return;
+        }
     }
 }

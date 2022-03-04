@@ -15,6 +15,7 @@ public class Tower : MonoBehaviour
     [Header("General")]
     public float range = 15f;
     public string[] enemyTypes = new string[] { "RedEnemy" };
+    private int _towerCurrentLevel;
 
     [Header("Use bullets (default)")]
     public bool useBullets = true;
@@ -268,18 +269,42 @@ public class Tower : MonoBehaviour
 
     }
 
-    public void SetNewParameters(TowerBlueprint blueprint)
+    public void SetNewParameters(TowerBlueprint blueprint, int towerLevel)
     {
+        GameObject prefabToSeek = null;
+
+        if (towerLevel == 1) prefabToSeek = blueprint.prefab;
+        else if (towerLevel == 2) prefabToSeek = blueprint.lvl2Prefab;
+        else if (towerLevel == 3) prefabToSeek = blueprint.lvl3Prefab;
+        else Debug.LogError("INCORRECT TOWER LEVEL TO BUILD");
+
+        _towerCurrentLevel = towerLevel;
+
         foreach (TowerParameters tParams in _dataManager.towerParameters)
         {
-            if (tParams.prefab == blueprint.prefab)
+            if (tParams.prefab == prefabToSeek)
             {
                 range = tParams.range;
                 fireRate = tParams.fireRate;
                 initialDamageOverTime = tParams.damageOverTime;
                 bulletDamage = tParams.bulletDamage;
                 bulletExplosionRadius = tParams.explosionRadius;
+                upgradableToLvl2 = tParams.upgradableToLvl2;
+                upgradableToLvl3 = tParams.upgradableToLvl3;
             }
         }
+    }
+
+    public bool IsUpgradable()
+    {
+        if (_towerCurrentLevel == 1 && upgradableToLvl2)
+        {
+            return true;
+        }
+        if (_towerCurrentLevel == 2 && upgradableToLvl3)
+        {
+            return true;
+        }
+        return false;
     }
 }

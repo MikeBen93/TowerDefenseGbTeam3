@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class NodeUI : MonoBehaviour
 {
+    public Button upgradeButton;
+    public Text upgradeText;
     public Text sellCostText;
 
     [SerializeField] private GameObject _nodeShopUI;
@@ -17,6 +19,21 @@ public class NodeUI : MonoBehaviour
     {
         _cameraSeeker = CameraSeeker.instance;
     }
+    private void Update()
+    {
+        if(!_nodeTowerUI.activeSelf)
+        {
+            return;
+        }
+
+        if(_choosenNode.TowerIsUpgradable())
+        {
+            upgradeButton.interactable = true;
+            return;
+        }
+
+        upgradeButton.interactable = false;
+    }
     private void ActivateShopUI()
     {
         _nodeShopUI.SetActive(true);
@@ -28,8 +45,16 @@ public class NodeUI : MonoBehaviour
         _nodeTowerUI.SetActive(true);
         _nodeShopUI.SetActive(false);
 
-        sellCostText.text = $"SELL: {_choosenNode.towerBlueprint.GetSellAmount()}$";
-        
+        sellCostText.text = $"SELL: {_choosenNode.towerBlueprint.GetSellAmount()}";
+        if(_choosenNode.towerNextlevel == 0)
+        {
+            upgradeText.text = "TOWER FULLY" + "\n" + "UPGRADED";
+        }
+        else
+        {
+            upgradeText.text = "UPGRADE TO LVL " + _choosenNode.towerNextlevel + "\n" + "COST: " + _choosenNode.upgradeCostToNextLevel;
+        }
+
     }
 
     public void DeactivateNodeUI()
@@ -58,6 +83,12 @@ public class NodeUI : MonoBehaviour
     public void Sell()
     {
         _choosenNode.SellTower();
+        BuildManager.instance.DeselectNode();
+    }
+
+    public void Upgrade()
+    {
+        _choosenNode.UpgradeTower();
         BuildManager.instance.DeselectNode();
     }
 }
