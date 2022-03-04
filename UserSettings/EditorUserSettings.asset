@@ -12,6 +12,7 @@ EditorUserSettings:
       value: 22424703114646680e0b0227036c72111f19352f223d68252320092a
       flags: 0
     RecentlyUsedScenePath-2:
+<<<<<<< Updated upstream
       value: 22424703114646680e0b0227036c73150012147a7e66333e243d04
       flags: 0
     RecentlyUsedScenePath-3:
@@ -31,6 +32,27 @@ EditorUserSettings:
       flags: 0
     RecentlyUsedScenePath-8:
       value: 22424703114646680e0b0227036c73150012147a7966333e243d04
+=======
+      value: 22424703114646701f071f0615355a1c1907152f223c6915233f1421edd32439f5e909cad4751a24380fff3001712427f3071907f3451f05181ae4
+      flags: 0
+    RecentlyUsedScenePath-3:
+      value: 22424703114646680e0b0227036c73150012147a7966333e243d04
+      flags: 0
+    RecentlyUsedScenePath-4:
+      value: 22424703114646680e0b0227036c73150012147a7d66333e243d04
+      flags: 0
+    RecentlyUsedScenePath-5:
+      value: 22424703114646680e0b0227036c73150012147a7e66333e243d04
+      flags: 0
+    RecentlyUsedScenePath-6:
+      value: 22424703114646680e0b0227036c73150012147a7f66333e243d04
+      flags: 0
+    RecentlyUsedScenePath-7:
+      value: 22424703114646680e0b0227036c73150012147a7866333e243d04
+      flags: 0
+    RecentlyUsedScenePath-8:
+      value: 22424703114646680e0b0227036c73150012147a7b66333e243d04
+>>>>>>> Stashed changes
       flags: 0
     UnityRemoteDevice:
       value: 530104565d055a0b405e5c73467506344e473d7f7c70766208
