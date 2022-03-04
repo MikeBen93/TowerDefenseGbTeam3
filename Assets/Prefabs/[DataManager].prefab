@@ -114,7 +114,7 @@ MonoBehaviour:
     cost: 210
     fireRate: 1
     range: 6
-    damageOverTime: 0
+    damageOverTime: 10
     bulletDamage: 0
     explosionRadius: 0
     upgradableToLvl2: 0

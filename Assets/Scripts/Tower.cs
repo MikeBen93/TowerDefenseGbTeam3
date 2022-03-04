@@ -209,7 +209,9 @@ public class Tower : MonoBehaviour
 
     private void SlowDown(Enemy enemy)
     {
+        
         enemy.Slow(slowAmount);
+        enemy.TakeDamage(initialDamageOverTime * Time.deltaTime);
     }
     private void Laser()
     {
