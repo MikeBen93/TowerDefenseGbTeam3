@@ -59,6 +59,8 @@ public class Tower : MonoBehaviour
 
     public bool turnable = true;
     public float turnSpeed = 10f;
+    public bool upgradableToLvl2 = false;
+    public bool upgradableToLvl3 = false;
 
 
     private string enemyTag = "Enemy";

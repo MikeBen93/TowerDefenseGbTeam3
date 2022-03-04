@@ -30,6 +30,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Level07.unity
     guid: c01797dfe8e8fd3498573e3d4ff2bee5
   - enabled: 1
-    path: Assets/Scenes/TestScene.unity
-    guid: 066b27f88002517419c3281c84439a03
+    path: Assets/Scenes/Upgrades.unity
+    guid: c885feab8287464428b4ee262beaa3f5
   m_configObjects: {}

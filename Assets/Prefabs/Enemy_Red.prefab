@@ -5008,7 +5008,6 @@ MonoBehaviour:
   speed: 0
   startHealth: 100
   health: 0
-  Health: 100
   damage: 1
   worth: 5
   healthBar: {fileID: 6622073735251182548}

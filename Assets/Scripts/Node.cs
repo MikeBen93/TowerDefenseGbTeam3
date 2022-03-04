@@ -73,4 +73,34 @@ public class Node : MonoBehaviour
         Destroy(tower);
         towerBlueprint = null;
     }
+
+    public string TryToUpgradeTower()
+    {
+        if (tower != null)
+        {
+            return "Tower is already build";
+        }
+
+        if (!_buildManager.HasMoney)
+        {
+            return "Not enough money";
+        }
+        TowerBlueprint towerToBuild = _buildManager.GetTowerToBuild();
+        BuildTower(towerToBuild);
+        //ChangeNodeColor(towerToBuild.prefab.GetComponent<Tower>().enemyTag);
+
+        return "Tower built";
+    }
+
+    private void UpgradeTower(TowerBlueprint blueprint)
+    {
+        PlayerStats.Money -= blueprint.cost;
+
+        GameObject createdTower = Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);
+        tower = createdTower;
+
+        tower.GetComponent<Tower>().SetNewParameters(blueprint);
+
+        towerBlueprint = blueprint;
+    }
 }

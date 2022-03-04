@@ -11,16 +11,23 @@ public class PlayerStats : MonoBehaviour
     public float startLives = 20;
     public static float initialLives;
 
-    public static float Crystals;
+    public static int Crystals;
+    public static int Chips;
 
     public static int Rounds;
+
+    private DataManager _dataManager;
  
 
     private void Start()
     {
+        _dataManager = DataManager.instance;
+
         Money = startMoney;
         Lives = startLives;
         initialLives = startLives;
+
+        Chips = _dataManager.ChipsAmount;
 
         Rounds = 0;
     }

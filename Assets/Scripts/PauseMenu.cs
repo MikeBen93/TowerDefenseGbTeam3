@@ -36,4 +36,10 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(mainMeneSceneName);
         //sceneFader.FadeTo(mainMeneSceneName);
     }
+
+    public void LoadUpgrades()
+    {
+        Toggle();
+        SceneManager.LoadScene("Upgrades");
+    }
 }

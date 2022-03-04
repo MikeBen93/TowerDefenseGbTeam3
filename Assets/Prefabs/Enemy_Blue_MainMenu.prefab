@@ -53,9 +53,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4181390380763099882, guid: bac1fccbe9cb2f340845d5ebcfa2b8ca, type: 3}
       propertyPath: m_Name
-      value: Enemy_Blue
+      value: Enemy_Blue_MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 5586118395540081733, guid: bac1fccbe9cb2f340845d5ebcfa2b8ca, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 253744584131149667, guid: bac1fccbe9cb2f340845d5ebcfa2b8ca, type: 3}
     - {fileID: 431007766315337094, guid: bac1fccbe9cb2f340845d5ebcfa2b8ca, type: 3}
+    - {fileID: 7856884113567773171, guid: bac1fccbe9cb2f340845d5ebcfa2b8ca, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bac1fccbe9cb2f340845d5ebcfa2b8ca, type: 3}

@@ -21,4 +21,6 @@ public class DataManager : MonoBehaviour
     }
 
     public TowerParameters[] towerParameters;
+    public int CrystalsAmount { get; set; }
+    public int ChipsAmount { get; set; }
 }

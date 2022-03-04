@@ -8,8 +8,11 @@ public class TowerBlueprint
     public GameObject prefab;
     public int cost;
 
-    //public GameObject upgradedPrefab;
-    //public int upgradeCost;
+    public GameObject lvl2Prefab;
+    public int lvl2Cost;
+
+    public GameObject lvl3Prefab;
+    public int lvl3Cost;
 
     public int GetSellAmount()
     {
