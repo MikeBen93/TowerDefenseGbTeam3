@@ -108,6 +108,89 @@ MonoBehaviour:
     enemyTypes:
     - BlueEnemy
     - PurpleEnemy
+  - prefab: {fileID: 6623846213659933248, guid: e737bfa58e958224b954e6e8a31e2627, type: 3}
+    cost: 110
+    fireRate: 1
+    range: 10
+    damageOverTime: 31
+    bulletDamage: 0
+    explosionRadius: 0
+    upgradableToLvl2: 0
+    upgradableToLvl3: 0
+    firstUprgradeBought: 0
+    secondtUprgradeBought: 0
+    thirdUprgradeBought: 0
+    fourthUprgradeBought: 0
+    enemyTypes:
+    - BlueEnemy
+    - PurpleEnemy
+  - prefab: {fileID: 6623846213659933248, guid: 43461dda980fdea41ae1332ebfbf8d24, type: 3}
+    cost: 110
+    fireRate: 1
+    range: 10
+    damageOverTime: 31
+    bulletDamage: 0
+    explosionRadius: 0
+    upgradableToLvl2: 0
+    upgradableToLvl3: 0
+    firstUprgradeBought: 0
+    secondtUprgradeBought: 0
+    thirdUprgradeBought: 0
+    fourthUprgradeBought: 0
+    enemyTypes:
+    - BlueEnemy
+    - PurpleEnemy
+  - prefab: {fileID: 6816593127903017046, guid: fcd4d41b53757e444aa7890b161f9682, type: 3}
+    cost: 210
+    fireRate: 2
+    range: 10
+    damageOverTime: 0
+    bulletDamage: 81
+    explosionRadius: 9
+    upgradableToLvl2: 0
+    upgradableToLvl3: 0
+    firstUprgradeBought: 0
+    secondtUprgradeBought: 0
+    thirdUprgradeBought: 0
+    fourthUprgradeBought: 0
+    enemyTypes:
+    - RedEnemy
+    - BlueEnemy
+    - PurpleEnemy
+  - prefab: {fileID: 6816593127903017046, guid: e9f289fdd199405458888795257920c2, type: 3}
+    cost: 210
+    fireRate: 2
+    range: 10
+    damageOverTime: 0
+    bulletDamage: 81
+    explosionRadius: 9
+    upgradableToLvl2: 0
+    upgradableToLvl3: 0
+    firstUprgradeBought: 0
+    secondtUprgradeBought: 0
+    thirdUprgradeBought: 0
+    fourthUprgradeBought: 0
+    enemyTypes:
+    - RedEnemy
+    - BlueEnemy
+    - PurpleEnemy
+  - prefab: {fileID: 6816593127903017046, guid: d31926adb356ea54f909fe02ec1881b1, type: 3}
+    cost: 210
+    fireRate: 2
+    range: 10
+    damageOverTime: 0
+    bulletDamage: 81
+    explosionRadius: 9
+    upgradableToLvl2: 0
+    upgradableToLvl3: 0
+    firstUprgradeBought: 0
+    secondtUprgradeBought: 0
+    thirdUprgradeBought: 0
+    fourthUprgradeBought: 0
+    enemyTypes:
+    - RedEnemy
+    - BlueEnemy
+    - PurpleEnemy
   - prefab: {fileID: 7995244191818393836, guid: 91b2d898bbef56d479bb27030c55337c, type: 3}
     cost: 210
     fireRate: 1
@@ -125,13 +208,30 @@ MonoBehaviour:
     - RedEnemy
     - BlueEnemy
     - PurpleEnemy
-  - prefab: {fileID: 6816593127903017046, guid: 7d5a62619d2ee7d4d80c91417732cf16, type: 3}
+  - prefab: {fileID: 7995244191818393836, guid: 8ceb825865f7e1d4092e7b7a88ad1c02, type: 3}
     cost: 210
-    fireRate: 2
-    range: 10
-    damageOverTime: 0
-    bulletDamage: 81
-    explosionRadius: 9
+    fireRate: 1
+    range: 6
+    damageOverTime: 10
+    bulletDamage: 0
+    explosionRadius: 0
+    upgradableToLvl2: 0
+    upgradableToLvl3: 0
+    firstUprgradeBought: 0
+    secondtUprgradeBought: 0
+    thirdUprgradeBought: 0
+    fourthUprgradeBought: 0
+    enemyTypes:
+    - RedEnemy
+    - BlueEnemy
+    - PurpleEnemy
+  - prefab: {fileID: 7995244191818393836, guid: 9853c94b9a35a574ca0a9486c374d90d, type: 3}
+    cost: 210
+    fireRate: 1
+    range: 6
+    damageOverTime: 10
+    bulletDamage: 0
+    explosionRadius: 0
     upgradableToLvl2: 0
     upgradableToLvl3: 0
     firstUprgradeBought: 0

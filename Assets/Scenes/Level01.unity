@@ -21311,7 +21311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - enemy: {fileID: 6408497559615290737, guid: e153908ade6dd6c46aac536ac7c1352b, type: 3}
-    count: 1
+    count: 5
     rate: 1.5
   - enemy: {fileID: 4181390380763099882, guid: bac1fccbe9cb2f340845d5ebcfa2b8ca, type: 3}
     count: 5
@@ -76808,10 +76808,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6283773521822676993, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 727cdbc559b7473418b209e2027bc824, type: 3}
     - target: {fileID: 6283773521822676997, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -76976,11 +76972,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7659458562972109230, guid: 374373cadca8ce5428773ac4d10a2f97, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 960
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7659458562972109230, guid: 374373cadca8ce5428773ac4d10a2f97, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 540
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7659458562972109230, guid: 374373cadca8ce5428773ac4d10a2f97, type: 3}
       propertyPath: m_LocalPosition.z
