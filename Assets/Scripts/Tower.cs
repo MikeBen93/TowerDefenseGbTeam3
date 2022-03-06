@@ -88,6 +88,12 @@ public class Tower : MonoBehaviour
         }
     }
 
+    public int CurrentLevel { get; }
+
+
+
+
+
     private void UpdateTarget()
     {
         GameObject[] allEnemies = GameObject.FindGameObjectsWithTag(enemyTag);
@@ -307,4 +313,6 @@ public class Tower : MonoBehaviour
         }
         return false;
     }
+
+    
 }

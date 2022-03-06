@@ -96,7 +96,7 @@ MonoBehaviour:
   sphereEffect: {fileID: 0}
   turnable: 0
   turnSpeed: 10
-  upgradableToLvl2: 0
+  upgradableToLvl2: 1
   upgradableToLvl3: 0
   firePoint: {fileID: 6816593126214924282}
 --- !u!1001 &2392240677151096134

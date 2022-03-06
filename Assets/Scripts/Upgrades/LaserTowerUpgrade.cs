@@ -39,11 +39,20 @@ public class LaserTowerUpgrade : MonoBehaviour
     {
         _dataManager = DataManager.instance;
 
+        SetData();
         CheckButtonInteractiablitiy();
+    }
 
+    private void SetData()
+    {
         tParamLVL1 = SeekTowerParam(towerPrefabLVL1);
         tParamLVL2 = SeekTowerParam(towerPrefabLVL2);
         tParamLVL3 = SeekTowerParam(towerPrefabLVL3);
+
+        firstUprgradeBought = tParamLVL1.firstUprgradeBought;
+        secondUprgradeBought = tParamLVL1.secondtUprgradeBought;
+        thirdUprgradeBought = tParamLVL1.thirdUprgradeBought;
+        fourthUprgradeBought = tParamLVL1.fourthUprgradeBought;
     }
 
     private void CheckButtonInteractiablitiy()

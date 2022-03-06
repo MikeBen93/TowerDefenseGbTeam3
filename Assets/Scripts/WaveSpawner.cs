@@ -27,6 +27,7 @@ public class WaveSpawner : MonoBehaviour
     {
         enemiesAlive = 0;
         _countdown = _initialCountdown;
+        waveNumberText.text = (_waveIndex + 1).ToString() + "/" + waves.Length.ToString();
     }
     private void Update()
     {

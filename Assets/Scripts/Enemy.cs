@@ -39,6 +39,7 @@ public class Enemy : MonoBehaviour
         isDead = true;
 
         PlayerStats.Money += worth;
+        PlayerStats.Crystals++;
 
         //GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
 

@@ -30,6 +30,7 @@ public class PlayerStats : MonoBehaviour
         Chips = _dataManager.ChipsAmount;
 
         Rounds = 0;
+        Crystals = 0;
     }
 
     public static float GetRemainPercatnage()

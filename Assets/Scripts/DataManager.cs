@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class DataManager : MonoBehaviour
 {
     public static DataManager instance;
+    private int _currentChipsAmount;
 
     private void Awake()
     {
@@ -21,6 +22,8 @@ public class DataManager : MonoBehaviour
     }
 
     public TowerParameters[] towerParameters;
-    public int CrystalsAmount { get; set; }
-    public int ChipsAmount { get; set; }
+    public int ChipsAmount { 
+        get { return _currentChipsAmount; } 
+        set { _currentChipsAmount = value; } 
+    }
 }

@@ -14,9 +14,13 @@ public class GameController : MonoBehaviour
 
     [SerializeField] private Tutorial[] tutorials;
 
+    private DataManager _dataManager;
+    [SerializeField] private float _healthRatioRelatedToChips;
+
 
     private void Start()
     {
+        _dataManager = DataManager.instance;
         GameIsOver = false;
     }
     private void Update()
