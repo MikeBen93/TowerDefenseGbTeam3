@@ -45,11 +45,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerParameters:
   - prefab: {fileID: 2298470444541065647, guid: 0bae11645e7a7484896dfbbb2cafed13, type: 3}
-    cost: 110
-    fireRate: 1
-    range: 10
+    cost: 100
+    fireRate: 0.8
+    range: 8
     damageOverTime: 0
-    bulletDamage: 51
+    bulletDamage: 40
     explosionRadius: 0
     upgradableToLvl2: 0
     upgradableToLvl3: 0
@@ -61,11 +61,11 @@ MonoBehaviour:
     - RedEnemy
     - PurpleEnemy
   - prefab: {fileID: 2298470444541065647, guid: b2a65d794d99a9e4ca9f84d6b606c133, type: 3}
-    cost: 110
-    fireRate: 1
-    range: 10
+    cost: 150
+    fireRate: 0.8
+    range: 9
     damageOverTime: 0
-    bulletDamage: 51
+    bulletDamage: 70
     explosionRadius: 0
     upgradableToLvl2: 0
     upgradableToLvl3: 0
@@ -77,11 +77,11 @@ MonoBehaviour:
     - RedEnemy
     - PurpleEnemy
   - prefab: {fileID: 2298470444541065647, guid: 4ecc5de22424ab1468dceaca9dfc2af1, type: 3}
-    cost: 110
-    fireRate: 1
+    cost: 200
+    fireRate: 0.5
     range: 10
     damageOverTime: 0
-    bulletDamage: 51
+    bulletDamage: 70
     explosionRadius: 0
     upgradableToLvl2: 0
     upgradableToLvl3: 0
@@ -93,10 +93,10 @@ MonoBehaviour:
     - RedEnemy
     - PurpleEnemy
   - prefab: {fileID: 6623846213659933248, guid: fa62a8c4d552cda479324284e136b88b, type: 3}
-    cost: 110
+    cost: 150
     fireRate: 1
-    range: 10
-    damageOverTime: 31
+    range: 8
+    damageOverTime: 40
     bulletDamage: 0
     explosionRadius: 0
     upgradableToLvl2: 0
@@ -109,10 +109,10 @@ MonoBehaviour:
     - BlueEnemy
     - PurpleEnemy
   - prefab: {fileID: 6623846213659933248, guid: e737bfa58e958224b954e6e8a31e2627, type: 3}
-    cost: 110
+    cost: 200
     fireRate: 1
-    range: 10
-    damageOverTime: 31
+    range: 9
+    damageOverTime: 80
     bulletDamage: 0
     explosionRadius: 0
     upgradableToLvl2: 0
@@ -125,10 +125,10 @@ MonoBehaviour:
     - BlueEnemy
     - PurpleEnemy
   - prefab: {fileID: 6623846213659933248, guid: 43461dda980fdea41ae1332ebfbf8d24, type: 3}
-    cost: 110
+    cost: 250
     fireRate: 1
     range: 10
-    damageOverTime: 31
+    damageOverTime: 120
     bulletDamage: 0
     explosionRadius: 0
     upgradableToLvl2: 0
@@ -141,12 +141,12 @@ MonoBehaviour:
     - BlueEnemy
     - PurpleEnemy
   - prefab: {fileID: 6816593127903017046, guid: fcd4d41b53757e444aa7890b161f9682, type: 3}
-    cost: 210
-    fireRate: 2
-    range: 10
+    cost: 250
+    fireRate: 2.4
+    range: 8
     damageOverTime: 0
-    bulletDamage: 81
-    explosionRadius: 9
+    bulletDamage: 60
+    explosionRadius: 5
     upgradableToLvl2: 0
     upgradableToLvl3: 0
     firstUprgradeBought: 0
@@ -158,12 +158,12 @@ MonoBehaviour:
     - BlueEnemy
     - PurpleEnemy
   - prefab: {fileID: 6816593127903017046, guid: e9f289fdd199405458888795257920c2, type: 3}
-    cost: 210
-    fireRate: 2
-    range: 10
+    cost: 250
+    fireRate: 2.2
+    range: 9
     damageOverTime: 0
-    bulletDamage: 81
-    explosionRadius: 9
+    bulletDamage: 80
+    explosionRadius: 5
     upgradableToLvl2: 0
     upgradableToLvl3: 0
     firstUprgradeBought: 0
@@ -175,12 +175,12 @@ MonoBehaviour:
     - BlueEnemy
     - PurpleEnemy
   - prefab: {fileID: 6816593127903017046, guid: d31926adb356ea54f909fe02ec1881b1, type: 3}
-    cost: 210
+    cost: 250
     fireRate: 2
     range: 10
     damageOverTime: 0
-    bulletDamage: 81
-    explosionRadius: 9
+    bulletDamage: 100
+    explosionRadius: 5
     upgradableToLvl2: 0
     upgradableToLvl3: 0
     firstUprgradeBought: 0
@@ -192,9 +192,9 @@ MonoBehaviour:
     - BlueEnemy
     - PurpleEnemy
   - prefab: {fileID: 7995244191818393836, guid: 91b2d898bbef56d479bb27030c55337c, type: 3}
-    cost: 210
+    cost: 250
     fireRate: 1
-    range: 6
+    range: 8
     damageOverTime: 10
     bulletDamage: 0
     explosionRadius: 0
@@ -209,9 +209,9 @@ MonoBehaviour:
     - BlueEnemy
     - PurpleEnemy
   - prefab: {fileID: 7995244191818393836, guid: 8ceb825865f7e1d4092e7b7a88ad1c02, type: 3}
-    cost: 210
+    cost: 200
     fireRate: 1
-    range: 6
+    range: 9
     damageOverTime: 10
     bulletDamage: 0
     explosionRadius: 0
@@ -226,9 +226,9 @@ MonoBehaviour:
     - BlueEnemy
     - PurpleEnemy
   - prefab: {fileID: 7995244191818393836, guid: 9853c94b9a35a574ca0a9486c374d90d, type: 3}
-    cost: 210
+    cost: 150
     fireRate: 1
-    range: 6
+    range: 10
     damageOverTime: 10
     bulletDamage: 0
     explosionRadius: 0

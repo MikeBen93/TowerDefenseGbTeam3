@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6faef08771aa56843a62916595cebd20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 8
+  range: 10
   enemyTypes:
   - BlueEnemy
   - PurpleEnemy
@@ -84,7 +84,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 0}
   fireRate: 1
   useLaser: 1
-  initialDamageOverTime: 30
+  initialDamageOverTime: 120
   lineRenderer: {fileID: 6623846213659933249}
   _pointingTime: 0
   _lastPointingTime: 0
