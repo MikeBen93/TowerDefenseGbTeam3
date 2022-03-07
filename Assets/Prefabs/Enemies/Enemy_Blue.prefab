@@ -306,9 +306,8 @@ MonoBehaviour:
   enemyType: BlueEnemy
   startSpeed: 2.5
   speed: 0
-  startHealth: 200
+  startHealth: 300
   health: 0
-  Health: 100
   damage: 1
   worth: 10
   healthBar: {fileID: 3310973321670526297}

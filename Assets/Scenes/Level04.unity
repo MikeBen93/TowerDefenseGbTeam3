@@ -23833,23 +23833,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - enemy: {fileID: 6408497559615290737, guid: e153908ade6dd6c46aac536ac7c1352b, type: 3}
-    count: 5
-    rate: 1.5
-  - enemy: {fileID: 6408497559615290737, guid: e153908ade6dd6c46aac536ac7c1352b, type: 3}
-    count: 7
+    count: 24
+    rate: 0.5
+  - enemy: {fileID: 6408497559615290737, guid: 050f39165b16c3f459d0617a09bace42, type: 3}
+    count: 20
+    rate: 0.5
+  - enemy: {fileID: 4181390380763099882, guid: bac1fccbe9cb2f340845d5ebcfa2b8ca, type: 3}
+    count: 14
     rate: 1
-  - enemy: {fileID: 4181390380763099882, guid: bac1fccbe9cb2f340845d5ebcfa2b8ca, type: 3}
-    count: 4
-    rate: 4
-  - enemy: {fileID: 6408497559615290737, guid: e153908ade6dd6c46aac536ac7c1352b, type: 3}
-    count: 10
-    rate: 1.5
-  - enemy: {fileID: 4181390380763099882, guid: bac1fccbe9cb2f340845d5ebcfa2b8ca, type: 3}
-    count: 5
-    rate: 3
   - enemy: {fileID: 8153226696454368382, guid: d33a3112983019c44b5397821a402c47, type: 3}
     count: 1
-    rate: 3
+    rate: 1
+  - enemy: {fileID: 4181390380763099882, guid: 70cd90e26977f1249b34f5edd5fd4df6, type: 3}
+    count: 8
+    rate: 1
+  - enemy: {fileID: 6408497559615290737, guid: 050f39165b16c3f459d0617a09bace42, type: 3}
+    count: 24
+    rate: 0.4
+  - enemy: {fileID: 6408497559615290737, guid: a02f7b7dffdff2149b4916abe6c35e25, type: 3}
+    count: 20
+    rate: 0.4
+  - enemy: {fileID: 4181390380763099882, guid: 70cd90e26977f1249b34f5edd5fd4df6, type: 3}
+    count: 20
+    rate: 1
   spawnPoint: {fileID: 1727449963}
   waveNumberText: {fileID: 297090358}
   heartCountdownImage: {fileID: 297090357}
@@ -23867,7 +23873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6381c6ad49e1cf46bd688264eb16415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 200
+  startMoney: 250
   startLives: 20
 --- !u!114 &607069962
 MonoBehaviour:

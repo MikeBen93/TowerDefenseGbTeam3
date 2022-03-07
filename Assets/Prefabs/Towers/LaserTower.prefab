@@ -84,7 +84,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 0}
   fireRate: 1
   useLaser: 1
-  initialDamageOverTime: 30
+  initialDamageOverTime: 40
   lineRenderer: {fileID: 6623846213659933249}
   _pointingTime: 0
   _lastPointingTime: 0

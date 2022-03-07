@@ -22503,22 +22503,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - enemy: {fileID: 6408497559615290737, guid: e153908ade6dd6c46aac536ac7c1352b, type: 3}
-    count: 5
-    rate: 1.5
-  - enemy: {fileID: 6408497559615290737, guid: e153908ade6dd6c46aac536ac7c1352b, type: 3}
-    count: 7
-    rate: 1
+    count: 20
+    rate: 1.3
+  - enemy: {fileID: 6408497559615290737, guid: 050f39165b16c3f459d0617a09bace42, type: 3}
+    count: 16
+    rate: 1.8
   - enemy: {fileID: 4181390380763099882, guid: bac1fccbe9cb2f340845d5ebcfa2b8ca, type: 3}
-    count: 4
-    rate: 4
-  - enemy: {fileID: 6408497559615290737, guid: e153908ade6dd6c46aac536ac7c1352b, type: 3}
     count: 10
-    rate: 1.5
-  - enemy: {fileID: 4181390380763099882, guid: bac1fccbe9cb2f340845d5ebcfa2b8ca, type: 3}
-    count: 5
-    rate: 3
+    rate: 4
+  - enemy: {fileID: 6408497559615290737, guid: a02f7b7dffdff2149b4916abe6c35e25, type: 3}
+    count: 12
+    rate: 2
   - enemy: {fileID: 8153226696454368382, guid: d33a3112983019c44b5397821a402c47, type: 3}
     count: 1
+    rate: 1
+  - enemy: {fileID: 4181390380763099882, guid: bac1fccbe9cb2f340845d5ebcfa2b8ca, type: 3}
+    count: 25
+    rate: 2
+  - enemy: {fileID: 4181390380763099882, guid: 70cd90e26977f1249b34f5edd5fd4df6, type: 3}
+    count: 20
+    rate: 2.4
+  - enemy: {fileID: 6408497559615290737, guid: a02f7b7dffdff2149b4916abe6c35e25, type: 3}
+    count: 20
+    rate: 1.5
+  - enemy: {fileID: 4181390380763099882, guid: 79adaf01fa52e9e4b92839ddc4c25565, type: 3}
+    count: 18
+    rate: 2.5
+  - enemy: {fileID: 8153226696454368382, guid: d33a3112983019c44b5397821a402c47, type: 3}
+    count: 3
     rate: 3
   spawnPoint: {fileID: 1727449963}
   waveNumberText: {fileID: 130653594}
@@ -22537,7 +22549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6381c6ad49e1cf46bd688264eb16415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 200
+  startMoney: 250
   startLives: 20
 --- !u!114 &607069962
 MonoBehaviour:
@@ -66750,10 +66762,9 @@ Transform:
   - {fileID: 695351186}
   - {fileID: 1041382684}
   - {fileID: 322538987}
-  - {fileID: 1758917421}
+  - {fileID: 779098754}
   - {fileID: 71736411}
   - {fileID: 57086920}
-  - {fileID: 779098754}
   - {fileID: 1555473907}
   - {fileID: 654740201}
   - {fileID: 1540356443}
@@ -66834,11 +66845,10 @@ Transform:
   - {fileID: 1651290415}
   - {fileID: 1354225681}
   - {fileID: 2146438847}
-  - {fileID: 1874966034}
+  - {fileID: 1685621699}
   - {fileID: 2089339492}
   - {fileID: 2025570697}
   - {fileID: 1880803144}
-  - {fileID: 1685621699}
   - {fileID: 19606849}
   - {fileID: 1631266455}
   - {fileID: 1917388455}
@@ -66852,6 +66862,7 @@ Transform:
   - {fileID: 1637670932}
   - {fileID: 1106020793}
   - {fileID: 1240568734}
+  - {fileID: 1758917421}
   - {fileID: 110347375}
   - {fileID: 1603431521}
   - {fileID: 747135841}
@@ -66898,10 +66909,11 @@ Transform:
   - {fileID: 1996028409}
   - {fileID: 1521121464}
   - {fileID: 362361737}
+  - {fileID: 1874966034}
   - {fileID: 249494743}
-  - {fileID: 676563601}
   - {fileID: 1242728403}
   - {fileID: 331923176}
+  - {fileID: 676563601}
   - {fileID: 279795100}
   - {fileID: 1251040941}
   - {fileID: 676230329}
@@ -66919,7 +66931,7 @@ Transform:
   - {fileID: 1876047818}
   - {fileID: 472126061}
   - {fileID: 1279091731}
-  - {fileID: 1150364472}
+  - {fileID: 86422548}
   - {fileID: 351928062}
   - {fileID: 823298862}
   - {fileID: 1213545267}
@@ -66927,7 +66939,6 @@ Transform:
   - {fileID: 1561245430}
   - {fileID: 1033507507}
   - {fileID: 552773241}
-  - {fileID: 86422548}
   - {fileID: 810540184}
   - {fileID: 145146243}
   - {fileID: 383813269}
@@ -66943,11 +66954,11 @@ Transform:
   - {fileID: 226842747}
   - {fileID: 1118930010}
   - {fileID: 95299263}
+  - {fileID: 1426646064}
   - {fileID: 473821366}
   - {fileID: 1354735096}
   - {fileID: 681648055}
   - {fileID: 1685228532}
-  - {fileID: 1426646064}
   - {fileID: 113272728}
   - {fileID: 1687952122}
   - {fileID: 1732081469}
@@ -66956,6 +66967,7 @@ Transform:
   - {fileID: 1053770351}
   - {fileID: 1547925552}
   - {fileID: 730564122}
+  - {fileID: 1150364472}
   - {fileID: 316803223}
   - {fileID: 855708722}
   - {fileID: 1612907356}
@@ -67030,7 +67042,7 @@ Transform:
   - {fileID: 1940186242}
   - {fileID: 1722165146}
   - {fileID: 1621834290}
-  - {fileID: 1825806447}
+  - {fileID: 724261999}
   - {fileID: 1436669028}
   - {fileID: 1066130635}
   - {fileID: 977351846}
@@ -67040,7 +67052,6 @@ Transform:
   - {fileID: 907188326}
   - {fileID: 1697834789}
   - {fileID: 1785204778}
-  - {fileID: 724261999}
   - {fileID: 1985499151}
   - {fileID: 1120134283}
   - {fileID: 1924249889}
@@ -67050,6 +67061,7 @@ Transform:
   - {fileID: 1208313705}
   - {fileID: 74984092}
   - {fileID: 1347583135}
+  - {fileID: 1825806447}
   - {fileID: 884087071}
   - {fileID: 525659721}
   - {fileID: 224423079}
