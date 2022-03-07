@@ -75,14 +75,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6faef08771aa56843a62916595cebd20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 6
+  range: 9
   enemyTypes:
   - PurpleEnemy
   - RedEnemy
   - BlueEnemy
   useBullets: 1
   bulletPrefab: {fileID: 7506923547514773519, guid: e1aa7047adfd1c44a8021551207542bd, type: 3}
-  fireRate: 2
+  fireRate: 2.2
   useLaser: 0
   initialDamageOverTime: 10
   lineRenderer: {fileID: 0}

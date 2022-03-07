@@ -6,7 +6,6 @@ public class Enemy : MonoBehaviour
     public string enemyType;
     public float startSpeed = 10f;
     public float speed;
-    [HideInInspector]
     public float startHealth = 100;
     public float health;
     //public float Health = 100;

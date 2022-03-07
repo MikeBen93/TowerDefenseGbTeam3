@@ -126,14 +126,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6faef08771aa56843a62916595cebd20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 6
+  range: 9
   enemyTypes:
   - RedEnemy
   - BlueEnemy
   - PurpleEnemy
   useBullets: 0
   bulletPrefab: {fileID: 0}
-  fireRate: 2
+  fireRate: 1
   useLaser: 0
   initialDamageOverTime: 10
   lineRenderer: {fileID: 0}
@@ -141,7 +141,7 @@ MonoBehaviour:
   _lastPointingTime: 0
   _currentDamageOverTime: 0
   hasSlowingEffect: 1
-  slowAmount: 0.5
+  slowAmount: 0.3
   hasArealEffect: 1
   hasSphereEffect: 1
   sphereEffect: {fileID: 1202517686}

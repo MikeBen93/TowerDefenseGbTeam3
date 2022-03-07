@@ -51,7 +51,7 @@ MonoBehaviour:
   - PurpleEnemy
   useBullets: 1
   bulletPrefab: {fileID: 7506923547514773519, guid: a116b4fca9732604f94cc6f086243107, type: 3}
-  fireRate: 1
+  fireRate: 0.8
   useLaser: 0
   initialDamageOverTime: 10
   lineRenderer: {fileID: 0}
