@@ -14,8 +14,19 @@ public class TowerBlueprint
     public GameObject lvl3Prefab;
     public int lvl3Cost;
 
-    public int GetSellAmount()
+    public int GetSellAmount(int currentLevel)
     {
-        return cost * 3 / 5;
+        if(currentLevel == 1)
+        {
+            return cost * 3 / 5;
+        }
+        else if (currentLevel == 2)
+        {
+            return (cost + lvl2Cost) * 3 / 5;
+        }
+        else
+        {
+            return (cost + lvl2Cost + lvl3Cost) * 3 / 5;
+        }
     }
 }

@@ -77,7 +77,7 @@ public class Node : MonoBehaviour
 
     public void SellTower()
     {
-        PlayerStats.Money += towerBlueprint.GetSellAmount();
+        PlayerStats.Money += towerBlueprint.GetSellAmount(tower.CurrentLevel);
         rend.material.color = defaultColor;
         Destroy(towerObj);
         towerBlueprint = null;

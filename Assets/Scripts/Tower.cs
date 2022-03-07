@@ -7,6 +7,7 @@ public class Tower : MonoBehaviour
     private Transform _target;
     private Enemy _targetEnemy;
     private GameObject _selectedEnemy;
+    private AudioSource shootingAudio;
 
     private Vector3 _dir;
     private Quaternion _lookRotation;
@@ -80,6 +81,7 @@ public class Tower : MonoBehaviour
 
         _currentDamageOverTime = initialDamageOverTime;
         _enemiesInArea = new List<Enemy>();
+        shootingAudio = GetComponent<AudioSource>();
 
         if (hasSphereEffect)
         {
@@ -88,7 +90,7 @@ public class Tower : MonoBehaviour
         }
     }
 
-    public int CurrentLevel { get; }
+    public int CurrentLevel { get { return _towerCurrentLevel; } }
 
 
 
@@ -138,7 +140,7 @@ public class Tower : MonoBehaviour
             }
         }
 
-        if(nearestEnemy == _selectedEnemy)
+        if(nearestEnemy == _selectedEnemy && shortestDistance <= range)
         {
             return;
         }
@@ -162,6 +164,7 @@ public class Tower : MonoBehaviour
     {
         if (_target == null && _enemiesInArea.Count == 0)
         {
+            shootingAudio.Stop();
             if (useLaser)
             {
                 if (lineRenderer.enabled)
@@ -199,6 +202,12 @@ public class Tower : MonoBehaviour
 
         if(hasArealEffect)
         {
+            if(!shootingAudio.isPlaying)
+            {
+                shootingAudio.Play();
+            }
+            
+
             foreach (Enemy enemy in _enemiesInArea)
             {
                 SlowDown(enemy);
@@ -222,6 +231,11 @@ public class Tower : MonoBehaviour
     }
     private void Laser()
     {
+        if (!shootingAudio.isPlaying)
+        {
+            shootingAudio.Play();
+        }
+
         _targetEnemy.TakeDamage(_currentDamageOverTime * Time.deltaTime);
 
         //below code related to graphics
@@ -254,6 +268,7 @@ public class Tower : MonoBehaviour
     private void Shoot()
     {
         GameObject bulletGO = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        shootingAudio.Play();
         Bullet bullet = bulletGO.GetComponent<Bullet>();
 
         if (bullet != null)
@@ -268,11 +283,6 @@ public class Tower : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
-    }
-
-    public void InverseTower()
-    {
-
     }
 
     public void SetNewParameters(TowerBlueprint blueprint, int towerLevel)

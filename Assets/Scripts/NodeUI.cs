@@ -45,7 +45,7 @@ public class NodeUI : MonoBehaviour
         _nodeTowerUI.SetActive(true);
         _nodeShopUI.SetActive(false);
 
-        sellCostText.text = $"SELL: {_choosenNode.towerBlueprint.GetSellAmount()}";
+        sellCostText.text = $"SELL: {_choosenNode.towerBlueprint.GetSellAmount(_choosenNode.tower.CurrentLevel)}";
         if(_choosenNode.towerNextlevel == 0)
         {
             upgradeText.text = "TOWER FULLY" + "\n" + "UPGRADED";
