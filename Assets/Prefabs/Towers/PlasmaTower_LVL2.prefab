@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6faef08771aa56843a62916595cebd20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 8
+  range: 9
   enemyTypes:
   - RedEnemy
   - PurpleEnemy
