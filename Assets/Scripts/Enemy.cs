@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -40,9 +42,7 @@ public class Enemy : MonoBehaviour
     private void Die()
     {
         isDead = true;
-
         deathAudio.Play();
-
         PlayerStats.Money += worth;
         PlayerStats.Crystals++;
 
@@ -51,6 +51,17 @@ public class Enemy : MonoBehaviour
         //Destroy(effect, 5f);
 
         WaveSpawner.enemiesAlive--;
+        Destroy(gameObject);
+        //StartCoroutine(EnemyDeathDelay());
+    }
+
+    IEnumerator EnemyDeathDelay()
+    {
+        gameObject.GetComponent<Renderer>().enabled = false;
+        gameObject.GetComponent<Collider>().enabled = false;
+        speed = 0;
+
+        yield return new WaitForSeconds(2);
 
         Destroy(gameObject);
     }

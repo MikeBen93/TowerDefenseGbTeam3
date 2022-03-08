@@ -4918,9 +4918,9 @@ GameObject:
   - component: {fileID: 289499260593464499}
   - component: {fileID: 2213936319072867271}
   - component: {fileID: -2529322958979842189}
-  - component: {fileID: 6732826176296831371}
   - component: {fileID: -686023779722041650}
   - component: {fileID: -8403398684803843953}
+  - component: {fileID: 1712553201}
   m_Layer: 0
   m_Name: Enemy_Red
   m_TagString: Enemy
@@ -5040,20 +5040,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBarCanvas: {fileID: 9221646563109256761}
---- !u!64 &6732826176296831371
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6408497559615290737}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 5302568919011541938, guid: d20e735b878e48d4db25f0e362adead8, type: 3}
 --- !u!82 &-686023779722041650
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5246,6 +5232,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &1712553201
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6408497559615290737}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 25.725836, y: 21.477146, z: 18.885103}
+  m_Center: {x: 0, y: 0.009530067, z: 0.00000047683713}
 --- !u!1 &8269802039132077830
 GameObject:
   m_ObjectHideFlags: 0

@@ -63,7 +63,7 @@ public class WaveSpawner : MonoBehaviour
     //waveCountdownText.text = string.Format("{0:00.00}", _countdown);
     }
 
-IEnumerator SpawnWave()
+    IEnumerator SpawnWave()
     {
         PlayerStats.Rounds++;
 
