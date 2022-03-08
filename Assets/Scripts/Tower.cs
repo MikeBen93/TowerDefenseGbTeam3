@@ -111,6 +111,8 @@ public class Tower : MonoBehaviour
             }
         }
 
+       
+
 
         float shortestDistance = Mathf.Infinity;
         GameObject nearestEnemy = null;
@@ -138,11 +140,6 @@ public class Tower : MonoBehaviour
                 shortestDistance = distanceToEnemy;
                 nearestEnemy = enemy;
             }
-        }
-
-        if(nearestEnemy == _selectedEnemy && shortestDistance <= range)
-        {
-            return;
         }
 
         if (nearestEnemy != null && shortestDistance <= range)
