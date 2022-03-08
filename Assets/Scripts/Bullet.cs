@@ -12,6 +12,8 @@ public class Bullet : MonoBehaviour
 
     public float explosionRadius = 0f;
 
+    public GameObject impactEffect;
+
     public void SetAim(Transform target)
     {
         _target = target;
@@ -41,6 +43,8 @@ public class Bullet : MonoBehaviour
 
     private void HitTarget()
     {
+        GameObject effectIns = Instantiate(impactEffect, transform.position, transform.rotation);
+        Destroy(effectIns, 3f);
 
         if (explosionRadius > 0f)
         {

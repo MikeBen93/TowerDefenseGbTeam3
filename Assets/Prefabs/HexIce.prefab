@@ -86,6 +86,7 @@ GameObject:
   - component: {fileID: 8136441631280517149}
   - component: {fileID: 5474259086297170119}
   - component: {fileID: 3778501042450557957}
+  - component: {fileID: 43146844770617162}
   m_Layer: 5
   m_Name: HexGround
   m_TagString: Untagged
@@ -157,6 +158,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &43146844770617162
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2427251213950326380}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5076798556035486163, guid: 5efef9b7b7ca70343a768a7ea2e1cc36, type: 3}
 --- !u!1 &5370587192324242870
 GameObject:
   m_ObjectHideFlags: 0

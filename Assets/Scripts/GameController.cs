@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private Tutorial[] tutorials;
 
     private DataManager _dataManager;
+    public int chipsRecievedOnLevel;
     [SerializeField] private float _healthRatioRelatedToChips;
 
 
@@ -41,6 +42,11 @@ public class GameController : MonoBehaviour
     public void WinLevel()
     {
         GameIsOver = true;
+        if (PlayerStats.Lives == PlayerStats.initialLives) chipsRecievedOnLevel = 3;
+        else if (PlayerStats.Lives/ PlayerStats.initialLives >= _healthRatioRelatedToChips) chipsRecievedOnLevel = 2;
+        else chipsRecievedOnLevel = 1;
+
+        _dataManager.ChipsAmount = _dataManager.ChipsAmount + chipsRecievedOnLevel;
         completeLevelUI.SetActive(true);
     }
 

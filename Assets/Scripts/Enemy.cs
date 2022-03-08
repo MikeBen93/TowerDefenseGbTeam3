@@ -13,13 +13,12 @@ public class Enemy : MonoBehaviour
     //public float Health = 100;
     public float damage = 1;
     public int worth = 50; //amount of money gained from enemy killing
-    //public GameObject deathEffect;
+    public GameObject deathEffect;
     [Header("Unity Stuff")]
     public Image healthBar;
     private bool isDead = false;
 
     [SerializeField] private AudioSource startAudio;
-    [SerializeField] private AudioSource deathAudio;
 
     private void Start()
     {
@@ -42,27 +41,14 @@ public class Enemy : MonoBehaviour
     private void Die()
     {
         isDead = true;
-        deathAudio.Play();
         PlayerStats.Money += worth;
         PlayerStats.Crystals++;
 
-        //GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
+        GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
 
-        //Destroy(effect, 5f);
+        Destroy(effect, 5f);
 
         WaveSpawner.enemiesAlive--;
-        Destroy(gameObject);
-        //StartCoroutine(EnemyDeathDelay());
-    }
-
-    IEnumerator EnemyDeathDelay()
-    {
-        gameObject.GetComponent<Renderer>().enabled = false;
-        gameObject.GetComponent<Collider>().enabled = false;
-        speed = 0;
-
-        yield return new WaitForSeconds(2);
-
         Destroy(gameObject);
     }
 

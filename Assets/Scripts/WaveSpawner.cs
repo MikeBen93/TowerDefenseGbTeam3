@@ -23,11 +23,18 @@ public class WaveSpawner : MonoBehaviour
 
     private int _waveIndex = 0;
 
+    [SerializeField] private Material redCenterMat;
+    [SerializeField] private Material blueCenterMat;
+    [SerializeField] private Material purpleCenterMat;
+    [SerializeField] private Renderer portalCenterRend;
+
     private void Start()
     {
         enemiesAlive = 0;
         _countdown = _initialCountdown;
         waveNumberText.text = (_waveIndex + 1).ToString() + "/" + waves.Length.ToString();
+
+        SetPortalCenter(waves[0].enemy.GetComponent<Enemy>().enemyType);
     }
     private void Update()
     {
@@ -78,11 +85,20 @@ public class WaveSpawner : MonoBehaviour
         }
 
         _waveIndex++;
+
+        if(_waveIndex != waves.Length) SetPortalCenter(waves[_waveIndex].enemy.GetComponent<Enemy>().enemyType);
     }
 
     private void SpawnEnemy(GameObject enemy)
     {
         Instantiate(enemy, spawnPoint.position, transform.rotation);
+    }
+
+    private void SetPortalCenter(string enemyType)
+    {
+        if (enemyType == "RedEnemy") portalCenterRend.material = redCenterMat;
+        else if (enemyType == "BlueEnemy") portalCenterRend.material = blueCenterMat;
+        else if (enemyType == "PurpleEnemy") portalCenterRend.material = purpleCenterMat;
     }
 
 }

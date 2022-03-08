@@ -97,3 +97,4 @@ MonoBehaviour:
   speed: 20
   damage: 40
   explosionRadius: 0
+  impactEffect: {fileID: 5278163957998829575, guid: ccd6ed3a42a044a41b0a3d29b33b3781, type: 3}

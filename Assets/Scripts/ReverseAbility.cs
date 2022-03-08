@@ -10,6 +10,8 @@ public class ReverseAbility : MonoBehaviour
     private bool _abilityIsOn = false;
 
     private Button reverseButton;
+    private AudioSource reverseAudio;
+
     [SerializeField] private string towerTagToReverse = "PlasmaTower";
 
     [SerializeField] private string[] revTowerEnemies;
@@ -25,6 +27,7 @@ public class ReverseAbility : MonoBehaviour
 
     private void Start()
     {
+        reverseAudio = GetComponent<AudioSource>();
         reverseButton = GetComponent<Button>();
     }
 
@@ -41,6 +44,8 @@ public class ReverseAbility : MonoBehaviour
 
     public void Reverse()
     {
+        reverseAudio.Play();
+
         GameObject[] firstTowers = GameObject.FindGameObjectsWithTag(towerTagToReverse);
 
         StartCoroutine(StartReverse(firstTowers));
