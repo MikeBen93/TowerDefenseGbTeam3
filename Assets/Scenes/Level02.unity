@@ -20687,23 +20687,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - enemy: {fileID: 4181390380763099882, guid: bac1fccbe9cb2f340845d5ebcfa2b8ca, type: 3}
-    count: 8
+    count: 7
     rate: 3.8
   - enemy: {fileID: 6408497559615290737, guid: e153908ade6dd6c46aac536ac7c1352b, type: 3}
-    count: 12
+    count: 11
     rate: 1.5
   - enemy: {fileID: 6408497559615290737, guid: e153908ade6dd6c46aac536ac7c1352b, type: 3}
-    count: 17
+    count: 16
     rate: 0.8
   - enemy: {fileID: 4181390380763099882, guid: bac1fccbe9cb2f340845d5ebcfa2b8ca, type: 3}
-    count: 10
+    count: 9
     rate: 3.5
   - enemy: {fileID: 6408497559615290737, guid: 050f39165b16c3f459d0617a09bace42, type: 3}
-    count: 15
+    count: 14
     rate: 1
   - enemy: {fileID: 4181390380763099882, guid: 70cd90e26977f1249b34f5edd5fd4df6, type: 3}
     count: 5
-    rate: 2
+    rate: 2.3
   spawnPoint: {fileID: 1727449963}
   waveNumberText: {fileID: 643454401}
   heartCountdownImage: {fileID: 1487563110}
@@ -40502,6 +40502,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 530952419, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
+      propertyPath: _reverseCost
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 530952419, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
+      propertyPath: _reverseTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1372579925, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
+      propertyPath: _reverseCost
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1372579925, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
+      propertyPath: _reverseTime
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6283773521822676997, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
       propertyPath: m_Pivot.x
       value: 0

@@ -141,7 +141,7 @@ MonoBehaviour:
     - BlueEnemy
     - PurpleEnemy
   - prefab: {fileID: 6816593127903017046, guid: fcd4d41b53757e444aa7890b161f9682, type: 3}
-    cost: 250
+    cost: 200
     fireRate: 2.4
     range: 8
     damageOverTime: 0
@@ -175,7 +175,7 @@ MonoBehaviour:
     - BlueEnemy
     - PurpleEnemy
   - prefab: {fileID: 6816593127903017046, guid: d31926adb356ea54f909fe02ec1881b1, type: 3}
-    cost: 250
+    cost: 300
     fireRate: 2
     range: 10
     damageOverTime: 0
@@ -192,7 +192,7 @@ MonoBehaviour:
     - BlueEnemy
     - PurpleEnemy
   - prefab: {fileID: 7995244191818393836, guid: 91b2d898bbef56d479bb27030c55337c, type: 3}
-    cost: 250
+    cost: 200
     fireRate: 1
     range: 8
     damageOverTime: 10
@@ -226,7 +226,7 @@ MonoBehaviour:
     - BlueEnemy
     - PurpleEnemy
   - prefab: {fileID: 7995244191818393836, guid: 9853c94b9a35a574ca0a9486c374d90d, type: 3}
-    cost: 150
+    cost: 200
     fireRate: 1
     range: 10
     damageOverTime: 10

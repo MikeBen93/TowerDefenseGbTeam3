@@ -21218,8 +21218,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - enemy: {fileID: 6408497559615290737, guid: e153908ade6dd6c46aac536ac7c1352b, type: 3}
-    count: 12
-    rate: 2.2
+    count: 5
+    rate: 2
   - enemy: {fileID: 6408497559615290737, guid: e153908ade6dd6c46aac536ac7c1352b, type: 3}
     count: 12
     rate: 1.2
@@ -21249,7 +21249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6381c6ad49e1cf46bd688264eb16415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 2500
+  startMoney: 250
   startLives: 20
 --- !u!114 &607069962
 MonoBehaviour:
@@ -76083,6 +76083,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 530952419, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
+      propertyPath: _reverseCost
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 530952419, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
+      propertyPath: _reverseTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1372579925, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
+      propertyPath: _reverseCost
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1372579925, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
+      propertyPath: _reverseTime
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6283773521822676997, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
       propertyPath: m_Pivot.x
       value: 0

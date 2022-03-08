@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11792,6 +11792,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 530952419, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
+      propertyPath: _reverseCost
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 530952419, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
+      propertyPath: _reverseTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1372579925, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
+      propertyPath: _reverseCost
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1372579925, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
+      propertyPath: _reverseTime
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6283773521822676997, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
       propertyPath: m_Pivot.x
       value: 0
