@@ -5822,6 +5822,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 530952419, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
+      propertyPath: _reverseCost
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 530952419, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
+      propertyPath: _reverseTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1372579925, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
+      propertyPath: _reverseCost
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1372579925, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
+      propertyPath: _reverseTime
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6283773521822676997, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
       propertyPath: m_Pivot.x
       value: 0
