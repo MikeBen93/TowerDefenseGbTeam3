@@ -16,10 +16,14 @@ public class Enemy : MonoBehaviour
     public Image healthBar;
     private bool isDead = false;
 
+    [SerializeField] private AudioSource startAudio;
+    [SerializeField] private AudioSource deathAudio;
+
     private void Start()
     {
         speed = startSpeed;
         health = startHealth;
+        startAudio.Play();
     }
     public void TakeDamage(float amount)
     {
@@ -36,6 +40,8 @@ public class Enemy : MonoBehaviour
     private void Die()
     {
         isDead = true;
+
+        deathAudio.Play();
 
         PlayerStats.Money += worth;
         PlayerStats.Crystals++;
