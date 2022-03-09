@@ -45,14 +45,14 @@ public class NodeUI : MonoBehaviour
         _nodeTowerUI.SetActive(true);
         _nodeShopUI.SetActive(false);
 
-        sellCostText.text = $"SELL: {_choosenNode.towerBlueprint.GetSellAmount(_choosenNode.tower.CurrentLevel)}";
+        sellCostText.text = $"{_choosenNode.towerBlueprint.GetSellAmount(_choosenNode.tower.CurrentLevel)}";
         if(_choosenNode.towerNextlevel == 0)
         {
-            upgradeText.text = "TOWER FULLY" + "\n" + "UPGRADED";
+            upgradeText.text = "FULLY UPGRADED";
         }
         else
         {
-            upgradeText.text = "UPGRADE TO LVL " + _choosenNode.towerNextlevel + "\n" + "COST: " + _choosenNode.upgradeCostToNextLevel;
+            upgradeText.text = $"{_choosenNode.upgradeCostToNextLevel}";
         }
 
     }
@@ -68,7 +68,8 @@ public class NodeUI : MonoBehaviour
         _choosenNode = node;
 
         transform.position = node.transform.position + (_cameraSeeker.GetCameraPosition - node.transform.position).normalized * 15;
-        transform.LookAt(_cameraSeeker.GetCameraPosition);
+        transform.rotation = Quaternion.LookRotation(Vector3.forward + Vector3.down);
+        //transform.LookAt(_cameraSeeker.GetCameraPosition);
 
         if (node.tower == null)
         {
