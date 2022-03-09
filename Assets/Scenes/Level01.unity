@@ -21229,8 +21229,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - enemy: {fileID: 6408497559615290737, guid: e153908ade6dd6c46aac536ac7c1352b, type: 3}
-    count: 1
+    count: 5
     rate: 2
+  - enemy: {fileID: 6408497559615290737, guid: e153908ade6dd6c46aac536ac7c1352b, type: 3}
+    count: 12
+    rate: 1.2
+  - enemy: {fileID: 4181390380763099882, guid: bac1fccbe9cb2f340845d5ebcfa2b8ca, type: 3}
+    count: 5
+    rate: 4
+  - enemy: {fileID: 6408497559615290737, guid: e153908ade6dd6c46aac536ac7c1352b, type: 3}
+    count: 12
+    rate: 2.2
+  - enemy: {fileID: 4181390380763099882, guid: bac1fccbe9cb2f340845d5ebcfa2b8ca, type: 3}
+    count: 5
+    rate: 3
   spawnPoint: {fileID: 152115902753023744}
   waveNumberText: {fileID: 1928909213}
   heartCountdownImage: {fileID: 6293260}
