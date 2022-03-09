@@ -34,8 +34,8 @@ public class Tower : MonoBehaviour
     [SerializeField] private float _pointingTime;
     [SerializeField] private float _lastPointingTime;
     [SerializeField] private float _currentDamageOverTime;
-    //public ParticleSystem impactEffect;
-    //public Light impactLight;
+    public ParticleSystem impactEffect;
+    public Light impactLight;
 
     [Header("Slowing effect")]
     public bool hasSlowingEffect = false;
@@ -167,8 +167,8 @@ public class Tower : MonoBehaviour
                 if (lineRenderer.enabled)
                 {
                     lineRenderer.enabled = false;
-                    //impactEffect.Stop();
-                    //impactLight.enabled = false;
+                    impactEffect.Stop();
+                    impactLight.enabled = false;
                 }
             }
             return;
@@ -239,16 +239,16 @@ public class Tower : MonoBehaviour
         if (!lineRenderer.enabled)
         {
             lineRenderer.enabled = true;
-            //impactEffect.Play();
-            //impactLight.enabled = true;
+            impactEffect.Play();
+            impactLight.enabled = true;
         }
         lineRenderer.SetPosition(0, firePoint.position);
         lineRenderer.SetPosition(1, _target.position);
 
         Vector3 dir = transform.position - _target.position;
 
-        //impactEffect.transform.position = _target.position + dir.normalized * 1f;
-        //impactEffect.transform.rotation = Quaternion.LookRotation(dir);
+        impactEffect.transform.position = _target.position + dir.normalized * 1f;
+        impactEffect.transform.rotation = Quaternion.LookRotation(dir);
     }
 
     private void DamageOverTimeRise()

@@ -25,4 +25,14 @@ public class LevelSelecter : MonoBehaviour
         SceneManager.LoadScene(levelName);
         //sceneFader.FadeTo(levelName);
     }
+
+    public void LoadUpgrades()
+    {
+        SceneManager.LoadScene("Upgrades");
+    }
+
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }

@@ -24,4 +24,9 @@ public class CompleteLevelMenu : MonoBehaviour
         SceneManager.LoadScene(mainMeneSceneName);
         //sceneFader.FadeTo(mainMeneSceneName);
     }
+
+    public void LoadUpgrades()
+    {
+        SceneManager.LoadScene("Upgrades");
+    }
 }
