@@ -10,6 +10,8 @@ public class WaveSpawner : MonoBehaviour
 
     public Wave[] waves;
 
+    private string _enemyType;
+
     public Transform spawnPoint;
 
     public Text waveNumberText;
@@ -28,19 +30,40 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField] private Material purpleCenterMat;
     [SerializeField] private Renderer portalCenterRend;
 
+    [SerializeField] private AudioSource redEnemiesEntranceSound;
+    [SerializeField] private AudioSource redEnemiesDeathSound;
+    [SerializeField] private AudioSource blueEnemiesEntranceSound;
+    [SerializeField] private AudioSource blueEnemiesDeathSound;
+    [SerializeField] private AudioSource purpleEnemiesEntranceSound;
+    [SerializeField] private AudioSource purpleEnemiesDeathSound;
+
+    private AudioSource entranceSoundToPlay;
+    private AudioSource deathSoundToPlay;
+    private bool _deathSoundPlayed = true;
+
+
     private void Start()
     {
         enemiesAlive = 0;
         _countdown = _initialCountdown;
         waveNumberText.text = (_waveIndex + 1).ToString() + "/" + waves.Length.ToString();
 
-        SetPortalCenter(waves[0].enemy.GetComponent<Enemy>().enemyType);
+        _enemyType = waves[0].enemy.GetComponent<Enemy>().enemyType;
+        SetPortalCenter(_enemyType);
+        SetAudio(_enemyType);
     }
     private void Update()
     {
         
         //checking if we killed all enemies in wave 
         if (enemiesAlive > 0) return;
+
+        if(!_deathSoundPlayed)
+        {
+            deathSoundToPlay.Play();
+            SetAudio(_enemyType);
+            _deathSoundPlayed = true;
+        }
 
         if (gameController.ShowTutorial && _countdown <= _initialCountdown - 1.5f)
         {
@@ -57,6 +80,7 @@ public class WaveSpawner : MonoBehaviour
         if (_countdown <= 0f)
         {
             waveNumberText.text = (_waveIndex + 1).ToString() + "/" + waves.Length.ToString();
+            
             StartCoroutine(SpawnWave());
             _countdown = timeBetweenWaves;
             return;
@@ -78,15 +102,23 @@ public class WaveSpawner : MonoBehaviour
 
         enemiesAlive = wave.count;
 
+
         for (int i = 0; i < wave.count; i++)
         {
             SpawnEnemy(wave.enemy);
+            if (i == 0) entranceSoundToPlay.Play();
+            if (i == wave.count - 1) _deathSoundPlayed = false;
             yield return new WaitForSeconds(wave.rate);
         }
 
         _waveIndex++;
 
-        if(_waveIndex != waves.Length) SetPortalCenter(waves[_waveIndex].enemy.GetComponent<Enemy>().enemyType);
+        if (_waveIndex != waves.Length)
+        {
+            _enemyType = waves[_waveIndex].enemy.GetComponent<Enemy>().enemyType;
+            SetPortalCenter(_enemyType);
+        }
+
     }
 
     private void SpawnEnemy(GameObject enemy)
@@ -99,6 +131,25 @@ public class WaveSpawner : MonoBehaviour
         if (enemyType == "RedEnemy") portalCenterRend.material = redCenterMat;
         else if (enemyType == "BlueEnemy") portalCenterRend.material = blueCenterMat;
         else if (enemyType == "PurpleEnemy") portalCenterRend.material = purpleCenterMat;
+    }
+
+    private void SetAudio(string enemyType)
+    {
+        if (enemyType == "RedEnemy")
+        {
+            entranceSoundToPlay = redEnemiesEntranceSound;
+            deathSoundToPlay = redEnemiesDeathSound;
+        }
+        else if (enemyType == "BlueEnemy")
+        {
+            entranceSoundToPlay = blueEnemiesEntranceSound;
+            deathSoundToPlay = blueEnemiesDeathSound;
+        }
+        else if (enemyType == "PurpleEnemy")
+        {
+            entranceSoundToPlay = purpleEnemiesEntranceSound;
+            deathSoundToPlay = purpleEnemiesDeathSound;
+        }
     }
 
 }
