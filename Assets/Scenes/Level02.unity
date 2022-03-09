@@ -20572,7 +20572,7 @@ MonoBehaviour:
   tutorialUI: {fileID: 1375058431}
   gameOverUI: {fileID: 1375058430}
   completeLevelUI: {fileID: 1375058429}
-  dialogueMenu: {fileID: 0}
+  dialogueMenu: {fileID: 1375058432}
   tutorials:
   - sceneName: Level01
     nextWaveNumber: 0
@@ -41105,6 +41105,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6283773523061584852, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
   m_PrefabInstance: {fileID: 1375058428}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1375058432 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2101952415862759734, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
+  m_PrefabInstance: {fileID: 1375058428}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ab2f0645bc3bbe4f9df7714e746cb70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1375768439
 PrefabInstance:
   m_ObjectHideFlags: 0
