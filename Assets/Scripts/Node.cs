@@ -23,6 +23,10 @@ public class Node : MonoBehaviour
     //[HideInInspector]
     public int upgradeCostToNextLevel;
 
+    [SerializeField] private AudioSource buildSound;
+    [SerializeField] private AudioSource sellSound;
+    [SerializeField] private AudioSource upgradeSound;
+
 
 
     private void Start()
@@ -63,7 +67,7 @@ public class Node : MonoBehaviour
     private void BuildTower(TowerBlueprint blueprint)
     {
         PlayerStats.Money -= blueprint.cost;
-
+        buildSound.Play();
         towerObj = Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);
 
         tower = towerObj.GetComponent<Tower>();
@@ -79,6 +83,7 @@ public class Node : MonoBehaviour
     {
         PlayerStats.Money += towerBlueprint.GetSellAmount(tower.CurrentLevel);
         rend.material.color = defaultColor;
+        sellSound.Play();
         Destroy(towerObj);
         towerBlueprint = null;
     }
@@ -107,6 +112,7 @@ public class Node : MonoBehaviour
     public void UpgradeTower()
     {
         Destroy(towerObj);
+        upgradeSound.Play();
         if (towerNextlevel == 2)
         {
             PlayerStats.Money -= towerBlueprint.lvl2Cost;
@@ -114,7 +120,7 @@ public class Node : MonoBehaviour
             tower = towerObj.GetComponent<Tower>();
             tower.SetNewParameters(towerBlueprint, 2);
             towerNextlevel = 3;
-            upgradeCostToNextLevel = towerBlueprint.lvl2Cost;
+            upgradeCostToNextLevel = towerBlueprint.lvl3Cost;
             return;
         } else if (towerNextlevel == 3)
         {
