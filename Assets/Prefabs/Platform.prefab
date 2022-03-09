@@ -95,12 +95,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e285c6c0512193140aef2560e9f28162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  positionOffset: {x: 0, y: 1, z: 0}
+  positionOffset: {x: 0, y: 0.75, z: 0.05}
+  towerObj: {fileID: 0}
   tower: {fileID: 0}
   towerBlueprint:
     prefab: {fileID: 0}
     cost: 0
+    lvl2Prefab: {fileID: 0}
+    lvl2Cost: 0
+    lvl3Prefab: {fileID: 0}
+    lvl3Cost: 0
   isUpgraded: 0
+  towerNextlevel: 0
+  upgradeCostToNextLevel: 0
 --- !u!64 &8527881758143505474
 MeshCollider:
   m_ObjectHideFlags: 0
