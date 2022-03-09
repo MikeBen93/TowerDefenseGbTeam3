@@ -142,6 +142,11 @@ public class Tower : MonoBehaviour
             }
         }
 
+        if(nearestEnemy == _selectedEnemy && shortestDistance <= range)
+        {
+            return;
+        }
+
         if (nearestEnemy != null && shortestDistance <= range)
         {
             _selectedEnemy = nearestEnemy;
@@ -153,6 +158,7 @@ public class Tower : MonoBehaviour
         }
         else
         {
+            _selectedEnemy = null;
             _target = null;
         }
     }
