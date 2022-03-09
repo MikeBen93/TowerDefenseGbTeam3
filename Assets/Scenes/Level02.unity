@@ -21154,7 +21154,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 74aec07eac016b04a9877726c0a32475, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8ec63a2582e153947ad6f65e5f7c973b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.3
   m_Pitch: 1
@@ -21250,7 +21250,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3610b7ba8eb7deb458f6b8e8f86479de, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1ff9b4446d856024aa07fb52ab5227d5, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.3
   m_Pitch: 1
@@ -41174,9 +41174,28 @@ PrefabInstance:
       propertyPath: _reverseTime
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 6283773521822676993, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
-      propertyPath: m_Volume
-      value: 0.3
+    - target: {fileID: 1945043019, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2101952415862759734, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
+      propertyPath: gameController
+      value: 
+      objectReference: {fileID: 607069959}
+    - target: {fileID: 2101952415862759734, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
+      propertyPath: dialogueElements.Array.data[0].characterSpeech
+      value: "- \u0422\u044B \u043F\u0440\u043E\u0434\u0435\u043B\u0430\u043B\u0430
+        \u0434\u043E\u043B\u0433\u0438\u0439 \u043F\u0443\u0442\u044C \u0447\u0442\u043E\u0431\u044B
+        \u0434\u043E\u0431\u0440\u0430\u0442\u044C\u0441\u044F \u0441\u044E\u0434\u0430.
+        \u041F\u0440\u043E\u0448\u043B\u043E \u0441\u0442\u043E\u043B\u044C\u043A\u043E
+        \u0432\u0440\u0435\u043C\u0435\u043D\u0438, \u0437\u0430\u0447\u0435\u043C
+        \u0436\u0435 \u0442\u044B \u043D\u0430 \u043C\u0435\u043D\u044F \u043D\u0430\u043F\u0430\u0434\u0430\u0435\u0448\u044C?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2101952415862759734, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
+      propertyPath: dialogueElements.Array.data[1].characterSpeech
+      value: "- \u042F \u044D\u0442\u043E \u0434\u0435\u043B\u0430\u044E \u0432\u043E
+        \u0438\u043C\u044F \u043C\u0435\u0441\u0442\u0438! \u0423\u043D\u0438\u0447\u0442\u043E\u0436\u0438\u0442\u044C
+        \u0435\u0433\u043E!"
       objectReference: {fileID: 0}
     - target: {fileID: 6283773521822676997, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
       propertyPath: m_Pivot.x

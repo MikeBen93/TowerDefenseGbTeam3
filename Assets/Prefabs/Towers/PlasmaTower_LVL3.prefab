@@ -140,6 +140,8 @@ MonoBehaviour:
   _pointingTime: 0
   _lastPointingTime: 0
   _currentDamageOverTime: 0
+  impactEffect: {fileID: 0}
+  impactLight: {fileID: 0}
   hasSlowingEffect: 0
   slowAmount: 0.5
   hasArealEffect: 0
@@ -160,7 +162,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c91199dba19f57645b7d6ecf1fc458bb, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 300dac7502a22f84db1d253a541440b2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.75
   m_Pitch: 1
