@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour
     public GameObject gameOverUI;
     public GameObject completeLevelUI;
 
+    [SerializeField] private DialogueMenu dialogueMenu;
     [SerializeField] private Tutorial[] tutorials;
 
     private DataManager _dataManager;
@@ -46,7 +47,22 @@ public class GameController : MonoBehaviour
         else if (PlayerStats.Lives/ PlayerStats.initialLives >= _healthRatioRelatedToChips) chipsRecievedOnLevel = 2;
         else chipsRecievedOnLevel = 1;
 
+        PlayerPrefs.SetInt("chips_recieveid_on_" + SceneManager.GetActiveScene().name, chipsRecievedOnLevel);
+
         _dataManager.ChipsAmount = _dataManager.ChipsAmount + chipsRecievedOnLevel;
+
+        if (dialogueMenu != null && dialogueMenu.showDialogueMenu)
+        {
+            dialogueMenu.ActivateDialogue();
+
+        } else
+        {
+            ShowWinWindow();
+        }
+    }
+
+    public void ShowWinWindow()
+    {
         completeLevelUI.SetActive(true);
     }
 
