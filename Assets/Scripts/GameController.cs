@@ -16,7 +16,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private Tutorial[] tutorials;
 
     private DataManager _dataManager;
-    public int chipsRecievedOnLevel;
+    public int chipsRecievedOnLevel = 0;
     [SerializeField] private float _healthRatioRelatedToChips;
 
 

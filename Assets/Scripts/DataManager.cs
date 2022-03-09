@@ -7,12 +7,18 @@ public class DataManager : MonoBehaviour
 {
     public static DataManager instance;
     private int _currentChipsAmount;
+    private bool _chipsIsLoaded = false;
+    private int amountOfLoadedChips = 0;
 
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
+            if(!_chipsIsLoaded)
+            {
+                LoadChips();
+            }
         } else if (instance != this)
         {
             Destroy(gameObject);
@@ -25,5 +31,17 @@ public class DataManager : MonoBehaviour
     public int ChipsAmount { 
         get { return _currentChipsAmount; } 
         set { _currentChipsAmount = value; } 
+    }
+
+    private void LoadChips()
+    {
+        for(int i = 0; i < 7; i ++)
+        {
+            amountOfLoadedChips += PlayerPrefs.GetInt("chips_recieveid_on_Level0" + i, 0);
+        }
+
+        ChipsAmount = amountOfLoadedChips;
+        _chipsIsLoaded = true;
+        Debug.Log($"chipsLoaded = {amountOfLoadedChips}");
     }
 }
