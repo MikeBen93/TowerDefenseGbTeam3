@@ -12,9 +12,13 @@ public class CompleteLevelMenu : MonoBehaviour
     public string nextLevel = "MainMenu";
     public int levelToUnlock = 2;
 
-    public void Continue()
+    private void OnEnable()
     {
         PlayerPrefs.SetInt("levelReached", levelToUnlock);
+    }
+
+    public void Continue()
+    {
         //sceneFader.FadeTo(nextLevel);
         SceneManager.LoadScene(nextLevel);
     }

@@ -5,6 +5,8 @@ using UnityEngine;
 [System.Serializable]
 public class TowerBlueprint
 {
+    [SerializeField] float sellingRate = 3 / 5;
+
     public GameObject prefab;
     public int cost;
 
@@ -18,15 +20,15 @@ public class TowerBlueprint
     {
         if(currentLevel == 1)
         {
-            return cost * 3 / 5;
+            return (int)(cost * sellingRate);
         }
         else if (currentLevel == 2)
         {
-            return (cost + lvl2Cost) * 3 / 5;
+            return (int)((cost + lvl2Cost) * sellingRate);
         }
         else
         {
-            return (cost + lvl2Cost + lvl3Cost) * 3 / 5;
+            return (int)((cost + lvl2Cost + lvl3Cost) * sellingRate);
         }
     }
 }

@@ -28,10 +28,10 @@ public class Shop : MonoBehaviour
         _buildManager = BuildManager.instance;
         _dataManager = DataManager.instance;
 
-        laserTower.cost = GetTowerCostFromData(laserTower);
-        plasmaTower.cost = GetTowerCostFromData(plasmaTower);
-        electroTower.cost = GetTowerCostFromData(electroTower);
-        magnitTower.cost = GetTowerCostFromData(magnitTower);
+        SetTowerCosts(laserTower);
+        SetTowerCosts(plasmaTower);
+        SetTowerCosts(electroTower);
+        SetTowerCosts(magnitTower);
     }
 
     private void Update()
@@ -67,16 +67,24 @@ public class Shop : MonoBehaviour
         _buildManager.SelectTowerToBuild(magnitTower);
     }
 
-    private int GetTowerCostFromData(TowerBlueprint blueprint)
+    private void SetTowerCosts(TowerBlueprint towerBl)
     {
-        foreach(TowerParameters towParams in _dataManager.towerParameters)
+        GameObject lvl1Pref = towerBl.prefab;
+        GameObject lvl2Pref = towerBl.lvl2Prefab;
+        GameObject lvl3Pref = towerBl.lvl3Prefab;
+        foreach (TowerParameters towParams in _dataManager.towerParameters)
         {
-            if(blueprint.prefab == towParams.prefab)
+            if (lvl1Pref == towParams.prefab)
             {
-                return towParams.cost;
+                towerBl.cost = towParams.cost;
+            } else if (lvl2Pref == towParams.prefab)
+            {
+                towerBl.lvl2Cost = towParams.cost;
+            }
+            else if (lvl3Pref == towParams.prefab)
+            {
+                towerBl.lvl3Cost = towParams.cost;
             }
         }
-
-        return 0;
     }
 }

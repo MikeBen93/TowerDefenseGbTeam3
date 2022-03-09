@@ -55,7 +55,7 @@ public class MagnitTowerUpgrade : MonoBehaviour
         fourthUprgradeBought = tParamLVL1.fourthUprgradeBought;
     }
 
-    private void CheckButtonInteractiablitiy()
+    public void CheckButtonInteractiablitiy()
     {
 
         if (_dataManager.ChipsAmount >= firstUpgradeCost && !firstUprgradeBought)
@@ -120,7 +120,7 @@ public class MagnitTowerUpgrade : MonoBehaviour
         }
         else Debug.LogError("Tower doesn't set to TowerParameters in DataManager");
 
-        CheckButtonInteractiablitiy();
+        _dataManager.ChipsAmount = _dataManager.ChipsAmount - firstUpgradeCost;
     }
 
     public void BuySecondUpgrade()
@@ -137,7 +137,7 @@ public class MagnitTowerUpgrade : MonoBehaviour
         }
         else Debug.LogError("Tower doesn't set to TowerParameters in DataManager");
 
-        CheckButtonInteractiablitiy();
+        _dataManager.ChipsAmount = _dataManager.ChipsAmount - secondUpgradeCost;
     }
 
     public void BuyThirdUpgrade()
@@ -154,7 +154,7 @@ public class MagnitTowerUpgrade : MonoBehaviour
         }
         else Debug.LogError("Tower doesn't set to TowerParameters in DataManager");
 
-        CheckButtonInteractiablitiy();
+        _dataManager.ChipsAmount = _dataManager.ChipsAmount - thirdUpgradeCost;
     }
 
     public void BuyFourthUpgrade()
@@ -168,6 +168,7 @@ public class MagnitTowerUpgrade : MonoBehaviour
         }
         else Debug.LogError("Tower doesn't set to TowerParameters in DataManager");
 
+        _dataManager.ChipsAmount = _dataManager.ChipsAmount - fourthUpgradeCost;
 
     }
 }

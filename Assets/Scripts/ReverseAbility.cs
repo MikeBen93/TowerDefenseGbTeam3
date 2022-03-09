@@ -44,6 +44,7 @@ public class ReverseAbility : MonoBehaviour
 
     public void Reverse()
     {
+        PlayerStats.Crystals -= _reverseCost;
         reverseAudio.Play();
 
         GameObject[] firstTowers = GameObject.FindGameObjectsWithTag(towerTagToReverse);
