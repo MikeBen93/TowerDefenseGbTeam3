@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Enemy_Red
+  m_Name: Enemy_Red_LVL2
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP _PARALLAXMAP
   m_LightmapFlags: 2
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: eba79dd4dbda7884f91ccd73647e494c, type: 3}
+        m_Texture: {fileID: 2800000, guid: df6fd0d9f6f74974eb7a3310b8d53ba8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -36,15 +36,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: af2f89cbc9f63814d93227d9b38346e2, type: 3}
+        m_Texture: {fileID: 2800000, guid: f4908c13f769b2f4aa820ae189047ff6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 41bd0bf5a958ce64ea47093270cb852d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4aed35c6de82e4a45b759947122261ab, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: cd03c5d2d334193469725abd0152b2e8, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5e9fca03561cab247b94a7a031312c30, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -52,7 +52,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 2800000, guid: ff20d4ca9f8e40242a624da02e624182, type: 3}
+        m_Texture: {fileID: 2800000, guid: 08478318bf45d47498863ebd430a390e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:

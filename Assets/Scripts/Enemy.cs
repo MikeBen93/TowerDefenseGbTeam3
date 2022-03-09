@@ -18,13 +18,10 @@ public class Enemy : MonoBehaviour
     public Image healthBar;
     private bool isDead = false;
 
-    [SerializeField] private AudioSource startAudio;
-
     private void Start()
     {
         speed = startSpeed;
         health = startHealth;
-        startAudio.Play();
     }
     public void TakeDamage(float amount)
     {
