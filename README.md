@@ -6,3 +6,8 @@ Build in this folder under name Untowered Hearts.apk : https://drive.google.com/
 ## Following people are developers of the game:
 
 **Mikhail Benkov** - Unity Developer (https://github.com/MikeBen93)
+**Ilya Ulybyshev** - Game Designer (ve9tamr@gmail.com)
+**Alexander Rubtsov** - Game Designer (allrubtsoff.job@gmail.com)
+**George Perminov (mantis_sound)** - Sound Designer (jmajorik@gmail.com Instagram: mantis_sound)
+**Chernakova Inna** - 2D Artist (zellikwow@gmail.com)
+**Shelmanov Pavel** - 3D Artist (shelmanovpasha@gmail.com)
