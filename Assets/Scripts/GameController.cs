@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour
     public static bool GameIsOver;
     public bool ShowTutorial = true;
 
-    public GameObject tutorialUI;
+    //public TutorialContentController tutorialController;
     public GameObject gameOverUI;
     public GameObject completeLevelUI;
 
@@ -38,10 +38,12 @@ public class GameController : MonoBehaviour
     {
         GameIsOver = true;
         gameOverUI.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     public void WinLevel()
     {
+        Time.timeScale = 0f;
         GameIsOver = true;
         if (PlayerStats.Lives == PlayerStats.initialLives) chipsRecievedOnLevel = 3;
         else if (PlayerStats.Lives/ PlayerStats.initialLives >= _healthRatioRelatedToChips) chipsRecievedOnLevel = 2;
@@ -73,8 +75,8 @@ public class GameController : MonoBehaviour
             if (tutorial.sceneName == sceneName && tutorial.nextWaveNumber == nextWaveNumber && !tutorial.showed)
             {
                 tutorial.showed = true;
-                tutorialUI.SetActive(true);
-                tutorialUI.GetComponent<TutorialMenu>().SetTutorialText(tutorial.tutorialText);
+                tutorial.tutorialContentController.gameObject.SetActive(true);
+                //tutorialUI.GetComponent<TutorialMenu>().SetTutorialText(tutorial.tutorialText);
 
                 Time.timeScale = 0;
                 return;

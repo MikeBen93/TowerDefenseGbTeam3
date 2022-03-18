@@ -6,6 +6,6 @@ public class Tutorial
 {
     public string sceneName;
     public int nextWaveNumber;
-    public string tutorialText;
+    public TutorialContentController tutorialContentController;
     public bool showed;
 }

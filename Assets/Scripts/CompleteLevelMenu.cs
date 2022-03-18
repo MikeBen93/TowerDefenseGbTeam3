@@ -20,17 +20,20 @@ public class CompleteLevelMenu : MonoBehaviour
     public void Continue()
     {
         //sceneFader.FadeTo(nextLevel);
+        Time.timeScale = 1f;
         SceneManager.LoadScene(nextLevel);
     }
 
     public void Menu()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(mainMeneSceneName);
         //sceneFader.FadeTo(mainMeneSceneName);
     }
 
     public void LoadUpgrades()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Upgrades");
     }
 }
