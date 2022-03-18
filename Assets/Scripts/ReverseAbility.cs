@@ -113,7 +113,7 @@ public class ReverseAbility : MonoBehaviour
 
     private void ButtonTimer()
     {
-        if (_abilityIsOn == true)
+        if (_abilityIsOn)
         {
             _currentRevTime += Time.deltaTime;
             revImage.fillAmount = _currentRevTime / _reverseTime;
