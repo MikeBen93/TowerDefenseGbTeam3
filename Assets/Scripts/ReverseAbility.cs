@@ -9,6 +9,9 @@ public class ReverseAbility : MonoBehaviour
     [SerializeField] private int _reverseCost = 0;
     private bool _abilityIsOn = false;
 
+    private Image revImage;
+    private float _currentRevTime;
+
     private Button reverseButton;
     private AudioSource reverseAudio;
 
@@ -29,11 +32,14 @@ public class ReverseAbility : MonoBehaviour
     {
         reverseAudio = GetComponent<AudioSource>();
         reverseButton = GetComponent<Button>();
+        revImage = GetComponent<Image>();
+        _currentRevTime = _reverseTime;
     }
 
     private void Update()
     {
         CheckAbilityToUse();
+        ButtonTimer();
     }
 
     private void CheckAbilityToUse()
@@ -46,6 +52,7 @@ public class ReverseAbility : MonoBehaviour
     {
         PlayerStats.Crystals -= _reverseCost;
         reverseAudio.Play();
+        _currentRevTime = 0;
 
         GameObject[] firstTowers = GameObject.FindGameObjectsWithTag(towerTagToReverse);
 
@@ -102,5 +109,14 @@ public class ReverseAbility : MonoBehaviour
         if (towerLevel == 1) return lvl1InitMat;
         else if (towerLevel == 2) return lvl2InitMat;
         else return lvl3InitMat;
+    }
+
+    private void ButtonTimer()
+    {
+        if (_abilityIsOn)
+        {
+            _currentRevTime += Time.deltaTime;
+            revImage.fillAmount = _currentRevTime / _reverseTime;
+        }
     }
 }
