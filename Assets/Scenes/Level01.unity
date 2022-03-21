@@ -48825,7 +48825,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6741373497203506456, guid: 63fc7b0a94a7cbc43a51807ce7784fbb, type: 3}
       propertyPath: m_Name
-      value: '[GameManager]'
+      value: '[GameManager-lvl1]'
       objectReference: {fileID: 0}
     - target: {fileID: 6741373497203506457, guid: 63fc7b0a94a7cbc43a51807ce7784fbb, type: 3}
       propertyPath: gameOverUI
