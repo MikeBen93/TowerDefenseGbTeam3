@@ -19,6 +19,10 @@ public class GameController : MonoBehaviour
     public int chipsRecievedOnLevel = 0;
     [SerializeField] private float _healthRatioRelatedToChips;
 
+    private void Awake()
+    {
+        Time.timeScale = 1;
+    }
 
     private void Start()
     {

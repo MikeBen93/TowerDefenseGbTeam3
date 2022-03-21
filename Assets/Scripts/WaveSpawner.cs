@@ -44,7 +44,9 @@ public class WaveSpawner : MonoBehaviour
 
     private void Start()
     {
-        enemiesAlive = 0;
+        gameController = GetComponent<GameController>();
+
+           enemiesAlive = 0;
         _countdown = _initialCountdown;
         waveNumberText.text = (_waveIndex + 1).ToString() + "/" + waves.Length.ToString();
 

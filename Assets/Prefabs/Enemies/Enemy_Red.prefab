@@ -4954,7 +4954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyType: RedEnemy
-  startSpeed: 4
+  startSpeed: 40
   speed: 0
   startHealth: 100
   health: 0
