@@ -42,6 +42,5 @@ public class DataManager : MonoBehaviour
 
         ChipsAmount = amountOfLoadedChips;
         _chipsIsLoaded = true;
-        Debug.Log($"chipsLoaded = {amountOfLoadedChips}");
     }
 }
