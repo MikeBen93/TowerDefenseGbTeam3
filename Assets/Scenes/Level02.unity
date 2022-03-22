@@ -29684,17 +29684,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6283773521881812170, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
   m_PrefabInstance: {fileID: 1375058428}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1375058431 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6430015969123828615, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
-  m_PrefabInstance: {fileID: 1375058428}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa35780bbcd956c46a32dc34736cc9c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1375058432 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2101952415862759734, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
@@ -29704,50 +29693,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ab2f0645bc3bbe4f9df7714e746cb70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1375058433 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 167022135209692227, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
-  m_PrefabInstance: {fileID: 1375058428}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa35780bbcd956c46a32dc34736cc9c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1375058434 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1944255815010775996, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
-  m_PrefabInstance: {fileID: 1375058428}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa35780bbcd956c46a32dc34736cc9c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1375058435 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4796632227236752472, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
-  m_PrefabInstance: {fileID: 1375058428}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa35780bbcd956c46a32dc34736cc9c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1375058436 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6724279624261054113, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
-  m_PrefabInstance: {fileID: 1375058428}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa35780bbcd956c46a32dc34736cc9c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1375768439
@@ -45921,25 +45866,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1375058429}
     - target: {fileID: 6713732492090394994, guid: 13301de3501b34647909d15b8ab9e60f, type: 3}
+      propertyPath: tutorials.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6713732492090394994, guid: 13301de3501b34647909d15b8ab9e60f, type: 3}
       propertyPath: tutorials.Array.data[0].tutorialContentController
       value: 
-      objectReference: {fileID: 1375058436}
+      objectReference: {fileID: 0}
     - target: {fileID: 6713732492090394994, guid: 13301de3501b34647909d15b8ab9e60f, type: 3}
       propertyPath: tutorials.Array.data[1].tutorialContentController
       value: 
-      objectReference: {fileID: 1375058435}
+      objectReference: {fileID: 0}
     - target: {fileID: 6713732492090394994, guid: 13301de3501b34647909d15b8ab9e60f, type: 3}
       propertyPath: tutorials.Array.data[2].tutorialContentController
       value: 
-      objectReference: {fileID: 1375058434}
+      objectReference: {fileID: 0}
     - target: {fileID: 6713732492090394994, guid: 13301de3501b34647909d15b8ab9e60f, type: 3}
       propertyPath: tutorials.Array.data[3].tutorialContentController
       value: 
-      objectReference: {fileID: 1375058433}
+      objectReference: {fileID: 0}
     - target: {fileID: 6713732492090394994, guid: 13301de3501b34647909d15b8ab9e60f, type: 3}
       propertyPath: tutorials.Array.data[4].tutorialContentController
       value: 
-      objectReference: {fileID: 1375058431}
+      objectReference: {fileID: 0}
     - target: {fileID: 6713732492090394995, guid: 13301de3501b34647909d15b8ab9e60f, type: 3}
       propertyPath: m_Name
       value: '[GameManager-lvl2]'

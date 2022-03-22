@@ -53,10 +53,7 @@ MonoBehaviour:
     explosionRadius: 0
     upgradableToLvl2: 0
     upgradableToLvl3: 0
-    firstUprgradeBought: 0
-    secondtUprgradeBought: 0
-    thirdUprgradeBought: 0
-    fourthUprgradeBought: 0
+    towerUprgradesBought: 00000000
     enemyTypes:
     - RedEnemy
     - PurpleEnemy
@@ -69,10 +66,7 @@ MonoBehaviour:
     explosionRadius: 0
     upgradableToLvl2: 0
     upgradableToLvl3: 0
-    firstUprgradeBought: 0
-    secondtUprgradeBought: 0
-    thirdUprgradeBought: 0
-    fourthUprgradeBought: 0
+    towerUprgradesBought: 00000000
     enemyTypes:
     - RedEnemy
     - PurpleEnemy
@@ -85,10 +79,7 @@ MonoBehaviour:
     explosionRadius: 0
     upgradableToLvl2: 0
     upgradableToLvl3: 0
-    firstUprgradeBought: 0
-    secondtUprgradeBought: 0
-    thirdUprgradeBought: 0
-    fourthUprgradeBought: 0
+    towerUprgradesBought: 00000000
     enemyTypes:
     - RedEnemy
     - PurpleEnemy
@@ -101,10 +92,7 @@ MonoBehaviour:
     explosionRadius: 0
     upgradableToLvl2: 0
     upgradableToLvl3: 0
-    firstUprgradeBought: 0
-    secondtUprgradeBought: 0
-    thirdUprgradeBought: 0
-    fourthUprgradeBought: 0
+    towerUprgradesBought: 00000000
     enemyTypes:
     - BlueEnemy
     - PurpleEnemy
@@ -117,10 +105,7 @@ MonoBehaviour:
     explosionRadius: 0
     upgradableToLvl2: 0
     upgradableToLvl3: 0
-    firstUprgradeBought: 0
-    secondtUprgradeBought: 0
-    thirdUprgradeBought: 0
-    fourthUprgradeBought: 0
+    towerUprgradesBought: 00000000
     enemyTypes:
     - BlueEnemy
     - PurpleEnemy
@@ -133,10 +118,7 @@ MonoBehaviour:
     explosionRadius: 0
     upgradableToLvl2: 0
     upgradableToLvl3: 0
-    firstUprgradeBought: 0
-    secondtUprgradeBought: 0
-    thirdUprgradeBought: 0
-    fourthUprgradeBought: 0
+    towerUprgradesBought: 00000000
     enemyTypes:
     - BlueEnemy
     - PurpleEnemy
@@ -149,10 +131,7 @@ MonoBehaviour:
     explosionRadius: 5
     upgradableToLvl2: 0
     upgradableToLvl3: 0
-    firstUprgradeBought: 0
-    secondtUprgradeBought: 0
-    thirdUprgradeBought: 0
-    fourthUprgradeBought: 0
+    towerUprgradesBought: 00000000
     enemyTypes:
     - RedEnemy
     - BlueEnemy
@@ -166,10 +145,7 @@ MonoBehaviour:
     explosionRadius: 5
     upgradableToLvl2: 0
     upgradableToLvl3: 0
-    firstUprgradeBought: 0
-    secondtUprgradeBought: 0
-    thirdUprgradeBought: 0
-    fourthUprgradeBought: 0
+    towerUprgradesBought: 00000000
     enemyTypes:
     - RedEnemy
     - BlueEnemy
@@ -183,10 +159,7 @@ MonoBehaviour:
     explosionRadius: 5
     upgradableToLvl2: 0
     upgradableToLvl3: 0
-    firstUprgradeBought: 0
-    secondtUprgradeBought: 0
-    thirdUprgradeBought: 0
-    fourthUprgradeBought: 0
+    towerUprgradesBought: 00000000
     enemyTypes:
     - RedEnemy
     - BlueEnemy
@@ -200,10 +173,7 @@ MonoBehaviour:
     explosionRadius: 0
     upgradableToLvl2: 0
     upgradableToLvl3: 0
-    firstUprgradeBought: 0
-    secondtUprgradeBought: 0
-    thirdUprgradeBought: 0
-    fourthUprgradeBought: 0
+    towerUprgradesBought: 00000000
     enemyTypes:
     - RedEnemy
     - BlueEnemy
@@ -217,10 +187,7 @@ MonoBehaviour:
     explosionRadius: 0
     upgradableToLvl2: 0
     upgradableToLvl3: 0
-    firstUprgradeBought: 0
-    secondtUprgradeBought: 0
-    thirdUprgradeBought: 0
-    fourthUprgradeBought: 0
+    towerUprgradesBought: 00000000
     enemyTypes:
     - RedEnemy
     - BlueEnemy
@@ -234,10 +201,7 @@ MonoBehaviour:
     explosionRadius: 0
     upgradableToLvl2: 0
     upgradableToLvl3: 0
-    firstUprgradeBought: 0
-    secondtUprgradeBought: 0
-    thirdUprgradeBought: 0
-    fourthUprgradeBought: 0
+    towerUprgradesBought: 00000000
     enemyTypes:
     - RedEnemy
     - BlueEnemy

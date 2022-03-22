@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -338,13 +338,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1755077660}
-        m_TargetAssemblyTypeName: MagnitTowerUpgrade, Assembly-CSharp
-        m_MethodName: BuySecondUpgrade
-        m_Mode: 1
+        m_TargetAssemblyTypeName: TowersUpgrade, Assembly-CSharp
+        m_MethodName: SelectUpgrade
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -626,7 +626,7 @@ GameObject:
   - component: {fileID: 299558413}
   - component: {fileID: 299558412}
   m_Layer: 5
-  m_Name: Background
+  m_Name: Upgrades
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -776,13 +776,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1222382672}
-        m_TargetAssemblyTypeName: ElectroTowerUpgrade, Assembly-CSharp
-        m_MethodName: BuyThirdUpgrade
-        m_Mode: 1
+        m_TargetAssemblyTypeName: TowersUpgrade, Assembly-CSharp
+        m_MethodName: SelectUpgrade
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -907,14 +907,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 638702170}
-        m_TargetAssemblyTypeName: PlasmaTowerUpgrade, Assembly-CSharp
-        m_MethodName: BuySecondUpgrade
-        m_Mode: 1
+      - m_Target: {fileID: 638702171}
+        m_TargetAssemblyTypeName: TowersUpgrade, Assembly-CSharp
+        m_MethodName: SelectUpgrade
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1194,7 +1194,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 638702169}
-  - component: {fileID: 638702170}
+  - component: {fileID: 638702171}
   m_Layer: 5
   m_Name: PlasmaTowerUpgrades
   m_TagString: Untagged
@@ -1226,7 +1226,7 @@ RectTransform:
   m_AnchoredPosition: {x: -707, y: -400}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &638702170
+--- !u!114 &638702171
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1235,22 +1235,72 @@ MonoBehaviour:
   m_GameObject: {fileID: 638702168}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5eb18d3efe3bab438157076da94a2ea, type: 3}
+  m_Script: {fileID: 11500000, guid: b03605d07d5884142ad7f3020a3dd93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerPrefabLVL1: {fileID: 2298470444541065647, guid: 0bae11645e7a7484896dfbbb2cafed13, type: 3}
-  towerPrefabLVL2: {fileID: 2298470444541065647, guid: b2a65d794d99a9e4ca9f84d6b606c133, type: 3}
-  towerPrefabLVL3: {fileID: 2298470444541065647, guid: 4ecc5de22424ab1468dceaca9dfc2af1, type: 3}
-  firstUpgradeButton: {fileID: 1570355118}
-  secondUpgradeButton: {fileID: 527095088}
-  thirdUpgradeButton: {fileID: 1250190945}
-  fourthUpgradeButton: {fileID: 2123765927}
-  firstUpgradeCost: 2
-  secondUpgradeCost: 2
-  thirdUpgradeCost: 2
-  fourthUpgradeCost: 2
-  costDecreasePrc: 10
-  fireRateDecreasePrc: 10
+  towersTypeName: Plasma Tower
+  towersVariant:
+  - {fileID: 2298470444541065647, guid: 0bae11645e7a7484896dfbbb2cafed13, type: 3}
+  - {fileID: 2298470444541065647, guid: b2a65d794d99a9e4ca9f84d6b606c133, type: 3}
+  - {fileID: 2298470444541065647, guid: 4ecc5de22424ab1468dceaca9dfc2af1, type: 3}
+  upgrades:
+  - parametersToUpgrade:
+      costChangePrc: 0
+      fireRateChangePrc: 0
+      rangeChangePrc: 0
+      damageOverTimeChangePrc: 0
+      bulletDamageChangePrc: 0
+      explosionRadiusChangePrc: 0
+      upgradableToLvl2: 1
+      upgradableToLvl3: 0
+    upgradeCost: 2
+    upgradeDescription: "\u0412\u043E\u0437\u043C\u043E\u0436\u043D\u043E \u0443\u043B\u0443\u0447\u0448\u0435\u043D\u0438\u0435
+      \u0431\u0430\u0448\u043D\u0438 \u0434\u043E 2\u043E\u0433\u043E \u0443\u0440\u043E\u0432\u043D\u044F"
+    upgradeBought: 0
+  - parametersToUpgrade:
+      costChangePrc: -10
+      fireRateChangePrc: 0
+      rangeChangePrc: 0
+      damageOverTimeChangePrc: 0
+      bulletDamageChangePrc: 0
+      explosionRadiusChangePrc: 0
+      upgradableToLvl2: 0
+      upgradableToLvl3: 0
+    upgradeCost: 2
+    upgradeDescription: "-10% \u0441\u0442\u043E\u0438\u043C\u043E\u0441\u0442\u0438
+      \u043F\u043E\u0441\u0442\u0440\u043E\u0439\u043A\u0438 \u0438 \u0443\u043B\u0443\u0447\u0448\u0435\u043D\u0438\u044F"
+    upgradeBought: 0
+  - parametersToUpgrade:
+      costChangePrc: 0
+      fireRateChangePrc: -10
+      rangeChangePrc: 0
+      damageOverTimeChangePrc: 0
+      bulletDamageChangePrc: 0
+      explosionRadiusChangePrc: 0
+      upgradableToLvl2: 0
+      upgradableToLvl3: 0
+    upgradeCost: 2
+    upgradeDescription: "-10% \u0432\u0440\u0435\u043C\u044F \u043C\u0435\u0436\u0434\u0443
+      \u0432\u044B\u0441\u0442\u0440\u0435\u043B\u0430\u043C\u0438"
+    upgradeBought: 0
+  - parametersToUpgrade:
+      costChangePrc: 0
+      fireRateChangePrc: 0
+      rangeChangePrc: 0
+      damageOverTimeChangePrc: 0
+      bulletDamageChangePrc: 0
+      explosionRadiusChangePrc: 0
+      upgradableToLvl2: 0
+      upgradableToLvl3: 1
+    upgradeCost: 2
+    upgradeDescription: "\u0412\u043E\u0437\u043C\u043E\u0436\u043D\u043E \u0443\u043B\u0443\u0447\u0448\u0435\u043D\u0438\u0435
+      \u0431\u0430\u0448\u043D\u0438 \u0434\u043E 3\u0435\u0433\u043E \u0443\u0440\u043E\u0432\u043D\u044F"
+    upgradeBought: 0
+  upgradeButtons:
+  - {fileID: 1570355118}
+  - {fileID: 527095088}
+  - {fileID: 1250190945}
+  - {fileID: 2123765927}
 --- !u!1 &665049300
 GameObject:
   m_ObjectHideFlags: 0
@@ -1503,13 +1553,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2044243766}
-        m_TargetAssemblyTypeName: LaserTowerUpgrade, Assembly-CSharp
-        m_MethodName: BuyFourthUpgrade
-        m_Mode: 1
+        m_TargetAssemblyTypeName: TowersUpgrade, Assembly-CSharp
+        m_MethodName: SelectUpgrade
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1710,7 +1760,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 764836511}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1430624042}
+        m_TargetAssemblyTypeName: UpgradesManager, Assembly-CSharp
+        m_MethodName: ImplementUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &764836511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1832,9 +1894,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1222382672}
-        m_TargetAssemblyTypeName: ElectroTowerUpgrade, Assembly-CSharp
-        m_MethodName: BuyFirstUpgrade
-        m_Mode: 1
+        m_TargetAssemblyTypeName: TowersUpgrade, Assembly-CSharp
+        m_MethodName: SelectUpgrade
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2592,22 +2654,72 @@ MonoBehaviour:
   m_GameObject: {fileID: 1222382670}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebaa582e7de06944bb58b5c6049122f9, type: 3}
+  m_Script: {fileID: 11500000, guid: b03605d07d5884142ad7f3020a3dd93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerPrefabLVL1: {fileID: 6816593127903017046, guid: fcd4d41b53757e444aa7890b161f9682, type: 3}
-  towerPrefabLVL2: {fileID: 6816593127903017046, guid: e9f289fdd199405458888795257920c2, type: 3}
-  towerPrefabLVL3: {fileID: 6816593127903017046, guid: d31926adb356ea54f909fe02ec1881b1, type: 3}
-  firstUpgradeButton: {fileID: 863821199}
-  secondUpgradeButton: {fileID: 1683570536}
-  thirdUpgradeButton: {fileID: 385527363}
-  fourthUpgradeButton: {fileID: 1268565406}
-  firstUpgradeCost: 2
-  secondUpgradeCost: 2
-  thirdUpgradeCost: 2
-  fourthUpgradeCost: 2
-  fireRateDecreasePrc: 10
-  explosionRadiusIncrePrc: 20
+  towersTypeName: Electro Tower
+  towersVariant:
+  - {fileID: 6816593127903017046, guid: fcd4d41b53757e444aa7890b161f9682, type: 3}
+  - {fileID: 6816593127903017046, guid: e9f289fdd199405458888795257920c2, type: 3}
+  - {fileID: 6816593127903017046, guid: d31926adb356ea54f909fe02ec1881b1, type: 3}
+  upgrades:
+  - parametersToUpgrade:
+      costChangePrc: 0
+      fireRateChangePrc: 0
+      rangeChangePrc: 0
+      damageOverTimeChangePrc: 0
+      bulletDamageChangePrc: 0
+      explosionRadiusChangePrc: 0
+      upgradableToLvl2: 1
+      upgradableToLvl3: 0
+    upgradeCost: 2
+    upgradeDescription: "\u0412\u043E\u0437\u043C\u043E\u0436\u043D\u043E \u0443\u043B\u0443\u0447\u0448\u0435\u043D\u0438\u0435
+      \u0431\u0430\u0448\u043D\u0438 \u0434\u043E 2\u043E\u0433\u043E \u0443\u0440\u043E\u0432\u043D\u044F"
+    upgradeBought: 0
+  - parametersToUpgrade:
+      costChangePrc: 0
+      fireRateChangePrc: -10
+      rangeChangePrc: 0
+      damageOverTimeChangePrc: 0
+      bulletDamageChangePrc: 0
+      explosionRadiusChangePrc: 0
+      upgradableToLvl2: 0
+      upgradableToLvl3: 0
+    upgradeCost: 2
+    upgradeDescription: "-10% \u0432\u0440\u0435\u043C\u044F \u043C\u0435\u0436\u0434\u0443
+      \u0432\u044B\u0441\u0442\u0440\u0435\u043B\u0430\u043C\u0438"
+    upgradeBought: 0
+  - parametersToUpgrade:
+      costChangePrc: 0
+      fireRateChangePrc: -10
+      rangeChangePrc: 0
+      damageOverTimeChangePrc: 0
+      bulletDamageChangePrc: 0
+      explosionRadiusChangePrc: 20
+      upgradableToLvl2: 0
+      upgradableToLvl3: 0
+    upgradeCost: 2
+    upgradeDescription: "+20% \u0440\u0430\u0434\u0438\u0443\u0441 \u043F\u043E\u0440\u0430\u0436\u0435\u043D\u0438\u044F
+      \u0441\u043D\u0430\u0440\u044F\u0434\u0430"
+    upgradeBought: 0
+  - parametersToUpgrade:
+      costChangePrc: 0
+      fireRateChangePrc: 0
+      rangeChangePrc: 0
+      damageOverTimeChangePrc: 0
+      bulletDamageChangePrc: 0
+      explosionRadiusChangePrc: 0
+      upgradableToLvl2: 0
+      upgradableToLvl3: 1
+    upgradeCost: 2
+    upgradeDescription: "\u0412\u043E\u0437\u043C\u043E\u0436\u043D\u043E \u0443\u043B\u0443\u0447\u0448\u0435\u043D\u0438\u0435
+      \u0431\u0430\u0448\u043D\u0438 \u0434\u043E 3\u0435\u0433\u043E \u0443\u0440\u043E\u0432\u043D\u044F"
+    upgradeBought: 0
+  upgradeButtons:
+  - {fileID: 863821199}
+  - {fileID: 1683570536}
+  - {fileID: 385527363}
+  - {fileID: 1268565406}
 --- !u!1 &1250190943
 GameObject:
   m_ObjectHideFlags: 0
@@ -2690,14 +2802,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 638702170}
-        m_TargetAssemblyTypeName: PlasmaTowerUpgrade, Assembly-CSharp
-        m_MethodName: BuyThirdUpgrade
-        m_Mode: 1
+      - m_Target: {fileID: 638702171}
+        m_TargetAssemblyTypeName: TowersUpgrade, Assembly-CSharp
+        m_MethodName: SelectUpgrade
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2823,13 +2935,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1222382672}
-        m_TargetAssemblyTypeName: ElectroTowerUpgrade, Assembly-CSharp
-        m_MethodName: BuyFourthUpgrade
-        m_Mode: 1
+        m_TargetAssemblyTypeName: TowersUpgrade, Assembly-CSharp
+        m_MethodName: SelectUpgrade
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3042,7 +3154,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1418891520
 Transform:
   m_ObjectHideFlags: 0
@@ -3356,13 +3468,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1430624035}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87c200d145268d34c95a54d7eb8030b4, type: 3}
+  m_Script: {fileID: 11500000, guid: 53ef03869e021f345b3f829e4c78374d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  electro: {fileID: 1222382672}
-  laser: {fileID: 2044243766}
-  magnit: {fileID: 1755077660}
-  plasma: {fileID: 638702170}
+  upgradeDescription: {fileID: 1775863676}
 --- !u!1 &1475820400
 GameObject:
   m_ObjectHideFlags: 0
@@ -3522,9 +3631,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1755077660}
-        m_TargetAssemblyTypeName: MagnitTowerUpgrade, Assembly-CSharp
-        m_MethodName: BuyFirstUpgrade
-        m_Mode: 1
+        m_TargetAssemblyTypeName: TowersUpgrade, Assembly-CSharp
+        m_MethodName: SelectUpgrade
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3653,10 +3762,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 638702170}
-        m_TargetAssemblyTypeName: PlasmaTowerUpgrade, Assembly-CSharp
-        m_MethodName: BuyFirstUpgrade
-        m_Mode: 1
+      - m_Target: {fileID: 638702171}
+        m_TargetAssemblyTypeName: TowersUpgrade, Assembly-CSharp
+        m_MethodName: SelectUpgrade
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3899,13 +4008,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2044243766}
-        m_TargetAssemblyTypeName: LaserTowerUpgrade, Assembly-CSharp
-        m_MethodName: BuySecondUpgrade
-        m_Mode: 1
+        m_TargetAssemblyTypeName: TowersUpgrade, Assembly-CSharp
+        m_MethodName: SelectUpgrade
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4107,13 +4216,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1222382672}
-        m_TargetAssemblyTypeName: ElectroTowerUpgrade, Assembly-CSharp
-        m_MethodName: BuySecondUpgrade
-        m_Mode: 1
+        m_TargetAssemblyTypeName: TowersUpgrade, Assembly-CSharp
+        m_MethodName: SelectUpgrade
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4330,9 +4439,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2044243766}
-        m_TargetAssemblyTypeName: LaserTowerUpgrade, Assembly-CSharp
-        m_MethodName: BuyFirstUpgrade
-        m_Mode: 1
+        m_TargetAssemblyTypeName: TowersUpgrade, Assembly-CSharp
+        m_MethodName: SelectUpgrade
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4506,13 +4615,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1755077660}
-        m_TargetAssemblyTypeName: MagnitTowerUpgrade, Assembly-CSharp
-        m_MethodName: BuyThirdUpgrade
-        m_Mode: 1
+        m_TargetAssemblyTypeName: TowersUpgrade, Assembly-CSharp
+        m_MethodName: SelectUpgrade
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4605,22 +4714,72 @@ MonoBehaviour:
   m_GameObject: {fileID: 1755077658}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51dec6efa89d2bd46acdd76ee9af1d21, type: 3}
+  m_Script: {fileID: 11500000, guid: b03605d07d5884142ad7f3020a3dd93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerPrefabLVL1: {fileID: 7995244191818393836, guid: 91b2d898bbef56d479bb27030c55337c, type: 3}
-  towerPrefabLVL2: {fileID: 7995244191818393836, guid: 8ceb825865f7e1d4092e7b7a88ad1c02, type: 3}
-  towerPrefabLVL3: {fileID: 7995244191818393836, guid: 9853c94b9a35a574ca0a9486c374d90d, type: 3}
-  firstUpgradeButton: {fileID: 1550180636}
-  secondUpgradeButton: {fileID: 80937407}
-  thirdUpgradeButton: {fileID: 1742260644}
-  fourthUpgradeButton: {fileID: 2026283123}
-  firstUpgradeCost: 2
-  secondUpgradeCost: 2
-  thirdUpgradeCost: 2
-  fourthUpgradeCost: 2
-  rangeIncreasePrc: 10
-  costDecreasePrc: 10
+  towersTypeName: Magnit Tower
+  towersVariant:
+  - {fileID: 7995244191818393836, guid: 91b2d898bbef56d479bb27030c55337c, type: 3}
+  - {fileID: 7995244191818393836, guid: 8ceb825865f7e1d4092e7b7a88ad1c02, type: 3}
+  - {fileID: 7995244191818393836, guid: 9853c94b9a35a574ca0a9486c374d90d, type: 3}
+  upgrades:
+  - parametersToUpgrade:
+      costChangePrc: 0
+      fireRateChangePrc: 0
+      rangeChangePrc: 0
+      damageOverTimeChangePrc: 0
+      bulletDamageChangePrc: 0
+      explosionRadiusChangePrc: 0
+      upgradableToLvl2: 1
+      upgradableToLvl3: 0
+    upgradeCost: 2
+    upgradeDescription: "\u0412\u043E\u0437\u043C\u043E\u0436\u043D\u043E \u0443\u043B\u0443\u0447\u0448\u0435\u043D\u0438\u0435
+      \u0431\u0430\u0448\u043D\u0438 \u0434\u043E 2\u043E\u0433\u043E \u0443\u0440\u043E\u0432\u043D\u044F"
+    upgradeBought: 0
+  - parametersToUpgrade:
+      costChangePrc: 0
+      fireRateChangePrc: 0
+      rangeChangePrc: 10
+      damageOverTimeChangePrc: 0
+      bulletDamageChangePrc: 0
+      explosionRadiusChangePrc: 0
+      upgradableToLvl2: 0
+      upgradableToLvl3: 0
+    upgradeCost: 2
+    upgradeDescription: "+10% \u043A \u0434\u0430\u043B\u044C\u043D\u043E\u0441\u0442\u0438
+      \u0441\u0442\u0440\u0435\u043B\u044C\u0431\u044B"
+    upgradeBought: 0
+  - parametersToUpgrade:
+      costChangePrc: -10
+      fireRateChangePrc: 0
+      rangeChangePrc: 0
+      damageOverTimeChangePrc: 0
+      bulletDamageChangePrc: 0
+      explosionRadiusChangePrc: 0
+      upgradableToLvl2: 0
+      upgradableToLvl3: 0
+    upgradeCost: 2
+    upgradeDescription: "-10% \u0441\u0442\u043E\u0438\u043C\u043E\u0441\u0442\u0438
+      \u043F\u043E\u0441\u0442\u0440\u043E\u0439\u043A\u0438 \u0438 \u0443\u043B\u0443\u0447\u0448\u0435\u043D\u0438\u044F"
+    upgradeBought: 0
+  - parametersToUpgrade:
+      costChangePrc: 0
+      fireRateChangePrc: 0
+      rangeChangePrc: 0
+      damageOverTimeChangePrc: 0
+      bulletDamageChangePrc: 0
+      explosionRadiusChangePrc: 0
+      upgradableToLvl2: 0
+      upgradableToLvl3: 1
+    upgradeCost: 2
+    upgradeDescription: "\u0412\u043E\u0437\u043C\u043E\u0436\u043D\u043E \u0443\u043B\u0443\u0447\u0448\u0435\u043D\u0438\u0435
+      \u0431\u0430\u0448\u043D\u0438 \u0434\u043E 3\u0435\u0433\u043E \u0443\u0440\u043E\u0432\u043D\u044F"
+    upgradeBought: 0
+  upgradeButtons:
+  - {fileID: 1550180636}
+  - {fileID: 80937407}
+  - {fileID: 1742260644}
+  - {fileID: 2026283123}
 --- !u!1 &1775863674
 GameObject:
   m_ObjectHideFlags: 0
@@ -5011,13 +5170,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2044243766}
-        m_TargetAssemblyTypeName: LaserTowerUpgrade, Assembly-CSharp
-        m_MethodName: BuyThirdUpgrade
-        m_Mode: 1
+        m_TargetAssemblyTypeName: TowersUpgrade, Assembly-CSharp
+        m_MethodName: SelectUpgrade
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5143,13 +5302,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1755077660}
-        m_TargetAssemblyTypeName: MagnitTowerUpgrade, Assembly-CSharp
-        m_MethodName: BuyFourthUpgrade
-        m_Mode: 1
+        m_TargetAssemblyTypeName: TowersUpgrade, Assembly-CSharp
+        m_MethodName: SelectUpgrade
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5242,22 +5401,73 @@ MonoBehaviour:
   m_GameObject: {fileID: 2044243764}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e47f22813e0727a4399ed9ac69ebc995, type: 3}
+  m_Script: {fileID: 11500000, guid: b03605d07d5884142ad7f3020a3dd93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerPrefabLVL1: {fileID: 6623846213659933248, guid: fa62a8c4d552cda479324284e136b88b, type: 3}
-  towerPrefabLVL2: {fileID: 6623846213659933248, guid: e737bfa58e958224b954e6e8a31e2627, type: 3}
-  towerPrefabLVL3: {fileID: 6623846213659933248, guid: 43461dda980fdea41ae1332ebfbf8d24, type: 3}
-  firstUpgradeButton: {fileID: 1697451446}
-  secondUpgradeButton: {fileID: 1602583287}
-  thirdUpgradeButton: {fileID: 2012873928}
-  fourthUpgradeButton: {fileID: 736533032}
-  firstUpgradeCost: 2
-  secondUpgradeCost: 2
-  thirdUpgradeCost: 2
-  fourthUpgradeCost: 2
-  rangeIncreasePrc: 10
-  initialDamageIncreasePrc: 10
+  towersTypeName: Laser Tower
+  towersVariant:
+  - {fileID: 6623846213659933248, guid: fa62a8c4d552cda479324284e136b88b, type: 3}
+  - {fileID: 6623846213659933248, guid: e737bfa58e958224b954e6e8a31e2627, type: 3}
+  - {fileID: 6623846213659933248, guid: 43461dda980fdea41ae1332ebfbf8d24, type: 3}
+  upgrades:
+  - parametersToUpgrade:
+      costChangePrc: 0
+      fireRateChangePrc: 0
+      rangeChangePrc: 0
+      damageOverTimeChangePrc: 0
+      bulletDamageChangePrc: 0
+      explosionRadiusChangePrc: 0
+      upgradableToLvl2: 1
+      upgradableToLvl3: 0
+    upgradeCost: 2
+    upgradeDescription: "\u0412\u043E\u0437\u043C\u043E\u0436\u043D\u043E \u0443\u043B\u0443\u0447\u0448\u0435\u043D\u0438\u0435
+      \u0431\u0430\u0448\u043D\u0438 \u0434\u043E 2\u043E\u0433\u043E \u0443\u0440\u043E\u0432\u043D\u044F"
+    upgradeBought: 0
+  - parametersToUpgrade:
+      costChangePrc: 0
+      fireRateChangePrc: 0
+      rangeChangePrc: 10
+      damageOverTimeChangePrc: 0
+      bulletDamageChangePrc: 0
+      explosionRadiusChangePrc: 0
+      upgradableToLvl2: 0
+      upgradableToLvl3: 0
+    upgradeCost: 2
+    upgradeDescription: "+10% \u043A \u0434\u0430\u043B\u044C\u043D\u043E\u0441\u0442\u0438
+      \u0441\u0442\u0440\u0435\u043B\u044C\u0431\u044B"
+    upgradeBought: 0
+  - parametersToUpgrade:
+      costChangePrc: 0
+      fireRateChangePrc: 0
+      rangeChangePrc: 0
+      damageOverTimeChangePrc: 10
+      bulletDamageChangePrc: 0
+      explosionRadiusChangePrc: 0
+      upgradableToLvl2: 0
+      upgradableToLvl3: 0
+    upgradeCost: 2
+    upgradeDescription: "+10% \u0431\u0430\u0437\u043E\u0432\u043E\u0433\u043E \u0443\u0440\u043E\u043D\u0430"
+    upgradeBought: 0
+  - parametersToUpgrade:
+      costChangePrc: 0
+      fireRateChangePrc: 0
+      rangeChangePrc: 0
+      damageOverTimeChangePrc: 0
+      bulletDamageChangePrc: 0
+      explosionRadiusChangePrc: 0
+      upgradableToLvl2: 0
+      upgradableToLvl3: 1
+    upgradeCost: 2
+    upgradeDescription: "\u0423\u043B\u0443\u0447\u0448\u0435\u043D\u0412\u043E\u0437\u043C\u043E\u0436\u043D\u043E
+      \u0443\u043B\u0443\u0447\u0448\u0435\u043D\u0438\u0435 \u0431\u0430\u0448\u043D\u0438
+      \u0434\u043E 3\u0435\u0433\u043E \u0443\u0440\u043E\u0432\u043D\u044F\u0435
+      \u0431\u0430\u0448\u043D\u0438 \u0434\u043E 3\u0435\u0433\u043E \u0443\u0440\u043E\u0432\u043D\u044F"
+    upgradeBought: 0
+  upgradeButtons:
+  - {fileID: 1697451446}
+  - {fileID: 1602583287}
+  - {fileID: 2012873928}
+  - {fileID: 736533032}
 --- !u!1 &2075541575
 GameObject:
   m_ObjectHideFlags: 0
@@ -5724,14 +5934,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 638702170}
-        m_TargetAssemblyTypeName: PlasmaTowerUpgrade, Assembly-CSharp
-        m_MethodName: BuyFourthUpgrade
-        m_Mode: 1
+      - m_Target: {fileID: 638702171}
+        m_TargetAssemblyTypeName: TowersUpgrade, Assembly-CSharp
+        m_MethodName: SelectUpgrade
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

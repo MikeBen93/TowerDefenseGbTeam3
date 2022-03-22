@@ -18,10 +18,7 @@ public class TowerParameters
     public bool upgradableToLvl2 = false;
     public bool upgradableToLvl3 = false;
 
-    public bool firstUprgradeBought = false;
-    public bool secondtUprgradeBought = false;
-    public bool thirdUprgradeBought = false;
-    public bool fourthUprgradeBought = false;
+    public bool[] towerUprgradesBought;
 
     public string[] enemyTypes;
 }

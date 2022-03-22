@@ -43,4 +43,14 @@ public class DataManager : MonoBehaviour
         ChipsAmount = amountOfLoadedChips;
         _chipsIsLoaded = true;
     }
+
+    public void SaveParamToPrefs()
+    {
+        SaveTowerParams();
+    }
+
+    private void SaveTowerParams()
+    {
+
+    }
 }
