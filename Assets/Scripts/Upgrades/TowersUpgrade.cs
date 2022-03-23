@@ -77,11 +77,11 @@ public class TowersUpgrade : MonoBehaviour
     {
         for (int i = 0; i < upgrades.Length; i++)
         {
-            if (i == 0 && upgrades[i].upgradeCost >= _dataManager.ChipsAmount && !upgrades[i].upgradeBought)
+            if (i == 0 && upgrades[i].upgradeCost <= _dataManager.ChipsAmount && !upgrades[i].upgradeBought)
             {
                 upgradeButtons[i].interactable = true;
             } 
-            else if(i > 0 && upgrades[i].upgradeCost >= _dataManager.ChipsAmount && !upgrades[i].upgradeBought && upgrades[i-1].upgradeBought)
+            else if(i > 0 && upgrades[i].upgradeCost <= _dataManager.ChipsAmount && !upgrades[i].upgradeBought && upgrades[i-1].upgradeBought)
             {
                 upgradeButtons[i].interactable = true;
             }

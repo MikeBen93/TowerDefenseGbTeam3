@@ -45,6 +45,8 @@ public class UpgradesManager : MonoBehaviour
             TowerParameters paramsToUpdate = SeekTowerParam(tower);
             UpgradeParameters(paramsToUpdate, choosenUpgrade.parametersToUpgrade);
         }
+
+        _dataManager.ChipsAmount = _dataManager.ChipsAmount - choosenUpgrade.upgradeCost;
     }
 
     public TowerParameters SeekTowerParam(GameObject prefabToSeek)
@@ -80,7 +82,6 @@ public class UpgradesManager : MonoBehaviour
         paramsToUpgrade.explosionRadius = (paramsToUpgrade.explosionRadius * (1 + paramsUpgrades.explosionRadiusChangePrc / 100.0f));
 
         paramsToUpgrade.towerUprgradesBought[upgradeNumberInOrder] = choosenUpgrade.upgradeBought = true;
-        
     }
 
 }
