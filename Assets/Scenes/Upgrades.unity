@@ -3472,6 +3472,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeDescription: {fileID: 1775863676}
+  allUpgrades:
+  - {fileID: 638702171}
+  - {fileID: 2044243766}
+  - {fileID: 1222382672}
+  - {fileID: 1755077660}
 --- !u!1 &1475820400
 GameObject:
   m_ObjectHideFlags: 0
@@ -5625,7 +5630,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2085530131}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1430624042}
+        m_TargetAssemblyTypeName: UpgradesManager, Assembly-CSharp
+        m_MethodName: ResetUpgrades
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2085530131
 MonoBehaviour:
   m_ObjectHideFlags: 0

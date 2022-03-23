@@ -7,8 +7,8 @@ public class TowersUpgrade : MonoBehaviour
 {
     public string towersTypeName;
 
-    [SerializeField] private GameObject[] towersVariant;
-    [SerializeField] private SpecificUpgrade[] upgrades;
+    public GameObject[] towersVariant;
+    public SpecificUpgrade[] upgrades;
 
     [SerializeField] private Button[] upgradeButtons;
 
