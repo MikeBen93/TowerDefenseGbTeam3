@@ -60,6 +60,11 @@ public class GameController : MonoBehaviour
 
         if (mode == "debug") chipsRecievedOnLevel = 3;
 
+        if(PlayerPrefs.HasKey("chips_recieveid_on_" + SceneManager.GetActiveScene().name))
+        {
+            chipsRecievedOnLevel += PlayerPrefs.GetInt("chips_recieveid_on_" + SceneManager.GetActiveScene().name);
+        }
+
         PlayerPrefs.SetInt("chips_recieveid_on_" + SceneManager.GetActiveScene().name, chipsRecievedOnLevel);
 
         _dataManager.ChipsAmount = _dataManager.ChipsAmount + chipsRecievedOnLevel;
