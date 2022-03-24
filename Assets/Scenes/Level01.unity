@@ -50624,6 +50624,14 @@ PrefabInstance:
       propertyPath: heartCountdownImage
       value: 
       objectReference: {fileID: 9688634}
+    - target: {fileID: 6887459839633857, guid: 75cc34869155dcb4ba3433b83ecd5f2a, type: 3}
+      propertyPath: waves.Array.data[0].enemy
+      value: 
+      objectReference: {fileID: 6408497559615290737, guid: e153908ade6dd6c46aac536ac7c1352b, type: 3}
+    - target: {fileID: 6887459839633858, guid: 75cc34869155dcb4ba3433b83ecd5f2a, type: 3}
+      propertyPath: startLives
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6887459839633859, guid: 75cc34869155dcb4ba3433b83ecd5f2a, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -50842,10 +50850,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1945043019, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2101952415862759734, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
       propertyPath: gameController
       value: 
       objectReference: {fileID: 1114115121}
+    - target: {fileID: 2101952415862759734, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
+      propertyPath: dialogueElements.Array.data[0].characterImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 45ba8feac736cf24e889946363534a73, type: 3}
+    - target: {fileID: 2101952415862759734, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
+      propertyPath: dialogueElements.Array.data[1].characterImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 126d61e7d9df34b4683f6144edceb2d7, type: 3}
     - target: {fileID: 6283773521822676997, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
       propertyPath: m_Pivot.x
       value: 0
