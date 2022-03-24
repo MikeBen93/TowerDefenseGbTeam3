@@ -50,6 +50,11 @@ public class GameController : MonoBehaviour
         PlayerStats.Lives = 0;
     }
 
+    public void DebugWinLevel()
+    {
+        WinLevel(mode:"debug");
+    }
+
     public void WinLevel(string mode = "normal")
     {
         Time.timeScale = 0f;
