@@ -47,7 +47,9 @@ public class UpgradesManager : MonoBehaviour
             UpgradeParameters(paramsToUpdate, choosenUpgrade.parametersToUpgrade);
         }
 
-        _dataManager.ChipsAmount = _dataManager.ChipsAmount - choosenUpgrade.upgradeCost;
+        _dataManager.ChipsAmount -= choosenUpgrade.upgradeCost;
+        _dataManager.TotalChipsSpend += choosenUpgrade.upgradeCost;
+        _dataManager.SaveTotalChipsSpend();
     }
     private void ReverseUpgrade()
     {
@@ -57,7 +59,8 @@ public class UpgradesManager : MonoBehaviour
             UpgradeParameters(paramsToRev, choosenUpgrade.parametersToUpgrade, true);
         }
 
-        _dataManager.ChipsAmount = _dataManager.ChipsAmount + choosenUpgrade.upgradeCost;
+        _dataManager.ChipsAmount += choosenUpgrade.upgradeCost;
+        
     }
 
     public TowerParameters SeekTowerParam(GameObject prefabToSeek)
@@ -134,6 +137,9 @@ public class UpgradesManager : MonoBehaviour
                 }
             }
         }
+
+        _dataManager.TotalChipsSpend = 0;
+        _dataManager.SaveTotalChipsSpend();
     }
 
 }
