@@ -45,13 +45,20 @@ public class GameController : MonoBehaviour
         Time.timeScale = 0f;
     }
 
-    public void WinLevel()
+    public void DebugEndGame()
+    {
+        PlayerStats.Lives = 0;
+    }
+
+    public void WinLevel(string mode = "normal")
     {
         Time.timeScale = 0f;
         GameIsOver = true;
         if (PlayerStats.Lives == PlayerStats.initialLives) chipsRecievedOnLevel = 3;
         else if (PlayerStats.Lives/ PlayerStats.initialLives >= _healthRatioRelatedToChips) chipsRecievedOnLevel = 2;
         else chipsRecievedOnLevel = 1;
+
+        if (mode == "debug") chipsRecievedOnLevel = 3;
 
         PlayerPrefs.SetInt("chips_recieveid_on_" + SceneManager.GetActiveScene().name, chipsRecievedOnLevel);
 

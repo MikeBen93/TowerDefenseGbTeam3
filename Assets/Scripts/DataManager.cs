@@ -9,6 +9,7 @@ public class DataManager : MonoBehaviour
     public static DataManager instance;
     private int _currentChipsAmount;
     private bool _chipsIsLoaded = false;
+    private bool _towerParamsIsLoaded = false;
     private int amountOfLoadedChips = 0;
 
     private void Awake()
@@ -20,7 +21,13 @@ public class DataManager : MonoBehaviour
             {
                 LoadChips();
             }
-        } else if (instance != this)
+
+            if(!_towerParamsIsLoaded)
+            {
+                CheckCurrentTowerParametersInPrefs();
+            }
+        } 
+        else if (instance != this)
         {
             Destroy(gameObject);
         }
@@ -42,8 +49,9 @@ public class DataManager : MonoBehaviour
         {
             amountOfLoadedChips += PlayerPrefs.GetInt("chips_recieveid_on_Level0" + i, 0);
         }
+        SetTotalChipsSpend();
 
-        ChipsAmount = amountOfLoadedChips;
+        ChipsAmount = amountOfLoadedChips - TotalChipsSpend;
         _chipsIsLoaded = true;
     }
 
@@ -57,15 +65,33 @@ public class DataManager : MonoBehaviour
         TotalChipsSpend = PlayerPrefs.GetInt("total_chips_spend");
     }
 
-    public void SaveTowerParamsToPrefs()
+    public void SaveAllTowerParametersToPrefs()
     {
         foreach(TowerParameters towerParam in towerParameters)
         {
-            ConvertTowerParametersToPrefs(towerParam);
+            SaveTowerParametersToPrefs(towerParam);
         }
     }
 
-    private void ConvertTowerParametersToPrefs(TowerParameters param)
+    private void CheckCurrentTowerParametersInPrefs()
+    {
+        foreach (TowerParameters towerParam in towerParameters)
+        {
+            string towerName = towerParam.prefab.name;
+            
+            if(PlayerPrefs.GetString(towerName + "_" + "name", " ") == " ")
+            {
+                SaveTowerParametersToPrefs(towerParam);
+            } else
+            {
+                GetTowerParametersFromPrefs(towerParam);
+            }
+        }
+
+        _towerParamsIsLoaded = true;
+    }
+
+    public void SaveTowerParametersToPrefs(TowerParameters param)
     {
         string towerName = param.prefab.name;
 
@@ -91,4 +117,33 @@ public class DataManager : MonoBehaviour
             PlayerPrefs.SetString(towerName + "_" + "enemyTypes" + "[" + i + "]",param.enemyTypes[i]);
         }
     }
+
+
+    public void GetTowerParametersFromPrefs(TowerParameters param)
+    {
+        string towerName = param.prefab.name;
+
+        PlayerPrefs.GetString(towerName + "_" + "name");
+
+        param.cost = PlayerPrefs.GetInt(towerName + "_" + "cost");
+        param.fireRate = PlayerPrefs.GetFloat(towerName + "_" + "fireRate");
+        param.range = PlayerPrefs.GetFloat(towerName + "_" + "range");
+        param.damageOverTime = PlayerPrefs.GetFloat(towerName + "_" + "damageOverTime");
+        param.bulletDamage = PlayerPrefs.GetInt(towerName + "_" + "bulletDamage");
+        param.explosionRadius = PlayerPrefs.GetFloat(towerName + "_" + "explosionRadius");
+
+        param.upgradableToLvl2 = Convert.ToBoolean(PlayerPrefs.GetInt(towerName + "_" + "upgradableToLvl2"));
+        param.upgradableToLvl3 = Convert.ToBoolean(PlayerPrefs.GetInt(towerName + "_" + "upgradableToLvl3"));
+
+        for (int i = 0; i < param.towerUprgradesBought.Length; i++)
+        {
+            param.towerUprgradesBought[i] = Convert.ToBoolean(PlayerPrefs.GetInt(towerName + "_" + "towerUprgradesBought" + "[" + i + "]"));
+        }
+
+        for (int i = 0; i < param.enemyTypes.Length; i++)
+        {
+            param.enemyTypes[i] = PlayerPrefs.GetString(towerName + "_" + "enemyTypes" + "[" + i + "]");
+        }
+    }
+
 }

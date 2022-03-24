@@ -115,7 +115,8 @@ public class UpgradesManager : MonoBehaviour
         {
             paramsToUpgrade.towerUprgradesBought[upgradeNumberInOrder] = choosenUpgrade.upgradeBought = false;
         }
-        
+
+        _dataManager.SaveTowerParametersToPrefs(paramsToUpgrade);
     }
 
     public void ResetUpgrades()
@@ -140,6 +141,7 @@ public class UpgradesManager : MonoBehaviour
 
         _dataManager.TotalChipsSpend = 0;
         _dataManager.SaveTotalChipsSpend();
+        _dataManager.SaveAllTowerParametersToPrefs();
     }
 
 }
