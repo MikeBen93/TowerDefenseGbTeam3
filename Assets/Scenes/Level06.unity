@@ -17475,7 +17475,7 @@ PrefabInstance:
     - target: {fileID: 2101952415862759734, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
       propertyPath: dialogueElements.Array.data[0].characterImage
       value: 
-      objectReference: {fileID: 21300000, guid: a650b95c1099d644b891ce1ee81ad4e1, type: 3}
+      objectReference: {fileID: 21300000, guid: 126d61e7d9df34b4683f6144edceb2d7, type: 3}
     - target: {fileID: 2101952415862759734, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
       propertyPath: dialogueElements.Array.data[0].characterSpeech
       value: "- \u0425\u043E\u0442\u0435\u043B\u0430 \u0431\u044B \u044F \u043D\u0435
