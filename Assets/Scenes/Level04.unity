@@ -7828,6 +7828,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1984174658333356149, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2056110653431264055}
+    - target: {fileID: 1984174658333356149, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowWinWindow
+      objectReference: {fileID: 0}
     - target: {fileID: 2101952415862759734, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
       propertyPath: gameController
       value: 
@@ -7967,6 +7975,14 @@ PrefabInstance:
     - target: {fileID: 6283773522890780502, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
       propertyPath: levelToUnlock
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6476101050494374100, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2056110653431264055}
+    - target: {fileID: 6476101050494374100, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DebugEndGame
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}

@@ -45,14 +45,20 @@ public class DataManager : MonoBehaviour
 
     private void LoadChips()
     {
-        for(int i = 0; i < 7; i ++)
+        SetTotalChipsSpend();
+        ResetTotalChipsAmount();
+
+        _chipsIsLoaded = true;
+    }
+
+    public void ResetTotalChipsAmount()
+    {
+        for (int i = 0; i < 7; i++)
         {
             amountOfLoadedChips += PlayerPrefs.GetInt("chips_recieveid_on_Level0" + i, 0);
         }
-        SetTotalChipsSpend();
 
         ChipsAmount = amountOfLoadedChips - TotalChipsSpend;
-        _chipsIsLoaded = true;
     }
 
     public void SaveTotalChipsSpend()
