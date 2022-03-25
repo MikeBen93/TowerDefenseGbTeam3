@@ -78,9 +78,9 @@ public class UpgradesManager : MonoBehaviour
 
     private void UpgradeParameters(TowerParameters paramsToUpgrade, TowerParametersUpgrade paramsUpgrades, bool isReverseUpgrade = false)
     {
-        int multiplier = 1;
+        int power = 1;
 
-        if (isReverseUpgrade) multiplier = -1;
+        if (isReverseUpgrade) power = -1;
 
         if (paramsUpgrades.upgradableToLvl2 && !isReverseUpgrade)
         {
@@ -100,14 +100,14 @@ public class UpgradesManager : MonoBehaviour
             paramsToUpgrade.upgradableToLvl3 = false;
         }
 
-        paramsToUpgrade.cost = (int)(paramsToUpgrade.cost * (1 + multiplier * paramsUpgrades.costChangePrc / 100.0f));
-        paramsToUpgrade.fireRate = (paramsToUpgrade.fireRate * (1 + multiplier * paramsUpgrades.fireRateChangePrc / 100.0f));
-        paramsToUpgrade.range = (paramsToUpgrade.range * (1 + multiplier * paramsUpgrades.rangeChangePrc / 100.0f));
-        paramsToUpgrade.damageOverTime = (paramsToUpgrade.damageOverTime * (1 + multiplier * paramsUpgrades.damageOverTimeChangePrc / 100.0f));
-        paramsToUpgrade.bulletDamage = (int)(paramsToUpgrade.bulletDamage * (1 + multiplier * paramsUpgrades.bulletDamageChangePrc / 100.0f));
-        paramsToUpgrade.explosionRadius = (paramsToUpgrade.explosionRadius * (1 + multiplier * paramsUpgrades.explosionRadiusChangePrc / 100.0f));
+        paramsToUpgrade.cost = (int)(paramsToUpgrade.cost * Mathf.Pow((1 + paramsUpgrades.costChangePrc / 100.0f), power));
+        paramsToUpgrade.fireRate = (paramsToUpgrade.fireRate * Mathf.Pow((1 + paramsUpgrades.fireRateChangePrc / 100.0f), power));
+        paramsToUpgrade.range = (paramsToUpgrade.range * Mathf.Pow((1 + paramsUpgrades.rangeChangePrc / 100.0f), power));
+        paramsToUpgrade.damageOverTime = (paramsToUpgrade.damageOverTime * Mathf.Pow((1 + paramsUpgrades.damageOverTimeChangePrc / 100.0f), power));
+        paramsToUpgrade.bulletDamage = (int)(paramsToUpgrade.bulletDamage * Mathf.Pow((1 + paramsUpgrades.bulletDamageChangePrc / 100.0f), power));
+        paramsToUpgrade.explosionRadius = (paramsToUpgrade.explosionRadius * Mathf.Pow((1 + paramsUpgrades.explosionRadiusChangePrc / 100.0f), power));
 
-        if(!isReverseUpgrade)
+        if (!isReverseUpgrade)
         {
             paramsToUpgrade.towerUprgradesBought[upgradeNumberInOrder] = choosenUpgrade.upgradeBought = true;
         }
