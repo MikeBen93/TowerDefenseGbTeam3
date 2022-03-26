@@ -29954,7 +29954,7 @@ PrefabInstance:
     - target: {fileID: 2101952415862759734, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
       propertyPath: gameController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3660320683397086804}
     - target: {fileID: 2101952415862759734, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
       propertyPath: dialogueElements.Array.data[0].characterImage
       value: 
