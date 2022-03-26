@@ -13627,7 +13627,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5327816c6a2f0164a8427292d5d8e944, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.6
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5327816c6a2f0164a8427292d5d8e944, type: 3}
       propertyPath: m_LocalScale.y
@@ -27709,7 +27709,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5327816c6a2f0164a8427292d5d8e944, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.6
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5327816c6a2f0164a8427292d5d8e944, type: 3}
       propertyPath: m_LocalScale.y
@@ -29906,7 +29906,7 @@ PrefabInstance:
     - target: {fileID: 2101952415862759734, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
       propertyPath: gameController
       value: 
-      objectReference: {fileID: 3660320683397086804}
+      objectReference: {fileID: 0}
     - target: {fileID: 2101952415862759734, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
       propertyPath: dialogueElements.Array.data[0].characterImage
       value: 
@@ -34966,7 +34966,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3406f68f0fe74434e8a5f0ba6dafb47f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.4
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3406f68f0fe74434e8a5f0ba6dafb47f, type: 3}
       propertyPath: m_LocalPosition.z
