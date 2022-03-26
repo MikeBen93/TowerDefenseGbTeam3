@@ -50899,6 +50899,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: OverlayCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6283773521881812170, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6283773522890780500, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6283773522890780502, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
+      propertyPath: chipsObjectsToShow.Array.data[3]
+      value: 
+      objectReference: {fileID: 6048564064750783409}
     - target: {fileID: 6283773523061584852, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -50914,6 +50926,11 @@ PrefabInstance:
 --- !u!224 &6048564064750783408 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6283773523061584853, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
+  m_PrefabInstance: {fileID: 6048564064750783407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6048564064750783409 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5226781016623053707, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
   m_PrefabInstance: {fileID: 6048564064750783407}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7341199970274626763

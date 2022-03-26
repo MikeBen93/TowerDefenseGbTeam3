@@ -3083,7 +3083,7 @@ PrefabInstance:
     - target: {fileID: 2101952415862759734, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
       propertyPath: gameController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5432332395761683316}
     - target: {fileID: 2101952415862759734, guid: 2c6565d860cf0aa4db2e32d4777c9a5c, type: 3}
       propertyPath: dialogueElements.Array.size
       value: 1

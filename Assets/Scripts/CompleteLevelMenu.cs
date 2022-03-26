@@ -12,9 +12,31 @@ public class CompleteLevelMenu : MonoBehaviour
     public string nextLevel = "MainMenu";
     public int levelToUnlock = 2;
 
+    [SerializeField] private GameObject[] chipsObjectsToShow;
+    private DataManager _dataManager;
+
     private void OnEnable()
     {
-        PlayerPrefs.SetInt("levelReached", levelToUnlock);
+        _dataManager = DataManager.instance;
+
+        if (levelToUnlock > PlayerPrefs.GetInt("levelReached", 0))
+        {
+            PlayerPrefs.SetInt("levelReached", levelToUnlock);
+        }
+
+        int recievedChipsOnLevel = PlayerPrefs.GetInt("chips_recieveid_on_" + SceneManager.GetActiveScene().name, 0);
+
+        for (int i = 0; i < chipsObjectsToShow.Length; i++)
+        {
+            if (i < recievedChipsOnLevel)
+            {
+                chipsObjectsToShow[i].SetActive(true);
+            }
+            else
+            {
+                chipsObjectsToShow[i].SetActive(false);
+            }
+        }
     }
 
     public void Continue()

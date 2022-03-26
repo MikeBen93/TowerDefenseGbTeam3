@@ -5723,6 +5723,10 @@ MonoBehaviour:
   mainMeneSceneName: LevelSelecter
   nextLevel: Level02
   levelToUnlock: 2
+  chipsObjectsToShow:
+  - {fileID: 2523676883745529598}
+  - {fileID: 172519147998233939}
+  - {fileID: 5226781016623053707}
 --- !u!82 &895844289
 AudioSource:
   m_ObjectHideFlags: 0
