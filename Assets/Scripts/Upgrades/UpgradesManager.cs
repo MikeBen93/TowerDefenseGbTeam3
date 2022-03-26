@@ -39,8 +39,19 @@ public class UpgradesManager : MonoBehaviour
         upgradeDescription.text = choosenUpgrade.upgradeDescription;
     }
 
+    public void DeSelectUpgrade()
+    {
+        choosenUpgrade = null;
+        towersToUpgrade = null;
+        towersType = null;
+
+        upgradeDescription.text = "";
+    }
+
     public void ImplementUpgrade()
     {
+        if (towersToUpgrade == null) return;
+
         foreach(GameObject tower in towersToUpgrade)
         {
             TowerParameters paramsToUpdate = SeekTowerParam(tower);
@@ -50,6 +61,8 @@ public class UpgradesManager : MonoBehaviour
         _dataManager.ChipsAmount -= choosenUpgrade.upgradeCost;
         _dataManager.TotalChipsSpend += choosenUpgrade.upgradeCost;
         _dataManager.SaveTotalChipsSpend();
+
+        DeSelectUpgrade();
     }
     private void ReverseUpgrade()
     {

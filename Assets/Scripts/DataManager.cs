@@ -53,7 +53,9 @@ public class DataManager : MonoBehaviour
 
     public void ResetTotalChipsAmount()
     {
-        for (int i = 0; i < 7; i++)
+        amountOfLoadedChips = 0;
+
+        for (int i = 1; i <= 7; i++)
         {
             amountOfLoadedChips += PlayerPrefs.GetInt("chips_recieveid_on_Level0" + i, 0);
         }
