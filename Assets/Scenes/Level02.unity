@@ -45977,6 +45977,22 @@ PrefabInstance:
       propertyPath: heartCountdownImage
       value: 
       objectReference: {fileID: 1487563110}
+    - target: {fileID: 6713732492090395002, guid: 13301de3501b34647909d15b8ab9e60f, type: 3}
+      propertyPath: waves.Array.data[0].rate
+      value: 3.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6713732492090395002, guid: 13301de3501b34647909d15b8ab9e60f, type: 3}
+      propertyPath: waves.Array.data[1].rate
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6713732492090395002, guid: 13301de3501b34647909d15b8ab9e60f, type: 3}
+      propertyPath: waves.Array.data[3].rate
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6713732492090395002, guid: 13301de3501b34647909d15b8ab9e60f, type: 3}
+      propertyPath: waves.Array.data[5].rate
+      value: 2.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6713732492090395003, guid: 13301de3501b34647909d15b8ab9e60f, type: 3}
       propertyPath: nodeUI
       value: 
