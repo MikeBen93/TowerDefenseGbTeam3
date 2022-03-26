@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -491,6 +491,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 76133813}
+  - component: {fileID: 76133814}
   m_Layer: 5
   m_Name: ChipsOnLevel2
   m_TagString: Untagged
@@ -523,6 +524,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 80}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &76133814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76133812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62208890a11cd854d8429b419b90f1da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chipsObjectsToShow:
+  - {fileID: 1125921681}
+  - {fileID: 1255328327}
+  - {fileID: 1581585144}
 --- !u!1 &115662078
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,6 +853,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 193422857}
+  - component: {fileID: 193422858}
   m_Layer: 5
   m_Name: ChipsOnLevel1
   m_TagString: Untagged
@@ -868,6 +886,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 80}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &193422858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193422856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62208890a11cd854d8429b419b90f1da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chipsObjectsToShow:
+  - {fileID: 826460808}
+  - {fileID: 1735856060}
+  - {fileID: 1706454600}
 --- !u!1 &227771981
 GameObject:
   m_ObjectHideFlags: 0
@@ -1481,6 +1515,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 380040717}
+  - component: {fileID: 380040718}
   m_Layer: 5
   m_Name: ChipsOnLevel3
   m_TagString: Untagged
@@ -1513,6 +1548,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 80}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &380040718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380040716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62208890a11cd854d8429b419b90f1da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chipsObjectsToShow:
+  - {fileID: 574007720}
+  - {fileID: 1959169020}
+  - {fileID: 34024981}
 --- !u!1 &489546167
 GameObject:
   m_ObjectHideFlags: 0
@@ -1672,6 +1723,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 494257495}
+  - component: {fileID: 494257496}
   m_Layer: 5
   m_Name: ChipsOnLevel7
   m_TagString: Untagged
@@ -1704,6 +1756,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 80}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &494257496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494257494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62208890a11cd854d8429b419b90f1da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chipsObjectsToShow:
+  - {fileID: 137727132}
+  - {fileID: 978533922}
+  - {fileID: 1385812005}
 --- !u!1 &545926773
 GameObject:
   m_ObjectHideFlags: 0
@@ -2405,6 +2473,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 670052356}
+  - component: {fileID: 670052357}
   m_Layer: 5
   m_Name: ChipsOnLevel4
   m_TagString: Untagged
@@ -2437,6 +2506,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 80}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &670052357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670052355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62208890a11cd854d8429b419b90f1da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chipsObjectsToShow:
+  - {fileID: 729492396}
+  - {fileID: 39788434}
+  - {fileID: 297459541}
 --- !u!1 &670511709
 GameObject:
   m_ObjectHideFlags: 0
@@ -2618,6 +2703,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 708905644}
+  - component: {fileID: 708905645}
   m_Layer: 5
   m_Name: ChipsOnLevel5
   m_TagString: Untagged
@@ -2650,6 +2736,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 80}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &708905645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708905643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62208890a11cd854d8429b419b90f1da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chipsObjectsToShow:
+  - {fileID: 1905925042}
+  - {fileID: 1461811713}
+  - {fileID: 115662078}
 --- !u!1 &729492396
 GameObject:
   m_ObjectHideFlags: 0
@@ -6311,6 +6413,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1740105628}
+  - component: {fileID: 1740105629}
   m_Layer: 5
   m_Name: ChipsOnLevel6
   m_TagString: Untagged
@@ -6343,6 +6446,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 80}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1740105629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1740105627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62208890a11cd854d8429b419b90f1da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chipsObjectsToShow:
+  - {fileID: 490588402}
+  - {fileID: 1476522086}
+  - {fileID: 731659540}
 --- !u!1 &1747187998
 GameObject:
   m_ObjectHideFlags: 0

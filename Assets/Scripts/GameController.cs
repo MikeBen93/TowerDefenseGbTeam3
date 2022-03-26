@@ -59,22 +59,26 @@ public class GameController : MonoBehaviour
     {
         Time.timeScale = 0f;
         GameIsOver = true;
+        
         if (PlayerStats.Lives == PlayerStats.initialLives) chipsRecievedOnLevel = 3;
-        else if (PlayerStats.Lives/ PlayerStats.initialLives >= _healthRatioRelatedToChips) chipsRecievedOnLevel = 2;
+        else if ((float)PlayerStats.Lives/PlayerStats.initialLives >= _healthRatioRelatedToChips) chipsRecievedOnLevel = 2;
         else chipsRecievedOnLevel = 1;
+        
+        //if (mode == "debug") chipsRecievedOnLevel = 3;
 
-        if (mode == "debug") chipsRecievedOnLevel = 3;
+        int previouslyRecievedChips = PlayerPrefs.GetInt("chips_recieveid_on_" + SceneManager.GetActiveScene().name, 0);
+        
 
-        int previouslyRecievedChips = 0;
-
-        if (PlayerPrefs.HasKey("chips_recieveid_on_" + SceneManager.GetActiveScene().name))
+        if (chipsRecievedOnLevel > previouslyRecievedChips)
         {
-            previouslyRecievedChips = PlayerPrefs.GetInt("chips_recieveid_on_" + SceneManager.GetActiveScene().name);
+            PlayerPrefs.SetInt("chips_recieveid_on_" + SceneManager.GetActiveScene().name, chipsRecievedOnLevel);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("chips_recieveid_on_" + SceneManager.GetActiveScene().name, previouslyRecievedChips);
         }
 
-        PlayerPrefs.SetInt("chips_recieveid_on_" + SceneManager.GetActiveScene().name, previouslyRecievedChips + chipsRecievedOnLevel);
-
-        _dataManager.ChipsAmount = _dataManager.ChipsAmount + chipsRecievedOnLevel;
+        _dataManager.ResetTotalChipsAmount();
 
         if (dialogueMenu != null && dialogueMenu.showDialogueMenu)
         {
