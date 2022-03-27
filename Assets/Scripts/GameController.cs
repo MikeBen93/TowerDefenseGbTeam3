@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public static bool GameIsOver;
+    public static bool GameIsPaused;
     public bool ShowTutorial = true;
 
     //public TutorialContentController tutorialController;
@@ -106,6 +107,7 @@ public class GameController : MonoBehaviour
                 //tutorialUI.GetComponent<TutorialMenu>().SetTutorialText(tutorial.tutorialText);
 
                 Time.timeScale = 0;
+                GameIsPaused = true;
                 return;
             }
         }

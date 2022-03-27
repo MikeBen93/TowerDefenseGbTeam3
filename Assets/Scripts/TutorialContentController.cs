@@ -54,6 +54,7 @@ public class TutorialContentController : MonoBehaviour
         }
         else
         {
+            GameController.GameIsPaused = false;
             Time.timeScale = 1;
             _tutorialShowed = true;
         }
