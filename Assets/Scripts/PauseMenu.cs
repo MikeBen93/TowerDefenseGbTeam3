@@ -15,10 +15,12 @@ public class PauseMenu : MonoBehaviour
 
         if (pauseMenu.activeSelf)
         {
+            GameController.GameIsPaused = true;
             Time.timeScale = 0f;
         }
         else
         {
+            GameController.GameIsPaused = false;
             Time.timeScale = 1f;
         }
     }
