@@ -48,7 +48,7 @@ public class NodeUI : MonoBehaviour
         sellCostText.text = $"{_choosenNode.towerBlueprint.GetSellAmount(_choosenNode.tower.CurrentLevel)}";
         if(_choosenNode.towerNextlevel == 0)
         {
-            upgradeText.text = "FULLY UPGRADED";
+            upgradeText.text = "-";
         }
         else
         {
