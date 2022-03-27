@@ -12,6 +12,8 @@ public class DataManager : MonoBehaviour
     private bool _towerParamsIsLoaded = false;
     private int amountOfLoadedChips = 0;
 
+    public int chipsTraining;
+
     private void Awake()
     {
         if (instance == null)

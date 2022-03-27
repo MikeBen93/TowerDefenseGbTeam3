@@ -37,6 +37,8 @@ public class CompleteLevelMenu : MonoBehaviour
                 chipsObjectsToShow[i].SetActive(false);
             }
         }
+
+        StartChipsTraining();
     }
 
     public void Continue()
@@ -57,5 +59,10 @@ public class CompleteLevelMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Upgrades");
+    }
+
+    public void StartChipsTraining()
+    {
+        if (_dataManager.chipsTraining == 0 && levelToUnlock == 2) _dataManager.chipsTraining = 1;
     }
 }
