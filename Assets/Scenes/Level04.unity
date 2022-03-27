@@ -47870,6 +47870,10 @@ PrefabInstance:
       value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 6793207797649994270, guid: 1030c29ffda632542997ef8cb3098ba8, type: 3}
+      propertyPath: waves.Array.data[2].enemy
+      value: 
+      objectReference: {fileID: 4181390380763099882, guid: bac1fccbe9cb2f340845d5ebcfa2b8ca, type: 3}
+    - target: {fileID: 6793207797649994270, guid: 1030c29ffda632542997ef8cb3098ba8, type: 3}
       propertyPath: waves.Array.data[3].count
       value: 1
       objectReference: {fileID: 0}
@@ -47903,12 +47907,12 @@ PrefabInstance:
       objectReference: {fileID: 6408497559615290737, guid: a02f7b7dffdff2149b4916abe6c35e25, type: 3}
     - target: {fileID: 6793207797649994270, guid: 1030c29ffda632542997ef8cb3098ba8, type: 3}
       propertyPath: waves.Array.data[7].count
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6793207797649994270, guid: 1030c29ffda632542997ef8cb3098ba8, type: 3}
       propertyPath: waves.Array.data[7].enemy
       value: 
-      objectReference: {fileID: 4181390380763099882, guid: 70cd90e26977f1249b34f5edd5fd4df6, type: 3}
+      objectReference: {fileID: 4181390380763099882, guid: 79adaf01fa52e9e4b92839ddc4c25565, type: 3}
     - target: {fileID: 6793207797649994270, guid: 1030c29ffda632542997ef8cb3098ba8, type: 3}
       propertyPath: purpleEnemiesEntranceSound
       value: 

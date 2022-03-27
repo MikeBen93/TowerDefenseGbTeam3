@@ -257,6 +257,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2298470445104371766}
+  - component: {fileID: 2273900359274651760}
   m_Layer: 0
   m_Name: FirePoint
   m_TagString: Untagged
@@ -272,12 +273,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2298470445104371761}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.323, z: 2.475}
+  m_LocalPosition: {x: 0, y: 0.798, z: 1.505}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2298470444541065645}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!111 &2273900359274651760
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2298470445104371761}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 381c53dd9693c0d488f407e28ffbb633, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 381c53dd9693c0d488f407e28ffbb633, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &7627708791239992908
 GameObject:
   m_ObjectHideFlags: 0
