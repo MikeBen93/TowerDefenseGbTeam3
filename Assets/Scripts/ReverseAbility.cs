@@ -98,7 +98,6 @@ public class ReverseAbility : MonoBehaviour
 
     private Material GetRevMaterial(int towerLevel)
     {
-        Debug.Log(towerLevel);
         if (towerLevel == 1) return lvl1RevMat;
         else if (towerLevel == 2) return lvl2RevMat;
         else return lvl3RevMat;

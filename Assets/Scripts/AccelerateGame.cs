@@ -17,7 +17,6 @@ public class AccelerateGame : MonoBehaviour
 
         if ((!GameController.GameIsOver || !GameController.GameIsPaused) && isHeldDown)
         {
-            Debug.Log("Start aceleration");
             Time.timeScale = accelerationSpeed;
             return;
         }
@@ -32,12 +31,10 @@ public class AccelerateGame : MonoBehaviour
     public void onPress()
     {
         isHeldDown = true;
-        Debug.Log(isHeldDown);
     }
 
     public void onRelease()
     {
         isHeldDown = false;
-        Debug.Log(isHeldDown);
     }
 }
