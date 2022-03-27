@@ -61,6 +61,13 @@ public class CompleteLevelMenu : MonoBehaviour
         SceneManager.LoadScene("Upgrades");
     }
 
+    public void Retry()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //sceneFader.FadeTo(SceneManager.GetActiveScene().name);
+    }
+
     public void StartChipsTraining()
     {
         if (_dataManager.chipsTraining == 0 && levelToUnlock == 2) _dataManager.chipsTraining = 1;
